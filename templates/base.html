@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>MyBlog</title>
+</head>
+
+<body>
+  <h1><a href="/">Top</a></h1>
+
+  <h2>tags</h2>
+  {% set tags = get_taxonomy(kind="tags", lang=lang) %}
+  <ul class="list">
+    {% for term in tags.items %}
+      <li><a href="{{ term.permalink | safe }}">{{ term.name }}</a></li>
+    {% endfor %}
+  </ul>
+  
+  <h2 class="title">{% block title %} {% endblock title %}</h2>
+  {% block content %} {% endblock %}
+</body>
+
+</html>
