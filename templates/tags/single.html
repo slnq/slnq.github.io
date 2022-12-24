@@ -7,7 +7,7 @@
     {% for page in term.pages %}
       <li>{{ page.date }} <a href="{{ page.permalink }}">{{ page.title }}</a>
         {% for term in page.taxonomies.tags %}
-          <a href="../tags/{{ term | safe }}">{{ term }}</a>
+          <a href="../{{ term | safe }}">{{ term }}</a>
         {% endfor %}
       </li>
     {% endfor %}
