@@ -6,4 +6,5 @@ tags = ["even", "zola"]
 +++
 test of youtube
 
-{{ youtube(id="q8XWxYwLTRE") }}
+00000000000000000000000000000000000
+

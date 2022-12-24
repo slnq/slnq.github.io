@@ -5,16 +5,31 @@ body {
     font-weight: 500;
 }
 
-a { color: #aca9bb; }
-
 h1 {
     display: flex;
     justify-content: center;
+    margin: 24px 0;
 }
 
-ul{ padding-left:0; }
+h2 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
 
-li { list-style:none; }
+h3 { margin-bottom: 6px; }
+
+a { color: #aca9bb; }
+
+p { margin: 6px; }
+
+table {
+    border-collapse: separate;
+    border-spacing: 8px 0px;
+}
+
+td { padding: 0; }
+
+code { font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; }
 
 .both {
     display: flex;
@@ -28,29 +43,10 @@ li { list-style:none; }
     justify-content: center;
 }
 
-.content {
-}
+.tags { width: 15vw; }
 
-.tags {
-    width: 15vw;
-}
+.nobr { white-space: nowrap; }
 
-.nobr {
-    white-space: nowrap;
-}
+.mr { margin-right: 10px; }
 
-.page-tags {
-    margin-bottom: 19.920px;
-}
-
-h3 {
-    margin-bottom: 6px;
-}
-
-p {
-    margin: 6px;
-}
-
-code {
-    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-}
+.page-tags { margin-bottom: 20px; }

@@ -3,17 +3,15 @@
 {% block title %} {{ term.name }} {% endblock title %}
 
 {% block content %}
-  <ul class="list">
+  <table class="list">
     {% for page in term.pages %}
-      <li>
-        <span class="date">{{ page.date }}</span>
-        <a class="nobr" href="{{ page.permalink }}">{{ page.title }}</a>
-        <span class="nobr">
-          {% for term in page.taxonomies.tags %}
-            <a href="../{{ term | safe }}/">{{ term }}</a>
-          {% endfor %}
-        </span>
-      </li>
+      <tr>
+        <td class="date nobr">{{ page.date }}</td>
+        <td><a class="nobr" href="{{ page.permalink }}">{{ page.title }}</a></td>
+        {% for term in page.taxonomies.tags %}
+          <td><a href="../{{ term | safe }}/">{{ term }}</a></td>
+        {% endfor %}
+      </tr>
     {% endfor %}
-  </ul>
+  </table>
 {% endblock content %}

@@ -21,11 +21,11 @@
     <div class="tags">
       <h2 class="title">tags</h2>
       {% set tags = get_taxonomy(kind="tags", lang=lang) %}
-      <ul class="list">
+      <table class="list">
         {% for term in tags.items %}
-          <li><a href="{{ term.permalink | safe }}">{{ term.name }}</a></li>
+          <tr><td><a href="{{ term.permalink | safe }}">{{ term.name }}</a></td></tr>
         {% endfor %}
-      </ul>
+      </table>
     </div>
   </div>
 </body>
