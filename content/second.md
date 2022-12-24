@@ -4,5 +4,6 @@ date = 2019-11-28
 [taxonomies]
 tags = ["even", "zola"]
 +++
+test of youtube
 
-This is my second blog post.
+{{ youtube(id="q8XWxYwLTRE") }}

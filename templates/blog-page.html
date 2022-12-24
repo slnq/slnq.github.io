@@ -3,9 +3,11 @@
 {% block title %} {{ page.title }} {% endblock title %}
 
 {% block content %}
-  <p class="subtitle"><strong>{{ page.date }}</strong></p>
-  {% for term in page.taxonomies.tags %}
-    <a href="../tags/{{ term | safe }}">{{ term }}</a>
-  {% endfor %}
+  <div class="date">{{ page.date }}</div>
+  <div class="page-tags">
+    {% for term in page.taxonomies.tags %}
+      <a href="../tags/{{ term | safe }}/">{{ term }}</a>
+    {% endfor %}
+  </div>
   {{ page.content | safe }}
 {% endblock content %}

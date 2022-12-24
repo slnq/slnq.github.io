@@ -1,0 +1,56 @@
+body {
+    background-color: #474554;
+    color: #aca9bb;
+    font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+    font-weight: 500;
+}
+
+a { color: #aca9bb; }
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+ul{ padding-left:0; }
+
+li { list-style:none; }
+
+.both {
+    display: flex;
+    margin-left: 5vw;
+    gap: 5vw;
+}
+
+.main {
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+}
+
+.tags {
+    width: 15vw;
+}
+
+.nobr {
+    white-space: nowrap;
+}
+
+.page-tags {
+    margin-bottom: 19.920px;
+}
+
+h3 {
+    margin-bottom: 6px;
+}
+
+p {
+    margin: 6px;
+}
+
+code {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
