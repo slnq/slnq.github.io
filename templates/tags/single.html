@@ -6,8 +6,8 @@
   <table class="list">
     {% for page in term.pages %}
       <tr>
-        <td class="date nobr">{{ page.date }}</td>
-        <td><a class="nobr" href="{{ page.permalink }}">{{ page.title }}</a></td>
+        <td class="date nobr"><span class="mr">{{ page.date }}</span></td>
+        <td><a class="nobr mr" href="{{ page.permalink }}">{{ page.title }}</a></td>
         {% for term in page.taxonomies.tags %}
           <td><a href="../{{ term | safe }}/">{{ term }}</a></td>
         {% endfor %}
