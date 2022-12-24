@@ -5,7 +5,7 @@
 {% block content %}
   <p class="subtitle"><strong>{{ page.date }}</strong></p>
   {% for term in page.taxonomies.tags %}
-    <a href="/tags/{{ term | safe }}">{{ term }}</a>
+    <a href="../tags/{{ term | safe }}">{{ term }}</a>
   {% endfor %}
   {{ page.content | safe }}
 {% endblock content %}
