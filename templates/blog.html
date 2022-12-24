@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 
-{% block title %}
-  Top
-{% endblock title %}
+{% block title %} Top {% endblock title %}
 
 {% block content %}
-<ul class="list">
-  {% for page in section.pages %}
-    <li>{{ page.date }} <a href="{{ page.permalink }}">{{ page.title }}</a></li>
-  {% endfor %}
-</ul>
+  <ul class="list">
+    {% for page in section.pages %}
+      <li>{{ page.date }} <a href="{{ page.permalink }}">{{ page.title }}</a> 
+        {% for term in page.taxonomies.tags %}
+          <a href="/tags/{{ term | safe }}">{{ term }}</a>
+        {% endfor %}
+      </li>
+    {% endfor %}
+  </ul>
 {% endblock content %}
