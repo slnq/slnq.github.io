@@ -1,15 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %} {{ page.title }} {% endblock title %}
-
 {% block content %}
-  <div>
+<div class="page">
+  <div class="infomation">
+    <div class="headline">{{ page.title }}</div>
     <span>{{ page.date }}</span>
     <span>
       {% for term in page.taxonomies.tags %}
-        <a href="../tags/{{ term | safe }}/">{{ term }}</a>
+        <a href="../tags/{{ term | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>
       {% endfor %}
     </span>
   </div>
   {{ page.content | safe }}
+</div>
 {% endblock content %}

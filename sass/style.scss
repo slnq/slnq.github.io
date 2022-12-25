@@ -1,13 +1,98 @@
+body {
+    -webkit-text-size-adjust: 100%;
+    margin: auto;
+    font-size: 14px;
+    word-wrap: break-word;
+    color: #aca9bb;
+    background-color: #474554;
+}
+
+a { color: #aca9bb; }
+
+table {
+    border-spacing: 10px 0;
+}
+
+h2 {
+    font-family: serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 20px 0 0;
+}
+
+ol {
+    margin: 8px 0;
+}
+
+#title {
+    font-size: 28px;
+    font-family: SimSun, "YuMincho", "Hiragino Mincho Pro", "MS PMincho", serif;
+    margin: 10px 0;
+}
+
+#tags {
+    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+    margin-bottom: 12px;
+}
+
+.base {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a { text-decoration: none; }
+}
+
+.list {
+    width: 80%;
+    font-size: 12px;
+    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+    margin: auto;
+    a { text-decoration: none; }
+}
+
+.pages {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+}
+
+.page {
+    font-weight: 500;
+    font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+    width: 100%;
+    p { margin: 4px 0;}
+    a { text-decoration: none;
+        background: linear-gradient(transparent 97%, #aca9bb 0);}
+}
+
+.infomation {
+    font-size: 12px;
+    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+    margin-bottom: 10px;
+    a { text-decoration: none;
+        background:none; }
+}
+
+.headline {
+    font-size: 24px;
+    font-family: "YuMincho", "Hiragino Mincho Pro", "MS PMincho", serif;
+    margin-bottom: 4px;
+}
+
+.emoji {
+    color: transparent;
+    text-shadow: 0 0 0 #aca9bb;
+    font-size: 10px;
+}
+
 @media screen and (orientation: landscape) {
-    /* 横向きの場合のスタイル */
- }
- @media screen and (orientation: portrait) {
-    html {
-        width: 100%;
-    }
     body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 60vh;
     }
- }
+}
+@media screen and (orientation: portrait) {
+    body {
+        width: 60vw;
+    }
+}

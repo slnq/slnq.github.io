@@ -8,19 +8,18 @@
 </head>
 
 <body>
-  <a href="{{ config.base_url }}">夏果</a>
+  <div class="base">
+    <div id="title"><a href="{{ config.base_url }}">夏果</a></div>
 
-  <div>
-    {% set tags = get_taxonomy(kind="tags", lang=lang) %}
-      {% for term in tags.items %}
-        <a href="{{ term.permalink | safe }}">{{ term.name }}</a>
-      {% endfor %}
+    <div id="tags">
+      {% set tags = get_taxonomy(kind="tags", lang=lang) %}
+        {% for term in tags.items %}
+          <a href="{{ term.permalink | safe }}"><span class="emoji">🔖️</span>{{ term.name }}</a>
+        {% endfor %}
+    </div>
   </div>
 
-  <div class="main">
-      <div>{% block title %} {% endblock title %}</div>
-      {% block content %} {% endblock %}
-  </div>
+    {% block content %} {% endblock %}
 </body>
 
 </html>
