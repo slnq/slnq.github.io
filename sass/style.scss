@@ -1,7 +1,7 @@
 body {
     -webkit-text-size-adjust: 100%;
     margin: auto;
-    font-size: 14px;
+    font-size: 16px;
     word-wrap: break-word;
     color: #aca9bb;
     background-color: #474554;
@@ -36,7 +36,7 @@ ol {
 }
 
 .base {
-    font-size: 12px;
+    font-size: 14px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,14 +45,14 @@ ol {
 
 .list {
     width: 80%;
-    font-size: 12px;
+    font-size: 14px;
     font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
     margin: auto;
     a { text-decoration: none; }
 }
 
 .pages {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
 }
@@ -67,7 +67,7 @@ ol {
 }
 
 .infomation {
-    font-size: 12px;
+    font-size: 14px;
     font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
     margin-bottom: 10px;
     a { text-decoration: none;
@@ -88,11 +88,11 @@ ol {
 
 @media screen and (orientation: landscape) {
     body {
-        width: 60vh;
+        width:80vh;
     }
 }
 @media screen and (orientation: portrait) {
     body {
-        width: 60vw;
+        width:80vw;
     }
 }
