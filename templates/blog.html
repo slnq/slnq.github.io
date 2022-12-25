@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
-{% block title %} top {% endblock title %}
+{% block title %} 記事 {% endblock title %}
 
 {% block content %}
-  <table class="list">
+  <table>
     {% for page in section.pages %}
       <tr>
-        <td class="date nobr"><span class="mr">{{ page.date }}</span></td>
-        <td><a class="nobr mr" href="{{ page.permalink }}">{{ page.title }}</a></td>
+        <td><div>{{ page.date }}</div></td>
+        <td><a href="{{ page.permalink }}">{{ page.title }}</a></td>
         {% for term in page.taxonomies.tags %}
           <td><a href="tags/{{ term | safe }}/">{{ term }}</a></td>
         {% endfor %}

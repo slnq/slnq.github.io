@@ -4,29 +4,22 @@
 <head>
   <link rel="stylesheet" href="{{ get_url(path='style.css', trailing_slash=false) | safe }}">
   <meta charset="utf-8">
-  <title>MyBlog</title>
+  <title>夏果</title>
 </head>
 
 <body>
-  <h1><a href="{{ config.base_url }}">top</a></h1>
+  <a href="{{ config.base_url }}">夏果</a>
 
-  <div class="both">
-    <div class="main">
-      <div class="content">
-        <h2 class="title">{% block title %} {% endblock title %}</h2>
-        {% block content %} {% endblock %}
-      </div>
-    </div>
+  <div>
+    {% set tags = get_taxonomy(kind="tags", lang=lang) %}
+      {% for term in tags.items %}
+        <a href="{{ term.permalink | safe }}">{{ term.name }}</a>
+      {% endfor %}
+  </div>
 
-    <div class="tags">
-      <h2 class="title">tags</h2>
-      {% set tags = get_taxonomy(kind="tags", lang=lang) %}
-      <table class="list">
-        {% for term in tags.items %}
-          <tr><td><a href="{{ term.permalink | safe }}">{{ term.name }}</a></td></tr>
-        {% endfor %}
-      </table>
-    </div>
+  <div class="main">
+      <div>{% block title %} {% endblock title %}</div>
+      {% block content %} {% endblock %}
   </div>
 </body>
 

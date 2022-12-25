@@ -1,52 +1,13 @@
-body {
-    background-color: #474554;
-    color: #aca9bb;
-    font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
-    font-weight: 500;
-}
-
-h1 {
-    display: flex;
-    justify-content: center;
-    margin: 24px 0;
-}
-
-h2 {
-    margin-top: 0px;
-    margin-bottom: 20px;
-}
-
-h3 { margin-bottom: 6px; }
-
-a { color: #aca9bb; }
-
-p { margin: 6px; }
-
-table {
-    border-collapse: separate;
-    border-spacing: 8px 0px;
-}
-
-td { padding: 0; }
-
-code { font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; }
-
-.both {
-    display: flex;
-    margin-left: 5vw;
-    gap: 5vw;
-}
-
-.main {
-    width: 70vw;
-    display: flex;
-    justify-content: center;
-}
-
-.tags { width: 15vw; }
-
-.nobr { white-space: nowrap; }
-
-.mr { margin-right: 10px; }
-
-.page-tags { margin-bottom: 20px; }
+@media screen and (orientation: landscape) {
+    /* 横向きの場合のスタイル */
+ }
+ @media screen and (orientation: portrait) {
+    html {
+        width: 100%;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+ }
