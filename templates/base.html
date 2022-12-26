@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
+  <meta name="viewport" content="width=device-width,  initial-scale=0.5">
+  <meta name="description" content="意識はいつだって自らには全くの崇高なものなのです">
   <link rel="stylesheet" href="{{ get_url(path='style.css', trailing_slash=false) | safe }}">
   <meta charset="utf-8">
   <title>夏果</title>
@@ -14,7 +16,7 @@
     <div id="tags">
       {% set tags = get_taxonomy(kind="tags", lang=lang) %}
         {% for term in tags.items %}
-          <a href="{{ term.permalink | safe }}"><span class="emoji">🔖️</span>{{ term.name }}</a>
+          <a href="{{ term.permalink | safe }}"><span class="emoji">🔖️</span>{{ term.name }} </a>
         {% endfor %}
     </div>
   </div>

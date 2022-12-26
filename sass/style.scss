@@ -1,13 +1,14 @@
 body {
+    width: 80vmin;
     -webkit-text-size-adjust: 100%;
     margin: auto;
     font-size: 16px;
     word-wrap: break-word;
-    color: #aca9bb;
-    background-color: #474554;
+    color: #DCDCE0;
+    background-color: #454351;
 }
 
-a { color: #aca9bb; }
+a { color: #DCDCE0; }
 
 table {
     border-spacing: 10px 0;
@@ -62,16 +63,20 @@ ol {
     font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
     width: 100%;
     p { margin: 4px 0;}
-    a { text-decoration: none;
-        background: linear-gradient(transparent 97%, #aca9bb 0);}
+    a { 
+        text-decoration: none;
+        background: linear-gradient(transparent 97%, #DCDCE0 0);
+    }
 }
 
 .infomation {
     font-size: 14px;
     font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
     margin-bottom: 10px;
-    a { text-decoration: none;
-        background:none; }
+    a { 
+        text-decoration: none;
+        background:none;
+    }
 }
 
 .headline {
@@ -82,17 +87,14 @@ ol {
 
 .emoji {
     color: transparent;
-    text-shadow: 0 0 0 #aca9bb;
+    text-shadow: 0 0 0 #DCDCE0;
     font-size: 10px;
 }
 
-@media screen and (orientation: landscape) {
-    body {
-        width:80vh;
-    }
-}
-@media screen and (orientation: portrait) {
-    body {
-        width:80vw;
+@media (max-aspect-ratio: 3/4) {
+    .list {
+        width: 100%;
+        .emoji { padding-left: 4px; }
+        a {font-size: 18px;}
     }
 }
