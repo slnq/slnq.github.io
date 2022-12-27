@@ -1,5 +1,5 @@
 +++
-title = "ブログを作る zolaを用いて"
+title = "ブログを作る zolaで"
 date = 2022-12-25
 [taxonomies]
 tags = ["web", "zola"]
