@@ -9,7 +9,7 @@
         <td><div class="info">{{ page.date }}</div></td>
         <td><a class="list-title" href="{{ page.permalink }}">{{ page.title }}</a></td>
         <td>{% for term in page.taxonomies.tags %}
-          <a class="info" href="../{{ term | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>
+          <a class="tag" class="info" href="../{{ term | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>
         {% endfor %}</td>
       </tr>
     {% endfor %}

@@ -14,9 +14,8 @@ html { font-size: 14px;
 }
 
 .headline { font-size: 1.6rem;
-    font-family: "YuMincho", "Hiragino Mincho Pro", "MS PMincho", serif;
-    margin: 1.5rem 0 0.4rem;
-    text-shadow: 0 0 2px #DCDCE0;
+    font-family: serif;
+    margin: 1.5rem 0 0;
 }
 
 .info { font-size: 0.86rem; 
@@ -68,7 +67,16 @@ h3 { margin: 0.7rem; }
     a { background: linear-gradient(transparent 97%, #DCDCE0 0); }
 }
 
+.tag {
+    display: inline-block;
+    margin-right: 0.3rem;
+}
+
+#date {
+    margin-right: 0.5rem;
+}
+
 @media (max-aspect-ratio: 40/71) {
-    html { font-size: 24px; }
+    html { font-size: 38px; }
     .list { width: 100%; }
 }

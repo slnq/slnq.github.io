@@ -4,10 +4,10 @@
 <div class="page">
   <div class="headline">{{ page.title }}</div>
   <div class="info">
-    <span>{{ page.date }}</span>
+    <span id="date">{{ page.date }}</span>
     <span>
       {% for term in page.taxonomies.tags %}
-        <a href="../tags/{{ term | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>
+        <a class="tag" href="../tags/{{ term | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>
       {% endfor %}
     </span>
   </div>
