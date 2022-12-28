@@ -77,7 +77,6 @@ h3 { margin: 0.7rem; }
 }
 
 @media (max-aspect-ratio: 40/71) {
-    html { font-size: 38px; }
     .list { width: 100%; }
 }
 
@@ -85,5 +84,6 @@ h3 { margin: 0.7rem; }
     html{ background-color: #fcee21; }
 }
 @media (max-aspect-ratio: 3/4){
+    html { font-size: 38px; }
     html{ background-color: #ffa8c8; }
 }
