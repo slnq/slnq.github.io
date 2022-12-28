@@ -81,9 +81,9 @@ h3 { margin: 0.7rem; }
     .list { width: 100%; }
 }
 
-@media (min-aspect-ratio: 1/1){
+@media (min-aspect-ratio: 3/4){
     html{ background-color: #fcee21; }
 }
-@media (max-aspect-ratio: 1/1){
+@media (max-aspect-ratio: 3/4){
     html{ background-color: #ffa8c8; }
 }
