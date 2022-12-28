@@ -1,102 +1,69 @@
-body {
+html { font-size: 14px;
+    font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
     width: 80vmin;
-    -webkit-text-size-adjust: 100%;
     margin: auto;
-    font-size: 16px;
     word-wrap: break-word;
     color: #DCDCE0;
     background-color: #454351;
+    -webkit-text-size-adjust: 100%;
 }
 
-a { color: #DCDCE0; }
-
-table {
-    border-spacing: 10px 0;
+#title { font-size: 2rem;
+    font-family: SimSun, "YuMincho", "Hiragino Mincho Pro", "MS PMincho", serif;
+    margin: 1rem 0 0.7rem;
 }
 
-h2 {
+.headline { font-size: 1.6rem;
+    font-family: "YuMincho", "Hiragino Mincho Pro", "MS PMincho", serif;
+    margin: 1.5rem 0 0.4rem;
+}
+
+.info { font-size: 0.86rem; 
+    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+}
+
+.emoji { font-size: 0.7rem;
+    color: transparent;
+    text-shadow: 0 0 0 #DCDCE0;
+}
+
+h2 { font-size: 1.4rem;
     font-family: serif;
     font-weight: 400;
-    font-size: 20px;
-    margin: 20px 0 0;
+    margin: 1.5rem 0 0;
 }
 
-h3 { margin: 10px; }
-
-ol {
-    margin: 8px 0;
+a {
+    text-decoration: none; 
+    color: #DCDCE0;
 }
 
-#title {
-    font-size: 28px;
-    font-family: SimSun, "YuMincho", "Hiragino Mincho Pro", "MS PMincho", serif;
-    margin: 10px 0;
-}
+p { margin: 0.3rem 0;}
 
-#tags {
-    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
-    margin-bottom: 12px;
-}
+table { width: 100%; }
+
+h3 { margin: 0.7rem; }
 
 .base {
-    font-size: 14px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    a { text-decoration: none; }
 }
 
 .list {
     width: 80%;
-    font-size: 14px;
-    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
     margin: auto;
-    a { text-decoration: none; }
 }
 
-.pages {
-    font-size: 16px;
-    font-weight: 500;
-    font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
-}
-
-.page {
-    font-weight: 500;
-    font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+.page-content {
     width: 100%;
-    p { margin: 4px 0;}
-    a { 
-        text-decoration: none;
-        background: linear-gradient(transparent 97%, #DCDCE0 0);
-    }
-}
-
-.infomation {
-    font-size: 14px;
-    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
-    margin-bottom: 10px;
-    a { 
-        text-decoration: none;
-        background:none;
-    }
-}
-
-.headline {
-    font-size: 24px;
-    font-family: "YuMincho", "Hiragino Mincho Pro", "MS PMincho", serif;
-    margin-bottom: 4px;
-}
-
-.emoji {
-    color: transparent;
-    text-shadow: 0 0 0 #DCDCE0;
-    font-size: 10px;
+    margin-top: 1rem;
+    a { background: linear-gradient(transparent 97%, #DCDCE0 0); }
 }
 
 @media (max-aspect-ratio: 3/4) {
+    html { font-size: 20px; }
     .list {
         width: 100%;
-        .emoji { padding-left: 4px; }
-        a {font-size: 18px;}
     }
 }

@@ -2,8 +2,8 @@
 
 {% block content %}
 <div class="page">
-  <div class="infomation">
-    <div class="headline">{{ page.title }}</div>
+  <div class="headline">{{ page.title }}</div>
+  <div class="info">
     <span>{{ page.date }}</span>
     <span>
       {% for term in page.taxonomies.tags %}
@@ -11,6 +11,6 @@
       {% endfor %}
     </span>
   </div>
-  {{ page.content | safe }}
+  <div class="page-content">{{ page.content | safe }}</div>
 </div>
 {% endblock content %}
