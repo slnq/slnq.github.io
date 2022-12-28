@@ -2,7 +2,7 @@
 title = "電界シミュレーション"
 date = 2022-12-27
 [taxonomies]
-tags = ["javascript", "rust", "wasm", "web"]
+tags = ["javascript", "rust", "wasm"]
 +++
 
 [電界シミュレーション](../2-sotsuken)をwasmで実装しようという心意気による\

@@ -2,7 +2,7 @@
 title = "電界シミュレーション"
 date = 2022-12-26
 [taxonomies]
-tags = ["gpu", "javascript", "web"]
+tags = ["gpu", "javascript"]
 +++
 
 卒業研究で作った電界とかを表示するwebサイト

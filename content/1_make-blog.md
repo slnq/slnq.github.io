@@ -2,7 +2,7 @@
 title = "ブログを作る zolaで"
 date = 2022-12-25
 [taxonomies]
-tags = ["web", "zola"]
+tags = ["zola"]
 +++
 
 [hugo](https://gohugo.io/)でも[jekyll](http://jekyllrb-ja.github.io/)でも無く[zola](https://www.getzola.org/)を選んだ理由は多少[rust](https://www.rust-lang.org/ja)を触ったことがあるというものだが一切の利点は無かった
