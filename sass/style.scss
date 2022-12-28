@@ -1,12 +1,4 @@
-@media (max-aspect-ratio: 40/71) {
-    html { font-size: 38px; }
-}
-
-@media (min-aspect-ratio: 40/71) {
-    html { font-size: 14px; }
-}
-
-html {
+html { font-size: 14px;
     font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
     width: 80vmin;
     margin: auto;
@@ -82,4 +74,16 @@ h3 { margin: 0.7rem; }
 
 #date {
     margin-right: 0.5rem;
+}
+
+@media (max-aspect-ratio: 40/71) {
+    html { font-size: 38px; }
+    .list { width: 100%; }
+}
+
+@media (orientation: portrait){
+    html{ background-color: #fcee21; }
+}
+@media (orientation: landscape){
+    html{ background-color: #ffa8c8; }
 }
