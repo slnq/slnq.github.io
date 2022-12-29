@@ -2,7 +2,7 @@
 title = "アニメ系 拡散モデル"
 date = 2022-12-29
 [taxonomies]
-tags = ["image-generation"]
+tags = ["img-generate"]
 +++
 
 情報に信憑性は皆無\
@@ -30,8 +30,12 @@ stable diffusion 2.1 ベース
 
 - [elysium anime v1-v3](https://huggingface.co/hesw23168/SD-Elysium-Model/tree/main)
 
-- [acertain thing](https://huggingface.co/JosephusCheung/ACertainThing/tree/main)\
+- [acertain](https://huggingface.co/JosephusCheung)\
 [作者はnaiベースを否定](https://twitter.com/realjosephus)
+    - [acertainty](https://huggingface.co/JosephusCheung/ACertainty/tree/main)
+    - [acertain model](https://huggingface.co/JosephusCheung/ACertainModel/tree/main)
+    - [acertain thing](https://huggingface.co/JosephusCheung/ACertainThing/tree/main)\
+    [3モデルの違いは学習の段階による](https://twitter.com/RealJosephus/status/1603363212434747393?s=20&t=gPtWbWngS1FwxUGyG4By0w)
 
 - [bpm model](https://huggingface.co/Crosstyan/BPModel/tree/main)\
 acertainベース
