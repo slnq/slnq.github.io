@@ -24,7 +24,14 @@ ssgどころかwebの初心者である私が躓いた点について書く
 1. git pushした後でrepositry>Settings>Pages>SourceがDeploy from a branchでありrepositry>Settings>Pages>Branchがgh-pages /(root)になっている事を確認する
 
 ## 
-色々と戸惑ったが及第点といった具合のブログが作れて良かった
+色々と戸惑ったが及第点といった具合のブログが作れて良かった\
+***
+2022-12-28追記\
+[page speed insights](https://pagespeed.web.dev/report?url=https%3A%2F%2Fnatsuka-sili.github.io%2F&hl=ja)の全項目で満点が取れるように下らない調整を行った\
+モバイルのseoでaタグが48px*48px以上ではないと評価を下げられるのだがviewportのscaleを小さくしてfont-sizeをあげる事で実質的な表示領域は変わらないのに点数を貰う事が出来る\
+下らないの所以\
+pwa対応はさせる意味が無い気もするが試したいのでまたいつか
+***
 
 というわけで\
 [**私のアツいブログ活動！ブロカツ！始まります！ﾌﾌｯﾋ**](https://dic.nicovideo.jp/a/%E3%83%95%E3%83%95%E3%83%83%E3%83%92)

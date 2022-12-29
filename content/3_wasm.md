@@ -1,5 +1,5 @@
 +++
-title = "電界シミュレーション"
+title = "電界シミュレーションwasm"
 date = 2022-12-27
 [taxonomies]
 tags = ["javascript", "rust", "wasm"]
@@ -13,4 +13,4 @@ tags = ["javascript", "rust", "wasm"]
 [gpujs版](https://s1kl.github.io/werve/)に対してpcでは安定しているがiOS端末では逆にカクつく印象がある\
 私のpcも一応rtx3060のっているのですが
 
-[webgpu](https://www.w3.org/TR/webgpu/)が正式実装されたて[wgpu](https://wgpu.rs/)が対応したら制作も再開しようかなとの意気込み
+[webgpu](https://www.w3.org/TR/webgpu/)が正式実装されて[wgpu](https://wgpu.rs/)が対応したら制作も再開しようかなとの意気込み

@@ -1,5 +1,5 @@
 +++
-title = "電界シミュレーション"
+title = "電界シミュレーションgpujs"
 date = 2022-12-26
 [taxonomies]
 tags = ["gpu", "javascript"]
