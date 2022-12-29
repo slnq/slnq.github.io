@@ -76,6 +76,9 @@ h3 { margin: 0.7rem; }
     margin-right: 0.5rem;
 }
 
+li li {list-style-type: square;}
+
+
 @media (max-aspect-ratio: 3/4){
     html { font-size: 38px; }
     .list { width: 100%; }
