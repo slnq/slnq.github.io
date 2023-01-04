@@ -30,6 +30,8 @@ stable diffusion 2.1 ベース
 
 - [elysium anime v1-v3](https://huggingface.co/hesw23168/SD-Elysium-Model/tree/main)
 
+- [sd_shirayuki_model](https://huggingface.co/hesw23168/SD_Shirayuki_Model)
+
 - [acertain](https://huggingface.co/JosephusCheung)\
 [作者はnaiベースを否定](https://twitter.com/realjosephus)
     - [acertainty](https://huggingface.co/JosephusCheung/ACertainty/tree/main)
@@ -46,6 +48,9 @@ acertainベース
 少なくとも16は非naiベース
 
 - [naiリーク用fine tuningまとめ](https://rentry.org/sdupdates)
+
+- [yaguru magiku](https://huggingface.co/Toooajk/YaguruMagiku)\
+anyベース
 
 ## [trin](https://ai-novel.com/art.php)系
 
