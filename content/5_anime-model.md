@@ -52,6 +52,8 @@ acertainベース
 - [yaguru magiku](https://huggingface.co/Toooajk/YaguruMagiku)\
 anyベース
 
+- [7th layer](https://huggingface.co/syaimu/7th_Layer)
+
 ## [trin](https://ai-novel.com/art.php)系
 
 - [stable diffusion trinart characters model v1](https://huggingface.co/naclbit/trinart_characters_19.2m_stable_diffusion_v1/tree/main)

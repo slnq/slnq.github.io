@@ -7,8 +7,10 @@ tags = []
 
 ## sns
 
-[Twitter](https://twitter.com/natsuka_sili)\
+[twitter](https://twitter.com/natsuka_sili)\
 ###
-[Github](https://github.com/natsuka-sili)
+[github](https://github.com/natsuka-sili)
 ###
-[YouTube](https://www.youtube.com/@natsuka_sili)
+[youTube](https://www.youtube.com/@natsuka_sili)
+###
+[soundcloud](https://soundcloud.com/natsuka-sili)
