@@ -12,7 +12,7 @@ tags = ["font"]
 
 [svgの材料](https://genshin-impact.fandom.com/wiki/Latin-Based_Language)
 
-[使っている様子の動画](.com)
+[使っている様子の動画](https://twitter.com/natsuka_sili/status/1613917756038217732?s=20&t=Bb4dIUmhi4964CoLGscPyg)
 
 思ったより簡単で1時間程度で作成できた\
 そう\
