@@ -23,7 +23,9 @@ stable diffusion 2.1 ベース
 
 ## [nai](https://novelai.net/)ベースの可能性がある
 
-- [anything v3](https://huggingface.co/Linaqruf/anything-v3.0/tree/main)\
+- [anything v3](https://huggingface.co/Linaqruf/anything-v3.0/tree/main)
+
+- [anything v4.5](https://huggingface.co/andite/anything-v4.0/tree/main)
 
 - [eimis anime diffusion v1](https://huggingface.co/eimiss/EimisAnimeDiffusion_1.0v/tree/main)\
 [作者によるコメント](https://www.reddit.com/r/WaifuDiffusion/comments/yygu3v/comment/iwv5alc/?utm_source=share&utm_medium=web2x&context=3)によるとwd + sd ベース

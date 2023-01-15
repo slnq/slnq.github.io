@@ -2,7 +2,7 @@
 title = "月ノ美兎 カバー曲"
 date = 2023-01-03
 [taxonomies]
-tags = ["v"]
+tags = ["v", "music"]
 +++
 
 <https://open.spotify.com/playlist/7dwqmuXbWDbQ85xDj40CyV?si=4f9d21c9030142ae>
