@@ -56,6 +56,16 @@ anyベース
 
 - [7th layer](https://huggingface.co/syaimu/7th_Layer)
 
+- [hitokomoru diffusion v2](https://huggingface.co/Linaqruf/hitokomoru-diffusion-v2)\
+なんだかなぁという感じはある
+
+- [ligne claire anime diffusion](https://huggingface.co/breakcore2/ligne_claire_anime_diffusion)
+
+- [PlumMix](https://huggingface.co/Hemlok/PlumMix)
+
+- [Counterfeit V2.0](https://huggingface.co/gsdf/Counterfeit-V2.0)\
+噂を聞いて使ってみたが確かに一線を画しているなとの感じ
+
 ## [trin](https://ai-novel.com/art.php)系
 
 - [stable diffusion trinart characters model v1](https://huggingface.co/naclbit/trinart_characters_19.2m_stable_diffusion_v1/tree/main)
