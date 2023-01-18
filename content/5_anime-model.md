@@ -69,7 +69,12 @@ anyベース
 - [vmix](https://huggingface.co/fhreinfls/VMix)
 
 - [Defmix v1.0](https://huggingface.co/Defpoint/Defmix-v1.0)\
-Counterfeit v1.0 + Counterfeit v2.0 + Basil Mix + Anything v4.0
+ACertainThings + Counterfeit v1.0 + Counterfeit v2.0 + Basil Mix + Anything v4.0
+
+- [Replicant](https://huggingface.co/gsdf/Replicant)\
+リアル要素のあるアニメ調
+
+- [Lazurite](https://huggingface.co/p1atdev/ore-o)
 
 ## [trin](https://ai-novel.com/art.php)系
 
