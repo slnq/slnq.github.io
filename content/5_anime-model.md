@@ -66,6 +66,11 @@ anyベース
 - [Counterfeit V2.0](https://huggingface.co/gsdf/Counterfeit-V2.0)\
 噂を聞いて使ってみたが確かに一線を画しているなとの感じ
 
+- [vmix](https://huggingface.co/fhreinfls/VMix)
+
+- [Defmix v1.0](https://huggingface.co/Defpoint/Defmix-v1.0)\
+Counterfeit v1.0 + Counterfeit v2.0 + Basil Mix + Anything v4.0
+
 ## [trin](https://ai-novel.com/art.php)系
 
 - [stable diffusion trinart characters model v1](https://huggingface.co/naclbit/trinart_characters_19.2m_stable_diffusion_v1/tree/main)
