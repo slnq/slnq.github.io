@@ -2,6 +2,7 @@
 title = "車の免許を取った"
 date = 2023-01-20
 [taxonomies]
+categories = ["test2"]
 tags = []
 +++
 

@@ -2,6 +2,7 @@
 title = "marindeckのテーマ"
 date = 2022-12-31
 [taxonomies]
+categories = ["test2"]
 tags = ["css", "twitter"]
 +++
 

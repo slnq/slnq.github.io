@@ -2,6 +2,7 @@
 title = "ios ロック画面"
 date = 2023-01-02
 [taxonomies]
+categories = ["test2"]
 tags = ["ios"]
 +++
 

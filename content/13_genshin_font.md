@@ -2,6 +2,7 @@
 title = "原神 テイワット文字"
 date = 2023-01-14
 [taxonomies]
+categories = ["test2"]
 tags = ["font"]
 +++
 
