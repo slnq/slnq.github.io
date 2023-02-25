@@ -14,10 +14,15 @@
 
 <body>
   <header>
-    <div id="title"><a href="{{ config.base_url }}">夏果</a></div>
-      {% for term in tags.items %}
+    <div><a id="title" href="{{ config.base_url }}">夏果</a></div>
+    {% for term in tags.items %}
       <a class="tag" href="{{ term.permalink | safe }}"><span class="emoji">🔖️</span>{{ term.name }}</a>
-      {% endfor %}
+    {% endfor %}
+    
+    <br>
+    これaboutを置くのどこにしようね
+    <a class="about" href="{{ config.base_url }}/about">❔about</a>
+
   </header>
   {% block content %} {% endblock %}
 </body>

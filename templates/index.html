@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+{% set section = get_section(path="post/_index.md") %}
 {% if paginator %} {% set pages = paginator.pages %} {% else %} {% set pages = section.pages %} {% endif %}
 
 <div class="blog-container">
