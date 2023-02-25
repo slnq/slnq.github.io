@@ -2,7 +2,7 @@
 title = "月ノ美兎 カバー曲"
 date = 2023-01-03
 [taxonomies]
-categories = ["test2"]
+categories = ["other"]
 tags = ["v", "music"]
 +++
 

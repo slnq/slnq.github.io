@@ -2,7 +2,7 @@
 title = "アニメ系 拡散モデル"
 date = 2022-12-29
 [taxonomies]
-categories = ["test2"]
+categories = ["other"]
 tags = ["img-generate"]
 +++
 

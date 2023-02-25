@@ -2,7 +2,7 @@
 title = "iosのyoutube視聴環境"
 date = 2022-12-28
 [taxonomies]
-categories = ["test1"]
+categories = ["other"]
 tags = ["ios", "youtube"]
 +++
 

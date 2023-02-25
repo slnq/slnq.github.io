@@ -1,19 +1,1 @@
 {% extends "base.html" %}
-
-{% block content %}
-<div class="list">
-  <div><div class="headline">{{ term.name }}</div>
-  <table>
-    {% for page in term.pages %}
-      <tr>
-        <td><div class="info">{{ page.date }}</div></td>
-        <td><a class="list-title" href="{{ page.permalink }}">{{ page.title }}</a></td>
-        <td>{% for term in page.taxonomies.categories %}
-          <a class="tag" class="info" href="../{{ term | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>
-        {% endfor %}</td>
-      </tr>
-    {% endfor %}
-  </table>
-  </div>
-</div>
-{% endblock content %}

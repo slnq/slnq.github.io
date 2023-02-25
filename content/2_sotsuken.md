@@ -2,7 +2,7 @@
 title = "電界シミュレーションgpujs"
 date = 2022-12-26
 [taxonomies]
-categories = ["test1"]
+categories = ["tech"]
 tags = ["gpu", "javascript"]
 +++
 

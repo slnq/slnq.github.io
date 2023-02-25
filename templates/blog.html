@@ -1,36 +1,31 @@
 {% extends "base.html" %}
-
 {% block content %}
-<div class="list">
-  <div><div class="headline">記事</div>
-  <table>
-    {% if paginator %}
-        {% set pages = paginator.pages %}
-        {% else %}
-        {% set pages = section.pages %}
-    {% endif %}
+{% if paginator %} {% set pages = paginator.pages %} {% else %} {% set pages = section.pages %} {% endif %}
 
-    {% for page in pages %}
-      <tr>
-        <td><div class="info">{{ page.date }}</div></td>
-        <td><a class="list-title" href="{{ page.permalink }}">{{ page.title }}</a></td>
+<div class="blog-container">
+  <div class="blog">
+    <div>
+      <div class="headline">tech</div>
+      <table> {% for page in pages %} {% if page.taxonomies.categories %} {% if "tech" in page.taxonomies.categories %} <tr>
+          <td><div class="page-date">{{ page.date }}</div></td>
+          <td><a class="page-title" href="{{ page.permalink }}">{{ page.title }}</a></td>
+          <td>{% for term in page.taxonomies.tags %}
+            <a class="page-tag" href="tags/{{ term | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>
+          {% endfor %}</td>
+      </tr> {% endif %}{% endif %} {% endfor %} </table>
+    </div>
+
+    <div>
+      <div class="headline">other</div>
+      <table> {% for page in pages %} {% if page.taxonomies.categories %} {% if "other" in page.taxonomies.categories %} <tr>
+        <td><div class="page-date">{{ page.date }}</div></td>
+        <td><a class="page-title" href="{{ page.permalink }}">{{ page.title }}</a></td>
         <td>{% for term in page.taxonomies.tags %}
-          <a class="tag" class="info" href="tags/{{ term | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>
+          <a class="page-tag" href="tags/{{ term | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>
         {% endfor %}</td>
-        <td>{% if page.taxonomies.categories %}
-          {% if "test1" in page.taxonomies.categories  %}
-        {{page.taxonomies.categories}}true
-        {% else %}
-        {{page.taxonomies.categories}}false
-        {% endif %}
-        
-        {% endif %}</td>
-      </tr>
-
-    {% endfor %}
-  </table>
-
-  
+      </tr> {% endif %} {% endif %} {% endfor %} </table>
+    </div>
   </div>
 </div>
+
 {% endblock content %}

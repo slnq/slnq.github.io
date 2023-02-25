@@ -2,7 +2,7 @@
 title = "ブログを作る zolaで"
 date = 2022-12-25
 [taxonomies]
-categories = ["test1"]
+categories = ["tech"]
 tags = ["zola"]
 +++
 

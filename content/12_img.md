@@ -2,7 +2,7 @@
 title = "所謂ai絵師"
 date = 2023-01-08
 [taxonomies]
-categories = ["test2"]
+categories = ["other"]
 tags = ["img-generate"]
 +++
 

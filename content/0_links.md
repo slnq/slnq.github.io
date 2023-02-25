@@ -2,6 +2,7 @@
 title = "リンクら"
 date = 2222-02-22
 [taxonomies]
+categories = ["other"]
 tags = []
 +++
 

@@ -1,3 +1,5 @@
+{% set tags = get_taxonomy(kind="tags", lang=lang) %}
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -11,25 +13,13 @@
 </head>
 
 <body>
-  <header class="base">
+  <header>
     <div id="title"><a href="{{ config.base_url }}">夏果</a></div>
-
-    <div class="info">
-      {% set tags = get_taxonomy(kind="tags", lang=lang) %}
       {% for term in tags.items %}
       <a class="tag" href="{{ term.permalink | safe }}"><span class="emoji">🔖️</span>{{ term.name }}</a>
       {% endfor %}
-
-      {% set categories = get_taxonomy(kind="categories", lang=lang) %}
-      {% for tern in categories.items %}
-      {% if tern.name == "test1" %}
-      <a class="tag" href="{{ tern.permalink | safe }}"><span class="emoji">🔖️</span>{{ tern.name }}</a>
-      {% endif %}  
-      {% endfor %}
-    </div>
   </header>
-  
-    {% block content %} {% endblock %}
+  {% block content %} {% endblock %}
 </body>
 
 </html>

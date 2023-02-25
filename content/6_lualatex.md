@@ -2,7 +2,7 @@
 title = "lualatexの使い方を考え"
 date = 2022-12-30
 [taxonomies]
-categories = ["test2"]
+categories = ["tech"]
 tags = ["lualatex"]
 +++
 

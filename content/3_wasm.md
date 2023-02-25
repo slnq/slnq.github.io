@@ -2,7 +2,7 @@
 title = "電界シミュレーションwasm"
 date = 2022-12-27
 [taxonomies]
-categories = ["test1"]
+categories = ["tech"]
 tags = ["javascript", "rust", "wasm"]
 +++
 
