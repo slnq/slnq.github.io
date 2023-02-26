@@ -22,7 +22,7 @@ header { text-align: center;
 /* blog.html */
 .blog { display: flex;
         justify-content: space-evenly;}
-@media (max-aspect-ratio: 3/4.1) { .blog { flex-direction: column;
+@media (max-aspect-ratio: 3/4) { .blog { flex-direction: column;
                                                     align-items: flex-start;
                                                     gap: 1.2rem; }
                                             .blog-container { display: flex;
