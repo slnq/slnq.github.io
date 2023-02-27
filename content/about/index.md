@@ -1,6 +1,6 @@
 +++
 title = "自己紹介"
-date = 2020-01-01
+date = 2023-02-26
 template = "blog-page.html"
 [taxonomies]
 categories = []
