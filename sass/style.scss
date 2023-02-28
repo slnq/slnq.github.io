@@ -8,28 +8,28 @@ a { color: $white;
 /* base.html */
 header { text-align: center;
          margin-bottom: 1.2rem; }
-body {margin-bottom: 40vh;}
+body { margin-bottom: 40vh; }
 #title { font-size: 2.2rem;
-    font-family: serif; }
+         font-family: serif; }
 #about { font-size: 1.2rem;
          text-decoration: underline;
          font-family: serif; }
 .tag { display: inline-block;
-       margin-left: 0.4rem;}
+       margin-left: 0.4rem; }
 .emoji { font-size: 0.6rem;
-    color: transparent;
-    text-shadow: 0 0 0 $white;}
+         color: transparent;
+         text-shadow: 0 0 0 $white; }
 
 /* blog.html */
 .blog { display: flex;
         justify-content: space-evenly;}
 @media (orientation: portrait) { .blog { flex-direction: column;
-                                                    align-items: flex-start;
-                                                    gap: 1.2rem; }
-                                            .blog-container { display: flex;
-                                                              justify-content: center; } }
-.headline {font-size: 1.8rem;
-           font-family: serif; }
+                                         align-items: flex-start;
+                                         gap: 1.2rem; }
+                                 .blog-container { display: flex;
+                                                   justify-content: center; } }
+.headline { font-size: 1.8rem;
+            font-family: serif; }
 .page-date { font-size: 0.8rem; }
 .page-title { font-family: serif;
               margin: auto 1rem auto; 
@@ -38,7 +38,7 @@ body {margin-bottom: 40vh;}
 
 /* tag/single.html */
 .single { display: flex;
-    justify-content: space-evenly; }
+          justify-content: space-evenly; }
 
 /* blog-page.html */
 .page-content { a { text-decoration: underline; } 
@@ -54,11 +54,13 @@ body {margin-bottom: 40vh;}
                      font-family: serif; }
                 p { margin: 0.1rem; }
                 ul, ol { margin: 0.1rem; 
-                     padding-left: 1.6rem;}
-                blockquote { p {font-family: serif; }
-                             margin: 0.4rem 4rem; }
-                margin-top: 1.2rem;
-                max-width: 60vmax; }
+                         padding-left: 1.6rem;}
+                blockquote { p { font-family: serif; }
+                                 margin: 0.4rem 4rem; }
+                margin: 1.2rem auto 0 auto;
+                max-width: 90vw; }
 
 /* スマートフォン用 */
-@media (max-aspect-ratio: 3/4) and (-webkit-min-device-pixel-ratio: 2) { html { font-size: 50px; }}
+@media (max-aspect-ratio: 3/4) and (-webkit-min-device-pixel-ratio: 2) { html { font-size: 3rem;
+                                                                                width: 100vw; 
+                                                                                -webkit-text-size-adjust: 100%; }}
