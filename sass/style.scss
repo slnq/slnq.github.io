@@ -53,12 +53,14 @@ body { margin-bottom: 40vh; }
                      font-weight: normal;
                      font-family: serif; }
                 p { margin: 0.1rem; }
-                ul, ol { margin: 0.1rem; 
-                         padding-left: 1.6rem;}
+                ul, ol, table { margin: 0.1rem; 
+                         padding-left: 1.6rem; }
+                thead tr th{ font-weight: normal;
+                             text-align: left; }
                 blockquote { p { font-family: serif; }
                                  margin: 0.4rem 4rem; }
                 margin: 1.2rem auto 0 auto;
-                max-width: 90vw; }
+                max-width: #{"min(90vw, 80vh);"} }
 
 /* スマートフォン用 */
 @media (max-aspect-ratio: 3/4) and (-webkit-min-device-pixel-ratio: 2) { html { font-size: 3rem;
