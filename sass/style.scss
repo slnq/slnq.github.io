@@ -6,6 +6,8 @@ html { background-color: $black;
 html::-webkit-scrollbar { display: none; }
 a { color: $white; 
     text-decoration: none;}
+::selection { background-color: $white;
+              color: $black; }
 
 /* base.html */
 header { text-align: center;
@@ -22,6 +24,8 @@ body { margin-bottom: 40vh; }
 .emoji { font-size: 0.6rem;
          color: transparent;
          text-shadow: 0 0 0 $white; }
+.emoji::selection{ text-shadow: 0 0 0 $black;
+                   color: transparent; }
 
 /* blog.html */
 .blog { display: flex;
