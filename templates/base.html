@@ -15,8 +15,8 @@
 
 <body>
   <header>
-    <div><a id="title" href="{{ config.base_url }}">夏果</a>
-      <a id="about" href="{{ config.base_url }}/about">とは</a></div>
+    <div><a class="about" id="hide">とは</a><a id="title" href="{{ config.base_url }}">夏果</a>
+      <a class="about" href="{{ config.base_url }}/about">とは</a></div>
     {% for term in tags.items %}
       <a class="tag" href="{{ term.permalink | safe }}"><span class="emoji">🔖️</span>{{ term.name }}</a>
     {% endfor %}

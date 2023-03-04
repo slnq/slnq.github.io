@@ -1,7 +1,9 @@
 $black: #454351;
 $white: #DCDCE0;
 html { background-color: $black; 
-       color: $white;}
+       color: $white;
+       scrollbar-width: none; }
+html::-webkit-scrollbar { display: none; }
 a { color: $white; 
     text-decoration: none;}
 
@@ -11,7 +13,8 @@ header { text-align: center;
 body { margin-bottom: 40vh; }
 #title { font-size: 2.2rem;
          font-family: serif; }
-#about { font-size: 1.2rem;
+#hide { visibility: hidden; }
+.about { font-size: 1.2rem;
          text-decoration: underline;
          font-family: serif; }
 .tag { display: inline-block;
