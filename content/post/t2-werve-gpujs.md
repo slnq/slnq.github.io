@@ -1,5 +1,5 @@
 +++
-title = "gpu.jsを使って電界シミュレータを作る"
+title = "gpu.js製 電界シミュレータ"
 date = 2023-02-28
 [taxonomies]
 categories = ["tech"]

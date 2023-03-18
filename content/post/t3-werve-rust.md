@@ -1,5 +1,5 @@
 +++
-title = "電界シミュレータをrust→wasmで改める"
+title = "rust→wasm製 電界シミュレータ"
 date = 2023-03-02
 [taxonomies]
 categories = ["tech"]

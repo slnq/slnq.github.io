@@ -1,5 +1,5 @@
 +++
-title = "zolaで作ったブログをgithub pagesに公開"
+title = "zola製ブログ github pages公開"
 date = 2023-02-27
 [taxonomies]
 categories = ["tech"]

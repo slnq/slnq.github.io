@@ -23,7 +23,8 @@ body { margin-bottom: 40vh; }
        margin-left: 0.4rem; }
 .emoji { font-size: 0.6rem;
          color: transparent;
-         text-shadow: 0 0 0 $white; }
+         text-shadow: 0 0 0 $white;
+         margin-right: 0.1rem; }
 .emoji::selection{ text-shadow: 0 0 0 $black;
                    color: transparent; }
 
@@ -65,7 +66,7 @@ body { margin-bottom: 40vh; }
                 thead tr th{ font-weight: normal;
                              text-align: left; }
                 blockquote { p { font-family: serif; }
-                                 margin: 0.4rem 4rem; }
+                                 margin: 0.4rem #{"min(4vw, 2rem)"}; }
                 margin: 1.2rem auto 0 auto;
                 max-width: #{"min(90vw, 80vh);"} }
 
