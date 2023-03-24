@@ -20,3 +20,4 @@ tags = []
 - [twitter](https://twitter.com/natsuka_sili)
 - [misskey.io](https://misskey.io/@sq)
 - [github](https://github.com/natsuka-sili)
+- [gist](https://gist.github.com/natsuka-sili)
