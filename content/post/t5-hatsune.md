@@ -4,6 +4,7 @@ date = 2023-03-17
 [taxonomies]
 categories = ["tech"]
 tags = ["stable-diffusion"]
+links = ["https://www.instagram.com/miku_ai_art/"]
 +++
 
 # 現状

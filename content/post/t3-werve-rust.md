@@ -1,9 +1,10 @@
 +++
-title = "rust→wasm製 電界シミュレータ"
+title = "rust→wasm電界シミュレータ"
 date = 2023-03-02
 [taxonomies]
 categories = ["tech"]
 tags = ["rust", "wasm", "github-pages"]
+links = ["https://natsuka-sili.github.io/werve-wasm/"]
 +++
 
 # 心意気

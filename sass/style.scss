@@ -39,6 +39,7 @@ body { margin-bottom: 40vh; }
 .headline { font-size: 1.8rem;
             font-family: serif; }
 .page-date { font-size: 0.8rem; }
+.link { font-size: 0.8rem; }
 .page-title { font-family: serif;
               margin: auto 1rem auto; 
               font-family: serif; }
@@ -49,6 +50,8 @@ body { margin-bottom: 40vh; }
           justify-content: space-evenly; }
 
 /* blog-page.html */
+.page-link { font-size: 1.2rem;
+			 vertical-align: text-top; }
 .page-content { a { text-decoration: underline; } 
                 h1 { margin: 0.8rem auto 0.1rem;
                      text-decoration: none;

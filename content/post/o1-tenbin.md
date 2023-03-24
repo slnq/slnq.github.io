@@ -4,6 +4,7 @@ date = 2023-02-26
 [taxonomies]
 categories = ["other"]
 tags = ["v"]
+links = []
 +++
 
 [【新生活応援！】社会の厳しさをお伝えします【Vtuber】 41:01～](https://www.youtube.com/live/h7KwvC8hBfM?feature=share&t=2461)

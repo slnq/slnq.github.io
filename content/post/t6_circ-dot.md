@@ -4,6 +4,7 @@ date = 2023-03-24
 [taxonomies]
 categories = ["tech"]
 tags = ["javascript", "firebase"]
+links = ["https://circ-do.web.app"]
 +++
 
 # aiに書いてもらうという流行り

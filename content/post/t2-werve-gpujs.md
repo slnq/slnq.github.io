@@ -1,9 +1,10 @@
 +++
-title = "gpu.js製 電界シミュレータ"
+title = "gpu.js電界シミュレータ"
 date = 2023-02-28
 [taxonomies]
 categories = ["tech"]
 tags = ["javascript", "github-pages"]
+links = ["https://natsuka-sili.github.io/werve-gpujs/"]
 +++
 
 # 心意気

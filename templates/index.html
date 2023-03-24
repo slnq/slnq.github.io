@@ -9,7 +9,9 @@
       <div class="headline">制作物</div>
       <table> {% for page in pages %} {% if page.taxonomies.categories %} {% if "tech" in page.taxonomies.categories %} <tr>
           <td><div class="page-date">{{ page.date }}</div></td>
-          <td><a class="page-title" href="{{ page.permalink }}">{{ page.title }}</a></td>
+          <td><span class="page-title" >
+			{% if page.taxonomies.links %}<a class="link" href="{{ page.taxonomies.links[0] }}" target="_blank" rel="noopener noreferrer">⧉</a>{% endif %}
+			<a href="{{ page.permalink }}">{{ page.title }}</a></span></td>
           <td>{% for term in page.taxonomies.tags %}
             <a class="page-tag" href="tags/{{ term | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>
           {% endfor %}</td>
@@ -20,7 +22,9 @@
       <div class="headline">その他</div>
       <table> {% for page in pages %} {% if page.taxonomies.categories %} {% if "other" in page.taxonomies.categories %} <tr>
         <td><div class="page-date">{{ page.date }}</div></td>
-        <td><a class="page-title" href="{{ page.permalink }}">{{ page.title }}</a></td>
+        <td><span class="page-title" >
+			{% if page.taxonomies.links %}<a class="link" href="{{ page.taxonomies.links[0] }}" target="_blank" rel="noopener noreferrer">⧉</a>{% endif %}
+			<a href="{{ page.permalink }}">{{ page.title }}</a></span></td>
         <td>{% for term in page.taxonomies.tags %}
           <a class="page-tag" href="tags/{{ term | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>
         {% endfor %}</td>

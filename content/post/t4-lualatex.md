@@ -4,6 +4,7 @@ date = 2023-03-04
 [taxonomies]
 categories = ["tech"]
 tags = ["lua", "latex"]
+links = ["https://github.com/natsuka-sili/lualatex-scripting"]
 +++
 
 <https://github.com/natsuka-sili/lualatex-scripting>

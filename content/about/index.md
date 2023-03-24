@@ -5,6 +5,7 @@ template = "blog-page.html"
 [taxonomies]
 categories = []
 tags = []
+links = []
 +++
 
 # 夏果しぃ

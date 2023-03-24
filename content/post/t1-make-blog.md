@@ -1,9 +1,10 @@
 +++
-title = "zola製ブログ github pages公開"
+title = "zolaブログgithub pages公開"
 date = 2023-02-27
 [taxonomies]
 categories = ["tech"]
 tags = ["zola", "github-pages"]
+links = ["https://natsuka-sili.github.io"]
 +++
 
 # zola

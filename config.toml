@@ -10,7 +10,8 @@ build_search_index = false
 # set taxonomies vaild
 taxonomies = [
   { name = "categories", feed = true },
-  { name = "tags", feed = true }
+  { name = "tags", feed = true },
+  { name = "links", feed = false }
 ]
 
 # When set to "true", the generated HTML files are minified.

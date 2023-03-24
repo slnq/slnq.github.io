@@ -4,6 +4,7 @@ date = 2023-03-03
 [taxonomies]
 categories = ["other"]
 tags = ["anime", "movie"]
+links = []
 +++
 
 批評などは出来る気がしないので気になった点と好きな点を｡
