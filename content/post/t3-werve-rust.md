@@ -43,7 +43,9 @@ links = ["https://natsuka-sili.github.io/werve-wasm/"]
 上述にある表示に適すような配列を共有メモリーから表示しています｡[gpu.js版](https://github.com/natsuka-sili/werve-gpujs)にあったベクトル表示を未だに作っていないためcanvasは1枚のみでの実装です｡
 
 ## css
-何も無いのでスマートフォンから使おうとすると電荷を動かす時にスクロールされるなど使いにくいと思います｡pc(2060)では[wasm版](https://github.com/natsuka-sili/werve-wasm)の方がフレームレートが出たのですがスマートフォン(iphone8)では[gpu.js版](https://github.com/natsuka-sili/werve-gpujs)の方が出たのでcssを作る気が消えたと記憶しています｡しかしiphone11で試したところ[wasm版](https://github.com/natsuka-sili/werve-wasm)もかなり良く動いたのでやる気によってはcssやベクトル表示機能を作ると思います｡
+~~何も無いのでスマートフォンから使おうとすると電荷を動かす時にスクロールされるなど使いにくいと思います｡pc(2060)では[wasm版](https://github.com/natsuka-sili/werve-wasm)の方がフレームレートが出たのですがスマートフォン(iphone8)では[gpu.js版](https://github.com/natsuka-sili/werve-gpujs)の方が出たのでcssを作る気が消えたと記憶しています｡しかしiphone11で試したところ[wasm版](https://github.com/natsuka-sili/werve-wasm)もかなり良く動いたのでやる気によってはcssやベクトル表示機能を作ると思います｡~~
+
+[chat gptに良い感じのものを作ってもらいました｡](https://poe.com/s/XGTlkiRiyR4deC8lfmIx)
 
 # デプロイ
 [webpack](https://webpack.js.org/)を用いてローカルで生成したものを[github pages](https://docs.github.com/ja/pages/getting-started-with-github-pages/about-github-pages)で`/docs`のデプロイしています｡
