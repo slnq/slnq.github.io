@@ -39,6 +39,8 @@ links = ["https://natsuka-sili.github.io/werve-wasm/"]
 ## rust→wasm
 入力と表示以外の全てを[rust](https://www.rust-lang.org/ja)から変換した[wasm](https://webassembly.org)で実行しています｡[wgpu](https://wgpu.rs)や[webgpu](https://www.w3.org/TR/webgpu/)は仕様が変わり続けているので使っていません｡表示に適すような配列への変換もこっちで行っています｡
 
+(追記)スマホで触ってみて気がついたのですがスワイプだとcontrol(move)が使えないのですね｡[gpujsで作った時](./t2-werve-gpujs)にどうやって解決したのか記憶が無いしコードを読むのも辛いので取り敢えず放置します｡やる気によっては直すかもしれません｡
+
 ## canvas
 上述にある表示に適すような配列を共有メモリーから表示しています｡[gpu.js版](https://github.com/natsuka-sili/werve-gpujs)にあったベクトル表示を未だに作っていないためcanvasは1枚のみでの実装です｡
 
