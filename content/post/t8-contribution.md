@@ -4,10 +4,10 @@ date = 2023-04-02
 [taxonomies]
 categories = ["tech"]
 tags = ["javascript", "github-pages"]
-links = ["https://natsuka-sili.github.io/tw-con/"]
+links = ["https://gist-4d0c6.web.app/like_contribution.html"]
 +++
 
-[リポジトリ](https://github.com/natsuka-sili/tw-con)
+[コード](https://gist.github.com/natsuka-sili/5c6407c9173c67b2222fa837cd9ce735)
 
 # githubのcontribution 通称 草
 緑色だからか草と称されている`N contributions in the last year`のことです｡
@@ -22,7 +22,7 @@ githubのプロフィールページから見ることが出来ます｡
 1ヶ月ほどは使えるようですが最後まで作るかは微妙です｡
 
 # 現状のもの
-<https://natsuka-sili.github.io/tw-con/>
+<https://gist-4d0c6.web.app/like_contribution.html>
 
 こんな感じです｡DOM操作を大量に行っているのですが特に重くなく実装できるのですね｡
 

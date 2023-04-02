@@ -4,7 +4,7 @@ date = 2023-03-24
 [taxonomies]
 categories = ["tech"]
 tags = ["javascript", "firebase"]
-links = ["https://circ-do.web.app"]
+links = ["https://gist-4d0c6.web.app/circle_dot.html"]
 +++
 
 # aiに書いてもらうという流行り
@@ -16,7 +16,7 @@ github copilot xでどこまで状況が変わるか心底楽しみです｡
 
 様子は上の通り｡図書館学が好きな人はstep-by-stepをつければ良いのにとでも思うのでしょうか｡
 
-<https://circ-do.web.app>
+<https://gist-4d0c6.web.app/circle_dot.html>
 
 完成したサイトは上のもの｡スマホで使えるようにhtmlとcssを多少触りましたが他はchat gptの通りです｡
 確かに良くできていますね｡元となるコードがあったのかは調べていないのでわかりませんが｡
