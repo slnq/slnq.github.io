@@ -1,0 +1,93 @@
++++
+title = "Zolaでブログを作る"
+date = 2023-06-26
+[taxonomies]
+categories = ["tech"]
+tags = ["Web", "Zola"]
+links = ["https://natsuka-sili.github.io"]
++++
+
+# [Zola](https://www.getzola.org)
+[Hugo](https://gohugo.io/)や[Gatsby](https://www.gatsbyjs.com/)と同じく[静的サイトジェネレーター(SSG)](https://en.wikipedia.org/wiki/Static_site_generator)の一種．
+言語は[Rust](https://www.rust-lang.org/ja)で書かれているため，buildが早いという特徴がある．
+とはいえ[Rust](https://www.rust-lang.org/ja)の知識は必要なく[Tera](https://tera.netlify.app)について知っていると少し書きやすい程度でブログを作る程度なら簡単に扱える．
+
+# ブログを作る
+[ドキュメント](https://www.getzola.org/documentation/getting-started/overview/)に仕様などが詳しく書かれているため，これを見ていけば最低限のブログは作れる．
+それでもわからない点は有志が作った[テーマ](https://www.getzola.org/themes/)のコードを見ることで大抵は解決する．
+作ったブログは[これ](https://natsuka-sili.github.io)．
+
+## デザイン
+軽量かつシンプルでありトップページから全てのページにアクセスできるように作った．
+特にページの要素を示すタグの一覧を見るために別のページにアクセスする労力を嫌い，タグの一覧をトップページに載せる仕様は絶対だった．
+また，技術的な内容と日記などの文章を主体とする記事の両方を書きたかったので2つのカテゴリに分けられるようにした．
+レイアウトについては[日光室](http://saqum.com/index.html)を参考にしている．
+タグに用いている記号については[4KBのJavaScriptだけで動く可愛いアクションゲームを作ったのでソースと解説](https://qiita.com/yuneco/items/444abd3f40d53ce7d078)にて紹介されている手法を用いた．
+
+## ディレクトリ構成
+[templates](https://github.com/natsuka-sili/natsuka-sili.github.io/tree/main/templates)ディレクトリにMarkdownからレンダリングされる元となるHTMLが配置されている．
+全てのページで使われているヘッダー部分は[base.html](https://github.com/natsuka-sili/natsuka-sili.github.io/blob/main/templates/base.html)，トップページは[index.html](https://github.com/natsuka-sili/natsuka-sili.github.io/blob/main/templates/index.html)，記事は[blog-pages.html](https://github.com/natsuka-sili/natsuka-sili.github.io/blob/main/templates/blog-page.html)を使っている．
+また，[sass](https://github.com/natsuka-sili/natsuka-sili.github.io/tree/main/sass)にはスタイルシートが，[content](https://github.com/natsuka-sili/natsuka-sili.github.io/tree/main/content)には書いたMarkdownが配置されている．
+
+## Taxonomies
+[Taxonomies](https://www.getzola.org/documentation/templates/taxonomies/)の実装に躓いたのでメモを残す．
+特に既存の[テーマ](https://www.getzola.org/themes/)ではタグやカテゴリの一覧を単独のページにしており，私の希望であった
+- タグの一覧をトップページに載せる
+- トップページで投稿を2つのカテゴリに分ける
+
+という仕様はコピー・アンド・ペーストでは実装できなかった．
+
+1つ目については[templates](https://github.com/natsuka-sili/natsuka-sili.github.io/tree/main/templates)ディレクトリ内に[tags](https://github.com/natsuka-sili/natsuka-sili.github.io/tree/main/templates/tags)を作成し[Taxonomies](https://www.getzola.org/documentation/templates/taxonomies/)を実装し[base.html](https://github.com/natsuka-sili/natsuka-sili.github.io/blob/main/templates/base.html)に
+```
+{% set tags = get_taxonomy(kind="tags", lang=lang) %}
+{% for term in tags.items %}
+  {{ term.name }}
+{% endfor %}
+```
+と記述することで実現できた．コードは簡単のため[tags](https://github.com/natsuka-sili/natsuka-sili.github.io/tree/main/templates/tags)に関係ない部分は省略している．
+[`get_taxonomy`](https://www.getzola.org/documentation/templates/overview/#get-taxonomy)で[tags](https://github.com/natsuka-sili/natsuka-sili.github.io/tree/main/templates/tags)を取得し`tags.items`の全てを表示している．
+
+2つ目については1つ目と同様に[categories](https://github.com/natsuka-sili/natsuka-sili.github.io/tree/main/templates/categories)を作成し[index.html](https://github.com/natsuka-sili/natsuka-sili.github.io/blob/main/templates/index.html)に
+```
+{% set section = get_section(path="post/_index.md") %}
+{% if paginator %} {% set pages = paginator.pages %} {% else %} {% set pages = section.pages %} {% endif %}
+{% for page in pages %} {% if page.taxonomies.categories %} {% if "tech" in page.taxonomies.categories %}
+      {{ page.title }}
+{% endif %}{% endif %} {% endfor %}
+```
+と記述することで実現できた．コードは簡単のため[categories](https://github.com/natsuka-sili/natsuka-sili.github.io/tree/main/templates/categories)に関係ない部分は省略している．
+`paginator.pages`や`section.pages`で[categories](https://github.com/natsuka-sili/natsuka-sili.github.io/tree/main/templates/categories)を取得し`page.taxonomies.categories`が存在しており`"tech"`が含まれている場合に`page.title`を表示することで2つのカテゴリに分けられている．[Tera](https://tera.netlify.app)の仕様で
+```
+{% if page.taxonomies.categories == "tech" %}
+```
+とは書けない．
+
+## Zennへの転載
+この記事もだが技術系のものについてはZennにも投稿したいと考え，Markdownのレンダリングを整えるために
+```
+{{ page.content |
+   linebreaksbr |
+   replace(from="</p><br><p>", to="</p><p class='br'></p><p>") |
+   replace(from="<br><a", to="<br \><a") |
+   replace(from="<br><c", to="<br \><c") |
+   replace(from="<br><", to="<") |
+   safe}}
+```
+と書いている．
+`linebreaksbr`でMarkdownの改行を`<br>`にし，```replace(from="</p><br><p>", to="</p><p class='br'></p><p>")```
+で二連続の改行を使えるようにし，`replace(from="<br><a", to="<br \><a")`などでaタグやcodeタグの改行を消さないようにした後で`replace(from="<br><", to="<")`で改行しすぎる事を防いでいる．もっと賢いやり方はあるのだろうが頭が悪いので力技を使っている．
+これで[Zenn](https://zenn.dev)とだいたい同じ感じでMarkdownを良い具合にHTMLに変換できていると思う．
+
+
+# デプロイ
+今回は[GitHub Pages](https://docs.github.com/ja/pages/getting-started-with-github-pages/about-github-pages)を使った｡
+[公式ドキュメント](https://www.getzola.org/documentation/deployment/github-pages/)に沿えば良いのが,知識不足と英語の苦手が故にまごついた部分があったので以下に手順を示す．
+1. user icon>[Settings](https://github.com/settings/profile)>[Developer setting](https://github.com/settings/apps)>[Personal access tokens (classic)](https://github.com/settings/tokens)にて Generate new token(classic) を行い public_repo のみに印を付け発行されたtokenをコピーする．
+1. repositry>Settings>Secrets>ActionsにてNameにTOKENと書きSecretには先程コピーしたtokenをペーストする．
+1. /config.tomlをbase_url="https://'user_name'.github.io/'repository_name'"と書き換える．
+1. git pushした後でrepositry>Settings>Pages>SourceがDeploy from a branchでありrepositry>Settings>Pages>Branchがgh-pages /(root)になっている事を確認する．
+
+# 所感
+かなり良いブログができたなと思っている．
+特に色彩とレイアウトはかなり気に入っているが，まだ改善の余地はあると感じている．
+最も改善するべき点はコードブロックなのだろうが，具体的な仕様が思いついていない．

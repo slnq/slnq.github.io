@@ -25,3 +25,5 @@ links = []
 - [Twitter](https://twitter.com/natsuka_sili)
 - [GitHub](https://github.com/natsuka-sili)
 - [Gist](https://gist.github.com/natsuka-sili)
+- [Zenn](https://zenn.dev/natsuka_sili)
+- [note](https://note.com/natsuka_sili)
