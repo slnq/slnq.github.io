@@ -10,7 +10,13 @@
     <span class="page-tag"> {% for term in page.taxonomies.tags %}
       <a class="tag" href="../../tags/{{ term | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>
     {% endfor %} </span>
-    <div class="page-content">{{ page.content | safe }}</div>
+    <div class="page-content">{{ page.content |
+								 linebreaksbr |
+								 replace(from="</p><br><p>", to="</p><p class='br'></p><p>") |
+								 replace(from="<br><a", to="<br \><a") |
+								 replace(from="<br><c", to="<br \><c") |
+								 replace(from="<br><", to="<") |
+								 safe}}</div>
   </div>
 </div>
 

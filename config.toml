@@ -21,6 +21,7 @@ minify_html = true
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = false
+hard_line_breaks = true
 
 [extra]
 # Put all your custom variables here

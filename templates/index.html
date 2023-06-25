@@ -6,7 +6,7 @@
 <div class="blog-container">
   <div class="blog">
     <div>
-      <div class="headline">制作物</div>
+      <div class="headline">理性</div>
       <table> {% for page in pages %} {% if page.taxonomies.categories %} {% if "tech" in page.taxonomies.categories %} <tr>
           <td><div class="page-date">{{ page.date }}</div></td>
           <td><span class="page-title" >
@@ -19,7 +19,7 @@
     </div>
 
     <div>
-      <div class="headline">その他</div>
+      <div class="headline">感性</div>
       <table> {% for page in pages %} {% if page.taxonomies.categories %} {% if "other" in page.taxonomies.categories %} <tr>
         <td><div class="page-date">{{ page.date }}</div></td>
         <td><span class="page-title" >
