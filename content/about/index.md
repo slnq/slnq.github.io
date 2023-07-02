@@ -1,7 +1,7 @@
 +++
 title = "自己紹介"
 date = 2023-06-14
-template = "blog-page.html"
+template = "about.html"
 [taxonomies]
 categories = []
 tags = []

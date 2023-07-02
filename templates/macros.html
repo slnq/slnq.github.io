@@ -1,0 +1,159 @@
+{% macro years(dates) %}
+	{% set years = [] %}
+	{% for i in dates %}
+		{% if years is not containing(i | date(format="%Y"))%}
+			{% set_global years = years | concat(with=i | date(format="%Y")) %}
+		{% endif %}
+	{% endfor %}
+	{% set years = years | sort %}
+	{{ years | join(sep=",") | spaceless }}
+{% endmacro %}
+
+{% macro dow2num(dow) %}
+	{% set num = 0 %}
+	{% if dow == "Monday" %}
+	  {% set_global num = 1 %}
+	{% elif dow == "Tuesday" %}
+		{% set_global num = 2 %}
+	{% elif dow == "Wednesday" %}
+		{% set_global num = 3 %}
+	{% elif dow == "Thursday" %}
+		{% set_global num = 4 %}
+	{% elif dow == "Friday" %}
+		{% set_global num = 5 %}
+	{% elif dow == "Saturday" %}
+		{% set_global num = 6 %}
+	{% endif %}
+	{{ num }}
+{% endmacro %}
+
+{% macro getWeeks(year) %}
+	{% set dates = [] %}
+	{% set dow = macros::dow2num(dow=year ~ "-01-01" | date(format="%A")) | int %}
+	{% if dow > 4 %}{% set dow = 6 %}{% else %}{% set dow = 5 %}{% endif %}
+	{% set_global dates = dates | concat(with=dow) %}
+	{% set_global dates = dates | concat(with=4 | int) %}
+	{% for month in range(start=3, end=13) %}
+	  {% if month < 10 %}{% set dow = macros::dow2num(dow=year ~ "-0" ~ month ~ "-01" | date(format="%A")) | int %}{% else %}{% set dow = macros::dow2num(dow=year ~ "-" ~ month ~ "-01" | date(format="%A")) | int %}{% endif %}
+		{% if month == 5 or month == 7 or month == 8 or month == 10 or month == 12 %}
+		  {% if dow > 4 or dow == 0 %}{% set dow = 5 %}{% else %}{% set dow = 4 %}{% endif %}
+		{% else %}
+		  {% if dow > 5 or dow == 0 %}{% set dow = 5 %}{% else %}{% set dow = 4 %}{% endif %}
+		{% endif %}
+		{% set_global dates = dates | concat(with=dow) %}
+	{% endfor %}
+	{{ dates | join(sep=",") | spaceless }}
+{% endmacro %}
+
+{% macro last_day(year, month) %}
+	{% if month == 2 %}
+		{% if year % 4 == 0 %}
+			{% if year % 100 != 0 or year % 400 == 0%}{{ 29 }}{% else %}{{ 28 }}{% endif %}
+		{%else%}
+			{{28}}
+		{% endif %}
+	{% elif month == 4 or month == 6 or month == 9 or month == 11 %}{{ 30 }}
+	{% else %}{{ 31 }}{% endif %}
+{% endmacro %}
+
+{% macro get_date_on_weekday(year, weekday) %}
+	{% set dates = [] %}
+	{% for j in range(start=1, end=13) %}
+		{% if j < 10 %}{% set_global date = year ~ "-0" ~ j ~ "-01" %}
+		{% else %}{% set_global date = year ~ "-" ~ j ~ "-01" %}{% endif %}
+		{% set_global date_int = 1 %}
+		{% for i in range(start=2, end=8) %}
+			{% set_global dow = macros::dow2num(dow=date | date(format="%A")) | int %}
+			{% if dow == weekday %}{% break %}{% endif %}
+			{% if j < 10 %}{% set_global date = year ~ "-0" ~ j ~ "-0" ~ i %}
+			{% else %}{% set_global date = year ~ "-" ~ j ~ "-0" ~ i %}{% endif %}
+			{% set_global date_int = i %}
+		{% endfor %}
+		{% set last_day = macros::last_day(year=year, month=j) | int %}
+		{% for i in range(end=5) %}
+			{% set_global date_ = date_int + i * 7 %}
+			{% if date_ <= last_day %}
+				{% if j < 10 %}
+					{% if date_ < 10 %}{% set_global dates = dates | concat(with=year ~ "-0" ~ j ~ "-0" ~ date_) %}
+					{% else %}{% set_global dates = dates | concat(with=year ~ "-0" ~ j ~ "-" ~ date_) %}{% endif %}
+				{% else %}
+					{% if date_ < 10 %}{% set_global dates = dates | concat(with=year ~ "-" ~ j ~ "-0" ~ date_) %}
+					{% else %}{% set_global dates = dates | concat(with=year ~ "-" ~ j ~ "-" ~ date_) %}{% endif %}
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+	{% endfor %}
+  {{ dates | join(sep=",") | spaceless }}
+{% endmacro %}
+
+{% macro display_td(year, dow, dates, titles)%}
+{% set dow_first = macros::dow2num(dow=year ~ '-01-01' | date(format="%A")) | int %}
+{% set dow1 = macros::dow2num(dow=dow | nth(n=0) | date(format="%A")) | int %}
+{% if dow1 < dow_first %}<td class='amt'></td>{% endif %}
+{% for i in dow %}
+					{% set_global k = 0 %}{% set_global l = 1 %}
+					{% for j in dates %}
+						{% if i == j %}{% set_global l = 0 %}<td class='amt'><a aria-label="{{titles | nth(n=k)}}" href="../post/{{ j | replace(from="-", to="")}}"></a></td>{% endif %}
+						{% set_global k = k + 1 %}
+					{% endfor %}
+					{% if l == 1 %}<td></td>{% endif %}
+				{% endfor %}
+{% endmacro %}
+
+{% macro main(year, dates, titles)%}
+	{% set month_colspan = macros::getWeeks(year=year) | split(pat=',') %}
+	{% set sun = macros::get_date_on_weekday(year=year, weekday=0)  | split(pat=',')%}
+	{% set mon = macros::get_date_on_weekday(year=year, weekday=1)  | split(pat=',')%}
+	{% set tue = macros::get_date_on_weekday(year=year, weekday=2)  | split(pat=',')%}
+	{% set wed = macros::get_date_on_weekday(year=year, weekday=3)  | split(pat=',')%}
+	{% set thu = macros::get_date_on_weekday(year=year, weekday=4)  | split(pat=',')%}
+	{% set fri = macros::get_date_on_weekday(year=year, weekday=5)  | split(pat=',')%}
+	{% set sat = macros::get_date_on_weekday(year=year, weekday=6)  | split(pat=',')%}
+		<table>
+			<tbody id="test">
+				<tr>
+					<th></th>
+					<th colspan="{{ month_colspan | nth(n=0) | trim }}">Jan</th>
+					<th colspan="{{ month_colspan | nth(n=1) }}">Feb</th>
+					<th colspan="{{ month_colspan | nth(n=2) }}">Mar</th>
+					<th colspan="{{ month_colspan | nth(n=3) }}">Apr</th>
+					<th colspan="{{ month_colspan | nth(n=4) }}">May</th>
+					<th colspan="{{ month_colspan | nth(n=5) }}">Jun</th>
+					<th colspan="{{ month_colspan | nth(n=6) }}">Jul</th>
+					<th colspan="{{ month_colspan | nth(n=7) }}">Aug</th>
+					<th colspan="{{ month_colspan | nth(n=8) }}">Sep</th>
+					<th colspan="{{ month_colspan | nth(n=9) }}">Oct</th>
+					<th colspan="{{ month_colspan | nth(n=10) }}">Nov</th>
+					<th colspan="{{ month_colspan | nth(n=11) }}">Dec</th>
+				</tr>
+				<tr>
+					<th></th>
+					{{ macros::display_td(year=year, dow=sun, dates=dates, titles=titles) }}
+				</tr>
+				<tr>
+					<th>Mon</th>
+					{{ macros::display_td(year=year, dow=mon, dates=dates, titles=titles) }}
+				</tr>
+				<tr>
+					<th></th>
+					{{ macros::display_td(year=year, dow=tue, dates=dates, titles=titles) }}
+				</tr>
+				<tr>
+					<th>Wed</th>
+					{{ macros::display_td(year=year, dow=wed, dates=dates, titles=titles) }}
+				</tr>
+				<tr>
+					<th></th>
+					{{ macros::display_td(year=year, dow=thu, dates=dates, titles=titles) }}
+				</tr>
+				<tr>
+					<th>Fri</th>
+					{{ macros::display_td(year=year, dow=fri, dates=dates, titles=titles) }}
+				</tr>
+				<tr>
+					<th></th>
+					{{ macros::display_td(year=year, dow=sat, dates=dates, titles=titles) }}
+				</tr>
+			</tbody>
+		</table>
+{% endmacro %}
