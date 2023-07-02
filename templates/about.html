@@ -39,40 +39,21 @@
 		GitHubのコントリビューションを模倣した更新履歴．
 		実装については<a href="../post/20230702">GitHubのContributionを模倣</a>にある．
 		{%for year in years | split(pat=',') %}
-		    <h2 style=""> {{ year }} </h2>
-			{{ macros::main(year=year | int, dates=dates, titles=titles)}}
+		    <h2> {{ year }} </h2>
+			<div style="overflow-x: auto;">{{ macros::main(year=year | int, dates=dates, titles=titles)}}</div>
 		{% endfor %}
 	</div>
   </div>
 </div>
 
 <style>
-	.twrap {
-		overflow-x: auto;
-	}
-
-	#years span,
-	td span,
-	.sronly {
-	  position: absolute;
-	  top: auto;
-	  overflow: hidden;
-	  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
-	  clip: rect(1px, 1px, 1px, 1px);
-	  width: 1px;
-	  height: 1px;
-	  white-space: nowrap;
-	}
-	
 	table {
+	  margin-top: 0!important;
+	  margin-bottom: 0!important;
+	  padding-bottom: 10px;
 	  font-size: 65%;
 	  border-collapse: m09yarate;
 	  border-spacing: 0.2em 0;
-	}
-	
-	caption {
-	  text-align: left;
-	  font-size: 140%;
 	}
 	
 	th {
@@ -112,12 +93,6 @@
 	  text-m12yoration: none;
 	}
 	
-	td a:hover,
-	td a:focus {
-	  text-m12yoration: none;
-	  outline: 1px solid #454351;
-	}
-	
 	td.amt a {
 	  background-color: #DCDCE0;
 	}
@@ -127,14 +102,14 @@
 	  position: absolute;
 	  display: block;
 	  z-index: 1;
-	  bottom: 1.5em;
-	  left: -1em;
-	  width: 12em;
+	  bottom: -0.2em;
+	  left: 1.5em;
+	  white-space: nowrap;
+	  width: auto;
 	  max-width: 57em;
 	  padding: 0.5em 0.75em;
 	  border: 0.05em solid #DCDCE0;
 	  border-radius: 0.2em;
-	  box-shadow: 0.15em 0.15em 0.5em #454351;
 	  content: attr(aria-label);
 	  background-color: #454351;
 	  color: #DCDCE0;
@@ -146,35 +121,6 @@
 	td[class^="amt"]:nth-child(n + 45) a:hover::before {
 	  left: -12em;
 	}
-	
-	/* Windows High Contrast Mode Support */
-	@media screen and (-ms-high-contrast: active) {
-	  td.amta a,
-	  td.amtb a,
-	  td.amtc a,
-	  td.amtd a {
-		background-color: Highlight;
-	  }
-	}
-	
-	/* The animation */
-	
-	@keyframes TOOLTIP {
-	  from {
-		bottom: 0.5em;
-		background-color: #454351;
-		border: 0.05em solid #454351;
-		color: #454351;
-		box-shadow: 0 0 0 #454351;
-	  }
-	  to {
-		bottom: 1.5em;
-		background-color: #454351;
-		border: 0.05em solid #DCDCE0;
-		color: #DCDCE0;
-		box-shadow: 0.15em 0.15em 0.5em #454351;
-	  }
-	}
-	</style>
+</style>
 
 {% endblock content %}
