@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#454351">
   <meta name="viewport" content="width=device-width,  initial-scale=0.1">
   <link rel="stylesheet" type="text/css" href="{{ get_url(path='style.css', trailing_slash=false) | safe }}">
+  <meta name="description" content="夏">
   <link rel="icon" href="{{ get_url(path='f.ico', trailing_slash=false) | safe }}">
   <meta charset="utf-8">
   <meta property="og:site_name" content="夏果" />
@@ -18,7 +19,7 @@
 
 <body>
   <header>
-    <div><a class="about" id="hide">とは</a><a id="title" href="{{ config.base_url }}">夏果</a>
+    <div><span class="about" id="hide">とは</span><a id="title" href="{{ config.base_url }}">夏果</a>
       <a class="about" href="{{ config.base_url }}/about">とは</a></div>
     {% for term in tags.items %}
       <a class="tag" href="{{ term.permalink | safe }}"><span class="emoji">🔖️</span>{{ term.name }}</a>
