@@ -9,7 +9,7 @@
 		{% if page.taxonomies.links %}<a class="link" href="{{ page.taxonomies.links[0] }}" target="_blank" rel="noopener noreferrer">⧉</a>{% endif %}
 		<a href="{{ page.permalink }}">{{ page.title }}</a></span></td>
     <td>{% for term in page.taxonomies.tags %}
-      <a class="page-tag" href="../{{ term | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>
+      <a class="page-tag" href="../{{ term | lower | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>
     {% endfor %}</td>
   </tr> {% endfor %} </table>
 </div>
