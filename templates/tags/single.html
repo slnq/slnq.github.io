@@ -4,7 +4,7 @@
 <div class="single">
   <div><div class="headline">{{ term.name }}</div>
   <table>{% for page in term.pages %} <tr>
-    <td><div class="page-date">{{ page.date }}</div></td>
+    <td><div class="page-date">{{ page.date | replace(from="-", to=".") }}</div></td>
     <td><span class="page-title" >
 		{% if page.taxonomies.links %}<a class="link" href="{{ page.taxonomies.links[0] }}" target="_blank" rel="noopener noreferrer">⧉</a>{% endif %}
 		<a href="{{ page.permalink }}">{{ page.title }}</a></span></td>

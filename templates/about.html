@@ -24,7 +24,7 @@
     <div class="headline">{{ page.title }}
 		{% if page.taxonomies.links %}<a class="page-link" href="{{ page.taxonomies.links[0] }}" target="_blank" rel="noopener noreferrer">⧉</a>{% endif %}
 	</div>
-    <span class="page-date">{{ page.date }}</span>
+    <span class="page-date">{{ page.date | replace(from="-", to=".") }}</span>
     <span class="page-tag"> {% for term in page.taxonomies.tags %}
       <a class="tag" href="../../tags/{{ term | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>
     {% endfor %} </span>

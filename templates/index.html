@@ -10,7 +10,7 @@
     <div>
       <div class="headline"><a href="https://zenn.dev/natsuka_sili">製作</a></div>
       <table> {% for page in pages %} {% if page.taxonomies.categories %} {% if "tech" in page.taxonomies.categories %} <tr>
-          <td><div class="page-date">{{ page.date }}</div></td>
+          <td><div class="page-date">{{ page.date | replace(from="-", to=".") }}</div></td>
           <td><span class="page-title" >
 			{% if page.taxonomies.links %}<a class="link" href="{{ page.taxonomies.links[0] }}" target="_blank" rel="noopener noreferrer">⧉</a>{% endif %}
 			<a href="{{ page.permalink }}">{{ page.title }}</a></span></td>
@@ -23,7 +23,7 @@
     <div>
       <div class="headline"><a href="https://note.com/natsuka_sili/">日常</a></div>
       <table> {% for page in pages %} {% if page.taxonomies.categories %} {% if "other" in page.taxonomies.categories %} <tr>
-        <td><div class="page-date">{{ page.date }}</div></td>
+        <td><div class="page-date">{{ page.date | replace(from="-", to=".") }}</div></td>
         <td><span class="page-title" >
 			{% if page.taxonomies.links %}<a class="link" href="{{ page.taxonomies.links[0] }}" target="_blank" rel="noopener noreferrer">⧉</a>{% endif %}
 			<a href="{{ page.permalink }}">{{ page.title }}</a></span></td>
