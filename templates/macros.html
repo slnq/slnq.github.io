@@ -93,7 +93,7 @@
 {% for i in dow %}
 					{% set_global k = 0 %}{% set_global l = 1 %}
 					{% for j in dates %}
-						{% if i == j %}{% set_global l = 0 %}<td class='amt'><a aria-label="{{ j | date(format="%-d")}}日: {{titles | nth(n=k)}}" href="../post/{{ j | replace(from="-", to="")}}"></a></td>{% endif %}
+						{% if j in i %}{% set_global l = 0 %}<td class='amt'><a aria-label="{{ j | date(format="%-d")}}日: {{titles | nth(n=k)}}" href="../post/{{ j | replace(from="-", to="")}}"></a></td>{% endif %}
 						{% set_global k = k + 1 %}
 					{% endfor %}
 					{% if l == 1 %}<td></td>{% endif %}
