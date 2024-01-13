@@ -18,7 +18,7 @@ links = []
 また夏果というブログタイトルの下にある単語群はタグになっており，記事数が増えると役に立つようになるのではないかと予想している．
 
 リセット癖のため，何度もブログ自体をまっさらにしては書き直している．
-過去の内容については[該当レポジトリ](https://github.com/natsuka-sili/natsuka-sili.github.io)の方を参照してほしい．
+過去の内容については[該当レポジトリ](https://github.com/slnq/slnq.github.io)の方を参照してほしい．
 中途半端なものを人に見られるのが嫌というわけでは無いのだが変な完璧主義のきらいがあるようで，最初から書き直すことで何かが変わることを期待している節がある．
 
 # リンク
@@ -28,6 +28,6 @@ links = []
 - [Instagram](https://www.instagram.com/ntkzu/)
 - [YouTube](https://www.youtube.com/@slnq)
 - [GitHub](https://github.com/slnq)
-- [Gist](https://gist.github.com/natsuka-sili)
+- [Gist](https://gist.github.com/slnq)
 - [Zenn](https://zenn.dev/natsuka_sili)
 - [note](https://note.com/natsuka_sili)
