@@ -24,7 +24,10 @@ links = []
 # リンク
 - [Twitter](https://twitter.com/natsuka_sili)
 - [Bluesky](https://bsky.app/profile/nsl.bsky.social)
-- [GitHub](https://github.com/natsuka-sili)
+- [Misskey](https://misskey.io/@sq)
+- [Instagram](https://www.instagram.com/ntkzu/)
+- [YouTube](https://www.youtube.com/@slnq)
+- [GitHub](https://github.com/slnq)
 - [Gist](https://gist.github.com/natsuka-sili)
 - [Zenn](https://zenn.dev/natsuka_sili)
 - [note](https://note.com/natsuka_sili)
