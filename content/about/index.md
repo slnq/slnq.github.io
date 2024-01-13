@@ -14,7 +14,7 @@ links = []
 
 ブログの構成としては記事を「制作」と「日常」に大別して表示している．
 「制作」では主に技術的な内容を書き，「日常」では日記や感想などを書いていく．
-前者は同じ内容を[Zenn](https://zenn.dev/natsuka_sili)に，後者は[note](https://note.com/natsuka_sili)にも転載をする．
+前者は同じ内容を[Zenn](https://zenn.dev/natsuka_sili)に，後者は[note](https://note.com/ntq)にも転載をする．
 また夏果というブログタイトルの下にある単語群はタグになっており，記事数が増えると役に立つようになるのではないかと予想している．
 
 リセット癖のため，何度もブログ自体をまっさらにしては書き直している．
@@ -30,4 +30,4 @@ links = []
 - [GitHub](https://github.com/slnq)
 - [Gist](https://gist.github.com/slnq)
 - [Zenn](https://zenn.dev/natsuka_sili)
-- [note](https://note.com/natsuka_sili)
+- [note](https://note.com/ntq)
