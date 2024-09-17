@@ -10,7 +10,7 @@
 	</div>
     <span class="page-date">{{ page.date | replace(from="-", to=".") }}</span>
     <span class="page-tag"> {% for term in page.taxonomies.tags %}
-      <a class="tag" href="../../tags/{{ term | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>
+      <a class="tag" href="../../tags/{{ term | lower | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>
     {% endfor %} </span>
     <div class="page-content">{{ page.content |
 								 linebreaksbr |

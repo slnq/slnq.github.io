@@ -22,7 +22,7 @@ links = []
 中途半端なものを人に見られるのが嫌というわけでは無いのだが変な完璧主義のきらいがあるようで，最初から書き直すことで何かが変わることを期待している節がある．
 
 # リンク
-- [Twitter](https://twitter.com/slnqe)
+- [Twitter](https://twitter.com/slnql)
 - [Bluesky](https://bsky.app/profile/nsl.bsky.social)
 - [Misskey](https://misskey.io/@sq)
 - [Instagram](https://www.instagram.com/ntkzu/)
