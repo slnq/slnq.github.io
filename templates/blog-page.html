@@ -6,7 +6,9 @@
 <div class="single">
   <div>
     <div class="headline">{{ page.title }}
-		{% if page.taxonomies.links %}<a class="page-link" href="{{ page.taxonomies.links[0] }}" target="_blank" rel="noopener noreferrer">⧉</a>{% endif %}
+		{% if page.taxonomies.links[1] %}{% for link in page.taxonomies.links %}<a class="link" href="{{ link }}" target="_blank" rel="noopener noreferrer">⧉</a>&nbsp;{% endfor %}
+			{% else %}{% if page.taxonomies.links %}<a class="link" href="{{ page.taxonomies.links[0] }}" target="_blank" rel="noopener noreferrer">⧉</a>{% else %}
+			{% endif %}{% endif %}
 	</div>
     <span class="page-date">{{ page.date | replace(from="-", to=".") }}</span>
     <span class="page-tag"> {% for term in page.taxonomies.tags %}
