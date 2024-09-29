@@ -14,6 +14,9 @@
   <meta name="twitter:card" content="summary" />
   <meta property="og:image" content="{{ get_url(path='f.ico', trailing_slash=false) | safe }}" />
   <meta name="twitter:site" content="@natsuka_sili" />
+  {%- if config.generate_feed %}
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="atom.xml") | safe }}">
+  {% endif -%}
   <title>夏果</title>
 </head>
 
