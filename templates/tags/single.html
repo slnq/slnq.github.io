@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-
+{% set max_taxnomies = 0 %}
+{% for page in term.pages %}{% if page.taxonomies.links[1] %}{% set_global max_taxnomies = 2 %}
+{% elif page.taxonomies.links %}{% if max_taxnomies != 2 %}{% set_global max_taxnomies = 1 %}{% endif %}{% endif %}{% endfor %}
 <div class="single">
   <div><div class="headline">{{ term.name }}</div>
   <table>{% for page in term.pages %} <tr>
     <td><div class="page-date">{{ page.date | replace(from="-", to=".") }}</div></td>
     <td><span class="page-title" >
-		{% if page.taxonomies.links %}<a class="link" href="{{ page.taxonomies.links[0] }}" target="_blank" rel="noopener noreferrer">⧉</a>{% endif %}
+		{% if max_taxnomies == 2 %}{% if page.taxonomies.links[1] %}{% for link in page.taxonomies.links %}<a class="link" href="{{ link }}" target="_blank" rel="noopener noreferrer">⧉ </a>{% endfor %}{% else %}{% if page.taxonomies.links %}　<a class="link" href="{{ page.taxonomies.links[0] }}" target="_blank" rel="noopener noreferrer">⧉</a>{% else %}　　{% endif %}{% endif %}{% endif %}
+		{% if max_taxnomies == 1 %}{% if page.taxonomies.links %}<a class="link" href="{{ page.taxonomies.links[0] }}" target="_blank" rel="noopener noreferrer">⧉</a>{% endif %}{% endif %}
 		<a href="{{ page.permalink }}">{{ page.title }}</a></span></td>
     <td>{% for term in page.taxonomies.tags %}
       <a class="page-tag" href="../{{ term | lower | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>

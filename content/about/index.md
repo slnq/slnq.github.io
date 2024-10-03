@@ -26,6 +26,7 @@ links = []
 
 # リンク
 - [当ブログRSS](https://slnq.github.io/atom.xml)
+- [写真](https://slnq.github.io/photos/)
 - [Twitter](https://twitter.com/slnql)
 - [Bluesky](https://bsky.app/profile/nsl.bsky.social)
 - [Misskey](https://misskey.io/@sq)

@@ -4,6 +4,7 @@
 {% if paginator %} {% set pages = paginator.pages %} {% else %} {% set pages = section.pages %} {% endif %}
 <meta property="og:type" content="website" />
 <meta property="og:title" content="夏果" />
+<meta name="description" content="夏果しきのブログ" />
 
 <div class="blog-container">
   <div class="blog">
@@ -12,7 +13,7 @@
       <table> {% for page in pages %} {% if page.taxonomies.categories %} {% if "tech" in page.taxonomies.categories %} <tr>
           <td><div class="page-date">{{ page.date | replace(from="-", to=".") }}</div></td>
           <td><span class="page-title" >
-			{% if page.taxonomies.links[1] %}{% for link in page.taxonomies.links %}<a class="link" href="{{ link }}" target="_blank" rel="noopener noreferrer">⧉</a>{% endfor %}
+			{% if page.taxonomies.links[1] %}{% for link in page.taxonomies.links %}<a class="link" href="{{ link }}" target="_blank" rel="noopener noreferrer">⧉ </a>{% endfor %}
 			{% else %}{% if page.taxonomies.links %}　<a class="link" href="{{ page.taxonomies.links[0] }}" target="_blank" rel="noopener noreferrer">⧉</a>{% else %}　　
 			{% endif %}{% endif %}
 			<a href="{{ page.permalink }}">{{ page.title }}</a></span></td>
