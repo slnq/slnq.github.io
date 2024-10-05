@@ -38,11 +38,13 @@ body { margin-bottom: 40vh; }
                                                    justify-content: center; } }
 .headline { font-size: 1.8rem;
             font-family: serif; }
-.page-date { font-size: 0.8rem; }
+.page-date { font-size: 0.8rem;
+			 margin-right: 1rem; }
 .link { font-size: 0.8rem; }
 .page-title { font-family: serif;
-              margin: auto 1rem auto; 
+              margin: auto 1rem auto 0; 
               font-family: serif; }
+.td-links { text-align: right; }
 .page-tag { font-size: 0.9rem; }
 
 /* tag/single.html */
