@@ -42,8 +42,7 @@ body { margin-bottom: 40vh; }
 			 margin-right: 1rem; }
 .link { font-size: 0.8rem; }
 .page-title { font-family: serif;
-              margin: auto 1rem auto 0; 
-              font-family: serif; }
+              margin: auto 1rem auto 0; }
 .td-links { text-align: right; }
 .page-tag { font-size: 0.9rem; }
 
@@ -52,9 +51,14 @@ body { margin-bottom: 40vh; }
           justify-content: space-evenly; }
 
 /* blog-page.html */
+@font-face { font-family: 'ja';
+			 src: local('UD Digi Kyokasho NK-R'), local('ヒラギノ角ゴ ProN W3'), local('Meiryo'), local('Noto Sans JP');
+			 unicode-range: U+3040-309F, U+30A0-30FF, U+4E00-9FFF;}
 .page-link { font-size: 1.2rem;
 			 vertical-align: text-top; }
-.page-content { a { text-decoration: underline; } 
+.page-content { font-family: 'ja', sans-serif;
+				p { font-size: 1.03rem; }
+				a { text-decoration: underline; } 
                 h1 { margin: 1.6rem auto 0;
                      text-decoration: none;
                      font-size: 1.6rem;

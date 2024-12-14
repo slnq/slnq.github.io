@@ -41,7 +41,7 @@
 		実装については<a href="../post/20230702">GitHubのContributionを模倣</a>にある．
 		{%for year in years | split(pat=',') %}
 		    <h2> {{ year }} </h2>
-			<div style="overflow-x: auto;">{{ macros::main(year=year | int, dates=dates, titles=titles)}}</div>
+			<div>{{ macros::main(year=year | int, dates=dates, titles=titles)}}</div>
 		{% endfor %}
 	</div>
   </div>
