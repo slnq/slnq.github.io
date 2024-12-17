@@ -41,7 +41,7 @@
 		実装については<a href="../post/20230702">GitHubのContributionを模倣</a>にある．
 		{%for year in years | split(pat=',') %}
 		    <h2> {{ year }} </h2>
-			<div>{{ macros::main(year=year | int, dates=dates, titles=titles)}}</div>
+			<div class="cal">{{ macros::main(year=year | int, dates=dates, titles=titles)}}</div>
 		{% endfor %}
 	</div>
   </div>
@@ -122,6 +122,13 @@
 	td[class^="amt"]:nth-child(n + 45) a:hover::before {
 	  left: -12em;
 	}
+
+	.cal { 
+		overflow-x: auto;
+		-ms-overflow-style: none;
+  		scrollbar-width: none;
+	}
+	.cal::-webkit-scrollbar { display: none; }
 </style>
 
 {% endblock content %}

@@ -54,9 +54,21 @@ body { margin-bottom: 40vh; }
 @font-face { font-family: 'ja';
 			 src: local('UD Digi Kyokasho NK-R'), local('ヒラギノ角ゴ ProN W3'), local('Meiryo'), local('Noto Sans JP');
 			 unicode-range: U+3040-309F, U+30A0-30FF, U+4E00-9FFF;}
+@font-face { font-family: 'lo';
+    		 src: local('Georgia');
+    		 unicode-range: U+0061-007A; }
+@font-face { font-family: 'up';
+    		 src: local('Tahoma');
+    		 unicode-range: U+0041-005A; }
+@font-face { font-family: 'nu';
+			 src: local('Cambria');
+    		 unicode-range: U+0030-0039; }
+@font-face { font-family: 'sy';
+    		 src: local('Segoe UI Symbol');
+    		 unicode-range: U+0021-002F, U+003A-0040, U+005B-0060, U+007B-007E, U+2190-21AA, U+FF00-FFEF; }
 .page-link { font-size: 1.2rem;
 			 vertical-align: text-top; }
-.page-content { font-family: 'ja', sans-serif;
+.page-content { font-family: 'ja', 'up', 'lo', 'nu', 'sy', sans-serif;
 				p { font-size: 1.03rem; }
 				a { text-decoration: underline; } 
                 h1 { margin: 1.6rem auto 0;
