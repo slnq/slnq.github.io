@@ -20,7 +20,9 @@ body { margin-bottom: 40vh; }
          text-decoration: underline;
          font-family: serif; }
 .tag { display: inline-block;
-       margin-left: 0.4rem; }
+       margin-left: 0.4rem;
+	   font-family: 'up', 'lo', serif;
+		letter-spacing: 0.03rem; }
 .emoji { font-size: 0.6rem;
          color: transparent;
          text-shadow: 0 0 0 $white;
@@ -38,13 +40,18 @@ body { margin-bottom: 40vh; }
                                                    justify-content: center; } }
 .headline { font-size: 1.8rem;
             font-family: serif; }
-.page-date { font-size: 0.8rem;
+.page-date { font-size: 0.9rem;
+			 font-family: Cambria;
 			 margin-right: 1rem; }
 .link { font-size: 0.8rem; }
-.page-title { font-family: serif;
-              margin: auto 1rem auto 0; }
+.page-title { font-family: 'ja', 'up', 'lo', 'nu', 'sy', sans-serif;
+              margin: auto 1rem auto 0;
+			  letter-spacing: 0.02rem; }
 .td-links { text-align: right; }
-.page-tag { font-size: 0.9rem; }
+.page-tag { font-size: 0.9rem;
+			font-family: 'up', 'lo', serif;
+			letter-spacing: 0.03rem; }
+table { border-spacing: 0 0.2rem; }
 
 /* tag/single.html */
 .single { display: flex;
@@ -69,6 +76,7 @@ body { margin-bottom: 40vh; }
 .page-link { font-size: 1.2rem;
 			 vertical-align: text-top; }
 .page-content { font-family: 'ja', 'up', 'lo', 'nu', 'sy', sans-serif;
+					
 				p { font-size: 1.03rem; }
 				a { text-decoration: underline; } 
                 h1 { margin: 1.6rem auto 0;
