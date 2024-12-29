@@ -33,7 +33,7 @@ jobs:
           API_KEY_SECRET: ${{ secrets.API_KEY_SECRET }}
         run: |
             git fetch origin main
-            new_file=$(git diff --name-status HEAD^ | grep '^A' | grep 'content/post/.*\.md' | awk '{print $2}' | head -n 1)
+            new_file=$(ls content/post/*.md | sort -t'/' -k3,3n -k2,2n -k1,1n | tail -n 1)
             if [ -z "$new_file" ]; then
               echo "No new .md file to tweet."
               exit 0
