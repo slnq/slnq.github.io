@@ -45,7 +45,7 @@ jobs:
             python - <<EOF
             import os
             import tweepy
-            print(f"os.environ.get("API_KEY")")
+            print(f"os.environ.get('API_KEY')")
             client = tweepy.Client(consumer_key=os.environ.get("API_KEY"),consumer_secret=os.environ.get("API_KEY_SECRET"),access_token=os.environ.get("ACCESS_TOKEN"),access_token_secret=os.environ.get("ACCESS_TOKEN_SECRET"))
             tweet_text = f"{os.environ.get('POST_URL')}"
             client.create_tweet(text=tweet_text)
