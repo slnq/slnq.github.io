@@ -30,6 +30,7 @@ links = []
 - [Twitter](https://twitter.com/slnql)
 - [Bluesky](https://bsky.app/profile/nsl.bsky.social)
 - [Misskey](https://misskey.io/@sq)
+- [mixi2](https://mixi.social/@sili)
 - [Instagram](https://www.instagram.com/ntkzu/)
 - [YouTube](https://www.youtube.com/@slnq)
 - [GitHub](https://github.com/slnq)

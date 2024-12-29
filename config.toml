@@ -9,7 +9,7 @@ build_search_index = false
 
 title = "夏果"
 
-generate_feed = true
+generate_feeds = true
 
 # set taxonomies vaild
 taxonomies = [
