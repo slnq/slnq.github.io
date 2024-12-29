@@ -40,10 +40,12 @@ jobs:
             fi
             post_path="${new_file#content/post/}"
             post_url="https://slnq.github.io/post/${post_path%.md}/"
+            echo "Post URL: $post_url"
+            echo "POST_URL=$post_url" >> $GITHUB_ENV
             python - <<EOF
             import os
             import tweepy
             client = tweepy.Client(consumer_key=os.environ.get("API_KEY"),consumer_secret=os.environ.get("API_KEY_SECRET"),access_token=os.environ.get("ACCESS_TOKEN"),access_token_secret=os.environ.get("ACCESS_TOKEN_SECRET"))
-            tweet_text = f"{post_url}"
+            tweet_text = f"{os.environ.get('POST_URL')}"
             client.create_tweet(text=tweet_text)
             EOF
