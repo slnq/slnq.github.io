@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install tweepy atproto
+          pip install tweepy atproto Misskey.py
       - name: Post latest page to Twitter
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
@@ -32,6 +32,7 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
           API_KEY_SECRET: ${{ secrets.API_KEY_SECRET }}
           BS_PASS: ${{ secrets.BS_PASS }}
+          MISSKEY_TOKEN: ${{ secrets.MISSKEY_TOKEN }}
         run: |
             git fetch origin main
             new_file=$(ls content/post/*.md | sort -t'/' -k3,3n -k2,2n -k1,1n | tail -n 1)
@@ -53,6 +54,7 @@ jobs:
             import os
             import tweepy
             import atproto
+            from misskey import Misskey
             print(f"API_KEY: {os.environ.get('API_KEY')}")
             client = tweepy.Client(consumer_key=os.environ.get("API_KEY"),consumer_secret=os.environ.get("API_KEY_SECRET"),access_token=os.environ.get("ACCESS_TOKEN"),access_token_secret=os.environ.get("ACCESS_TOKEN_SECRET"))
             tweet_text = f"{os.environ.get('TWEET_CONTENT')}"
@@ -61,4 +63,7 @@ jobs:
             client = atproto.Client(base_url='https://bsky.social')
             client.login(login='nsl.bsky.social',password=os.environ.get("BS_PASS"))
             client.send_post(tweet_text)
+            api = Misskey('misskey.io')
+            api.token = os.environ.get("MISSKEY_TOKEN")
+            api.notes_create(text=tweet_text)
             EOF
