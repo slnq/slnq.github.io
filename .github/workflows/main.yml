@@ -40,15 +40,20 @@ jobs:
             fi
             post_path="${new_file#content/post/}"
             post_url="https://slnq.github.io/post/${post_path%.md}/"
-            echo "Post URL: $post_url"
-            echo "POST_URL=$post_url" >> $GITHUB_ENV
-            export POST_URL="$post_url"
+            second_line_content=$(awk -F'"' 'NR==2 {print $2}' "$new_file")
+            if [ -z "$second_line_content" ]; then
+              echo "No valid content in the second line of the file."
+              exit 0
+            fi
+            tweet_content="${second_line_content}\n${post_url}"
+            echo "TWEET_CONTENT=$tweet_content" >> $GITHUB_ENV
+            export TWEET_CONTENT="$tweet_content"
             python - <<EOF
             import os
             import tweepy
             print(f"API_KEY: {os.environ.get('API_KEY')}")
             client = tweepy.Client(consumer_key=os.environ.get("API_KEY"),consumer_secret=os.environ.get("API_KEY_SECRET"),access_token=os.environ.get("ACCESS_TOKEN"),access_token_secret=os.environ.get("ACCESS_TOKEN_SECRET"))
-            tweet_text = f"{os.environ.get('POST_URL')}"
+            tweet_text = f"{os.environ.get('TWEET_CONTENT')}"
             print(f"Tweet Text: {tweet_text}")
             client.create_tweet(text=tweet_text)
             EOF
