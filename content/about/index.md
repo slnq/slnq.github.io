@@ -24,7 +24,7 @@ links = []
 過去の内容については[該当レポジトリ](https://github.com/slnq/slnq.github.io)の方を参照してほしい．
 中途半端なものを人に見られるのが嫌というわけでは無いのだが変な完璧主義のきらいがあるようで，最初から書き直すことで何かが変わることを期待している節がある．
 
-# リンク
+# link
 - [RSS](https://slnq.github.io/atom.xml)
 - [Photos](https://slnq.github.io/photos/)
 - [Twitter](https://twitter.com/slnql)

@@ -36,18 +36,17 @@
 								 replace(from="<br><c", to="<br \><c") |
 								 replace(from="<br><", to="<") |
 								 safe}}
-		<h1 id="log">更新履歴</h1>
+		<h1 id="log">calendar</h1>
 		GitHubのコントリビューションを模倣した更新履歴．
 		実装については<a href="../post/20230702">GitHubのContributionを模倣</a>にある．
 		{%for year in years | split(pat=',') %}
 		    <h2> {{ year }} </h2>
 			<div class="cal">{{ macros::main(year=year | int, dates=dates, titles=titles)}}</div>
 		{% endfor %}
-
-		<h1 id="aah1">icon</h1>
+		<br>
+		<h1>icon</h1>
 		<div id="aa">
 			{% raw %}
-			<br>
 			　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 ,,,,,,━━¨¨¨''━,,,,,,,,━━━,,,,,,<br>
 			　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 　,,,,,r'''~¨　　　　　　　　¨′　　　　 ｀¨'''ｘ,,,<br>
 			　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 　,,,,,㌻　　　　　　　　　　　　　　　　　　　　　~'''ｘ,,,<br>
@@ -194,29 +193,20 @@
 	}
 	.cal::-webkit-scrollbar { display: none; }
 
+	@font-face {
+		font-family: 'aahub_light';
+		src: url("{{ get_url(path='aahub_light.woff2', trailing_slash=false) | safe }}") format("woff2");
+		font-display: swap;
+	}
+
 	#aa {
 		white-space: pre;
     	font-size: 16px;
-    	font-family: 'ＭＳ Ｐゴシック', sans-serif;
+    	font-family: 'ＭＳ Ｐゴシック', 'aahub_light', sans-serif;
     	transform: scale(0.4);
     	transform-origin: top left;
     	line-height: 18px;
-		display: none;
-	}
-
-	#aah1 {
-		display: none;
-	}
-	
-	@font-face {
-    	font-family: CheckMSPGothic;
-    	src: local('ＭＳ Ｐゴシック');
-	}
-
-	@supports (font-family: CheckMSPGothic) {
-    	#aah1, #aa {
-        	display: block;
-    	}
+		
 	}
 </style>
 
