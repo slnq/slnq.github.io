@@ -31,6 +31,7 @@
 	.f { fill: #DCDCE0; }
 	
   </style>
+  <rect width="100%" height="100%" fill="#454351" />
   <g
      transform="translate(0,445.5)">
     <g
