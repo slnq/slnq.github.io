@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="main">
+<p class="aoa">4</p>
+<p class="aoa">0</p>
+<p class="aoa" id="a">4</p>
+</div>
+<style>
+#main { display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 75vh; }
+.aoa { font-size: 10rem;
+	   font-family: serif; }
+#a { transform: scaleX(-1); }
+</style>
+{% endblock content %}
