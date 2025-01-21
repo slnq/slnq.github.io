@@ -8,9 +8,11 @@
 <p class="aoa" id="a">4</p>
 </div>
 
-<div class="blog page-title">
+<div class="page-content">
+<div>
 アクセスされたページは諸般の事情により表示することができません<br>
 代わりに投稿された記事を時系列降順で置いておきます
+</div>
 </div>
 
 <div class="blog-container">
@@ -41,7 +43,10 @@
 	   font-family: serif;
 	   font-weight: 100; }
 #a { transform: scaleX(-1); }
-.blog { margin-bottom: 3rem; }
+.page-content { margin-bottom: 3rem;
+				margin-top: 0;
+				display: flex;
+				justify-content: center;}
 p { margin: 0; }
 </style>
 {% endblock content %}
