@@ -25,6 +25,7 @@ links = []
 中途半端なものを人に見られるのが嫌というわけでは無いのだが変な完璧主義のきらいがあるようで，最初から書き直すことで何かが変わることを期待している節がある．
 
 # link
+- [search](https://slnq.github.io/search)
 - [RSS](https://slnq.github.io/atom.xml)
 - [Photos](https://slnq.github.io/photos/)
 - [Twitter](https://twitter.com/slnql)

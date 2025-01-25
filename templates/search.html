@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+{% set section = get_section(path="post/_index.md") %}
+{% if paginator %} {% set pages = paginator.pages %} {% else %} {% set pages = section.pages %} {% endif %}
+
+<div class="single">
+	<div>
+		<div class="headline">
+			検索用の全ページアーカイブ
+		</div>
+		<div class="page-content">
+			Ctrl+Fによって全文検索ができるページ．当ブログの全ての記事の全文が置かれている．詳しい話は<a href="google.com">静的なサイトの静的な検索</a>にある．
+		</div>
+	</div>
+</div>
+
+
+{% for page in pages %}
+
+<div class="single">
+	<div>
+	  <div class="headline"><a href="{{ page.permalink }}">{{ page.title }} </a>
+		  {% if page.taxonomies.links[1] %}{% for link in page.taxonomies.links %}<a class="link" href="{{ link }}" target="_blank" rel="noopener noreferrer">⧉</a>&nbsp;{% endfor %}
+			  {% else %}{% if page.taxonomies.links %}<a class="link" href="{{ page.taxonomies.links[0] }}" target="_blank" rel="noopener noreferrer">⧉</a>{% else %}
+			  {% endif %}{% endif %}
+	  </div>
+	  <span class="page-date">{{ page.date | replace(from="-", to=".") }}</span>
+	  <span class="page-tag"> {% for term in page.taxonomies.tags %}
+		<a class="tag" href="../../tags/{{ term | lower | safe }}/"><span class="emoji">🔖️</span>{{ term }}</a>
+	  {% endfor %} </span>
+	  <div class="page-content">{{ page.content |
+								   linebreaksbr |
+								   replace(from="</p><br><p>", to="</p><p class='br'></p><p>") |
+								   replace(from="<br><a", to="<br \><a") |
+								   replace(from="<br><c", to="<br \><c") |
+								   replace(from="<br><", to="<") |
+								   safe}}</div>
+	</div>
+</div>
+
+{% endfor %}
+
+<style>
+.single { margin-bottom: 10rem; }
+.first { margin-top: 1.2rem; }
+</style>
+
+{% endblock content %}
