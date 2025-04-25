@@ -28,6 +28,7 @@ links = []
 - [search](https://slnq.github.io/search)
 - [RSS](https://slnq.github.io/atom.xml)
 - [Photos](https://slnq.github.io/photos/)
+- [Animation](https://slnq.github.io/animation/)
 - [Twitter](https://twitter.com/slnql)
 - [Bluesky](https://bsky.app/profile/nsl.bsky.social)
 - [Misskey](https://misskey.io/@sq)
