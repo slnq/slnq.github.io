@@ -6,10 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
-      - name: checkout
+      - name: Checkout repository with submodules
         uses: actions/checkout@v4
         with:
           submodules: true
+      - name: Clean up legacy submodule configuration for animation
+        run: |
+          git config -f .git/config --remove-section submodule.animation || true
+          rm -rf .git/modules/animation || true
       - name: Synchronize submodule configuration
         run: git submodule sync --recursive
       - name: Set up Python
@@ -18,12 +22,10 @@ jobs:
           python-version: '3.x'
       - name: Run get_files.py
         run: python ./get_files.py
-      - name: build_and_deploy
+      - name: Build and Deploy
         uses: shalzz/zola-deploy-action@master
         env:
-          # Target branch
           PAGES_BRANCH: gh-pages
-          # Provide personal access token
           TOKEN: ${{ secrets.TOKEN }}
 #
 #
