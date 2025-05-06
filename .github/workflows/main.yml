@@ -10,10 +10,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: true
-      - name: Initialize and update submodules
-        run: |
-          git submodule init
-          git submodule update --recursive
+      - name: Synchronize submodule configuration
+        run: git submodule sync --recursive
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
