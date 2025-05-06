@@ -9,11 +9,16 @@ jobs:
       - name: Checkout repository with submodules
         uses: actions/checkout@v4
         with:
-          submodules: true
-      - name: Clean up legacy submodule configuration for animation
+          submodules: false
+      - name: Clean up legacy configuration for submodule animation
         run: |
-          git config -f .git/config --remove-section submodule.static/animation || true
-          rm -rf .git/modules/animation || true
+            git config -f .git/config --remove-section submodule.animation || true
+            git config -f .git/config --remove-section submodule.static/photos || true
+            rm -rf .git/modules/animation || true
+            rm -rf .git/modules/photos || true
+      - name: Update submodules manually
+        run: |
+            git submodule update --init --recursive
       - name: Synchronize submodule configuration
         run: git submodule sync --recursive
       - name: Set up Python
