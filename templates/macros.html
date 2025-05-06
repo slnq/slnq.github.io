@@ -87,17 +87,28 @@
 {% endmacro %}
 
 {% macro display_td(year, dow, dates, titles)%}
+{% set files = config.extra.files %}
+{% set format = config.extra.format %}
 {% set dow_first = macros::dow2num(dow=year ~ '-01-01' | date(format="%A")) | int %}
 {% set dow1 = macros::dow2num(dow=dow | nth(n=0) | date(format="%A")) | int %}
 {% if dow1 < dow_first %}<td class='amt'></td>{% endif %}
 {% for i in dow %}
-					{% set_global k = 0 %}{% set_global l = 1 %}
-					{% for j in dates %}
-						{% if j in i %}{% set_global l = 0 %}<td class='amt'><a aria-label="{{ j | date(format="%-d")}}日: {{titles | nth(n=k)}}" href="../post/{{ j | replace(from="-", to="")}}"></a></td>{% endif %}
-						{% set_global k = k + 1 %}
-					{% endfor %}
-					{% if l == 1 %}<td></td>{% endif %}
-				{% endfor %}
+	{% set_global k = 0 %}{% set_global l = 1 %}{% set_global r = 0 %}
+	{% for j in dates %}
+		{% if j in i %}{% set_global l = 0 %}<td class='amt'><a aria-label="{{ j | date(format="%-d")}}日: {{titles | nth(n=k)}}" href="../post/{{ j | replace(from="-", to="")}}"></a></td>{% endif %}
+		{% set_global k = k + 1 %}
+	{% endfor %}
+	{% if l == 1 %}
+		{% for t in files %}
+			{% if t in i %}{% set_global l = 0 %}
+			{% if format|nth(n=r) == 0 %}<td class='amt'><a aria-label="{{ t | date(format="%-d")}}日: アニメーション" href="https://slnq.github.io/animation/"></a></td>
+			{% else %}<td class='amt'><a aria-label="{{ t | date(format="%-d")}}日: 写真" href="https://slnq.github.io/photos/{{ t | replace(from="-", to="")}}.html"></a></td>{% endif %}
+			{% endif %}
+			{% set_global r = r + 1 %}
+		{% endfor %}
+	{% endif %}
+	{% if l == 1 %}<td></td>{% endif %}
+{% endfor %}
 {% endmacro %}
 
 {% macro main(year, dates, titles)%}

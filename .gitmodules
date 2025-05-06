@@ -1,0 +1,6 @@
+[submodule "static/animation"]
+	path = static/animation
+	url = https://github.com/slnq/animation
+[submodule "static/photos"]
+	path = static/photos
+	url = https://github.com/slnq/photos

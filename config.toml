@@ -29,4 +29,5 @@ hard_line_breaks = true
 
 [extra]
 # Put all your custom variables here
-
+files = []
+format = []
