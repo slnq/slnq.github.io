@@ -10,6 +10,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: true
+      - name: Initialize and update submodules
+        run: |
+          git submodule init
+          git submodule update --recursive
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -23,6 +27,9 @@ jobs:
           PAGES_BRANCH: gh-pages
           # Provide personal access token
           TOKEN: ${{ secrets.TOKEN }}
+#
+#
+#
           # Or if publishing to the same repo, use the automatic token
           #TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #      - name: Setup Python
