@@ -9,10 +9,10 @@ jobs:
       - name: Checkout repository with submodules
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: true
       - name: Clean up legacy submodule configuration for animation
         run: |
-          git config -f .git/config --remove-section submodule.animation || true
+          git config -f .git/config --remove-section submodule.static/animation || true
           rm -rf .git/modules/animation || true
       - name: Synchronize submodule configuration
         run: git submodule sync --recursive
