@@ -1,6 +1,7 @@
 import os
 import re
 from datetime import datetime
+import pathlib
 
 def update_config_toml(config_path, animation_dir, photos_dir):
     """
@@ -12,6 +13,14 @@ def update_config_toml(config_path, animation_dir, photos_dir):
         animation_dir (str): .gif ファイルがあるディレクトリのパス。
         photos_dir (str): .webp ファイルがあるディレクトリのパス。
     """
+
+    # 絶対パスを取得
+    base_path = pathlib.Path(__file__).parent.resolve()
+    config_path = os.path.join(base_path, config_path)
+    animation_dir = os.path.join(base_path, animation_dir)
+    photos_dir = os.path.join(base_path, photos_dir)
+    photos_imgs_dir = os.path.join(photos_dir, "imgs")  # photos/imgs ディレクトリの絶対パス
+
     gif_files = []
     webp_files = []
 
@@ -28,14 +37,15 @@ def update_config_toml(config_path, animation_dir, photos_dir):
 
     # .webp ファイルの処理
     if os.path.exists(photos_dir) and os.path.isdir(photos_dir):
-        for filename in os.listdir(os.path.join(photos_dir, "imgs")):
-            match = re.match(r"(\d{8})\.webp$", filename)
-            if match:
-                date_str = match.group(1)
-                date_obj = datetime.strptime(date_str, "%Y%m%d")
-                formatted_date = f"{date_str[:4]}-{date_str[4:6]}-{date_str[6:]}"
-                webp_files.append((date_obj, formatted_date, 1))  # (日付オブジェクト, フォーマット済み日付, フォーマット)
-        webp_files.sort(key=lambda item: item[0])  # 日付オブジェクトでソート
+        if os.path.exists(photos_imgs_dir) and os.path.isdir(photos_imgs_dir):  # photos/imgs の存在を確認
+            for filename in os.listdir(photos_imgs_dir):
+                match = re.match(r"(\d{8})\.webp$", filename)
+                if match:
+                    date_str = match.group(1)
+                    date_obj = datetime.strptime(date_str, "%Y%m%d")
+                    formatted_date = f"{date_str[:4]}-{date_str[4:6]}-{date_str[6:]}"
+                    webp_files.append((date_obj, formatted_date, 1))  # (日付オブジェクト, フォーマット済み日付, フォーマット)
+            webp_files.sort(key=lambda item: item[0])  # 日付オブジェクトでソート
 
     # 結果の統合
     files_list = [item[1] for item in gif_files] + [item[1] for item in webp_files]
@@ -90,7 +100,7 @@ def update_config_toml(config_path, animation_dir, photos_dir):
 
 if __name__ == "__main__":
     config_file = "config.toml"
-    animation_directory = "./static/animation"
-    photos_directory = "./static/photos"
+    animation_directory = "static/animation"
+    photos_directory = "static/photos"
 
     update_config_toml(config_file, animation_directory, photos_directory)
