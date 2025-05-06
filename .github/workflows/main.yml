@@ -9,7 +9,7 @@ jobs:
       - name: Checkout repository with submodules
         uses: actions/checkout@v4
         with:
-          submodules: false
+          submodules: true
       - name: Synchronize submodule configuration
         run: git submodule sync --recursive
       - name: Set up Python

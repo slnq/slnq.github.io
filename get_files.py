@@ -100,7 +100,7 @@ def update_config_toml(config_path, animation_dir, photos_dir):
 
 if __name__ == "__main__":
     config_file = "config.toml"
-    animation_directory = "static/animation"
-    photos_directory = "static/photos"
+    animation_directory = "animation"
+    photos_directory = "photos"
 
     update_config_toml(config_file, animation_directory, photos_directory)
