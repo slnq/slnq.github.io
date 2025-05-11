@@ -101,7 +101,7 @@
 	{% if l == 1 %}
 		{% for t in files %}
 			{% if t in i %}{% set_global l = 0 %}
-			{% if format|nth(n=r) == 0 %}<td class='amt'><a aria-label="{{ t | date(format="%-d")}}日: アニメーション" href="https://slnq.github.io/animation/"></a></td>
+			{% if format|nth(n=r) == 0 %}<td class='amt'><a aria-label="{{ t | date(format="%-d")}}日: アニメーション" href="https://slnq.github.io/animation/#{{ t | replace(from="-", to="")}}"></a></td>
 			{% else %}<td class='amt'><a aria-label="{{ t | date(format="%-d")}}日: 写真" href="https://slnq.github.io/photos/{{ t | replace(from="-", to="")}}.html"></a></td>{% endif %}
 			{% endif %}
 			{% set_global r = r + 1 %}
