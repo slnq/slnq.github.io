@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>夏果 - Wasm</title>
+    <link rel="self" type="application/atom+xml" href="https://slnq.github.io/tags/wasm/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://slnq.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-06-29T00:00:00+00:00</updated>
+    <id>https://slnq.github.io/tags/wasm/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Wasmで電場シミュレータを作る</title>
+        <published>2023-06-29T00:00:00+00:00</published>
+        <updated>2023-06-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://slnq.github.io/post/20230629/"/>
+        <id>https://slnq.github.io/post/20230629/</id>
+        
+        <content type="html" xml:base="https://slnq.github.io/post/20230629/">&lt;h1 id=&quot;motibesiyon&quot;&gt;モチベーション&lt;&#x2F;h1&gt;
+&lt;p&gt;卒業研究として&lt;a href=&quot;..&#x2F;post&#x2F;t2-werve-gpujs&quot;&gt;GPU.jsで電場シミュレータ&lt;&#x2F;a&gt;を作っている間に&lt;a href=&quot;https:&#x2F;&#x2F;webassembly.org&quot;&gt;WebAssembly&lt;&#x2F;a&gt;というものを知ってしまい，それ以降はやる気が低下したりしていた．卒研が終わり暇も出来たので，電場シミュレータを&lt;a href=&quot;https:&#x2F;&#x2F;webassembly.org&quot;&gt;WebAssembly&lt;&#x2F;a&gt;で作り直した．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zhi-zuo-wu&quot;&gt;制作物&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;slnq.github.io&#x2F;werve-wasm&#x2F;&quot;&gt;https:&#x2F;&#x2F;slnq.github.io&#x2F;werve-wasm&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ji-neng&quot;&gt;機能&lt;&#x2F;h2&gt;
+&lt;p&gt;黒い範囲をクリックすると白いぼやけた円が表示される．これはスライダーによって変化するcharge valueの値に対応した電荷による電場である．このようにして電場を表示するのが主な機能．&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;install&lt;&#x2F;th&gt;&lt;th&gt;:&lt;&#x2F;th&gt;&lt;th&gt;クリックするとchargeに合う値の電荷を置く&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;remove&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電荷をクリックすると消すことができる&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;control&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電荷をドラッグ・アンド・ドロップで移動させられる&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;fix&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電荷をクリックすると固定できる&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;sosukodo&quot;&gt;ソースコード&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;werve-wasm&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;werve-wasm&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;基本的に&lt;code&gt;src&lt;&#x2F;code&gt;内の&lt;code&gt;.js&lt;&#x2F;code&gt;ファイルを読めばシミュレーションについてはわかると思う．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;chu-li&quot;&gt;処理&lt;&#x2F;h1&gt;
+&lt;ol&gt;
+&lt;li&gt;1つの電荷に対する電界の値を1539×1539で計算しテンプレートに格納する．&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の位置を元に電界のテンプレートを動かし配列769×769に格納する．&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の数だけ総和して配列769×769に格納していく．&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の座標に対応する電界配列の要素を電荷値と乗算してクーロン力を計算する．&lt;&#x2F;li&gt;
+&lt;li&gt;クーロン力を元に位置と速度と加速度を計算する．&lt;&#x2F;li&gt;
+&lt;li&gt;表示する．&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;これの2.から6.を繰り返している．配列の大きさの選択理由については記憶が無いが奇数の方が都合が良かったはず．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;webassembly&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;webassembly.org&quot;&gt;WebAssembly&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;入力と表示以外の全てを&lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;ja&quot;&gt;Rust&lt;&#x2F;a&gt;から変換した&lt;a href=&quot;https:&#x2F;&#x2F;webassembly.org&quot;&gt;WebAssembly&lt;&#x2F;a&gt;で実行している．これを作った時点では&lt;a href=&quot;https:&#x2F;&#x2F;wgpu.rs&quot;&gt;wgpu&lt;&#x2F;a&gt;というか&lt;a href=&quot;https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webgpu&#x2F;&quot;&gt;WebGPU&lt;&#x2F;a&gt;の仕様が変わり続けていたため使っていない．
+また，表示に適すような配列への変換もこっちで行っている．&lt;&#x2F;p&gt;
+&lt;p&gt;スマホで触ってみて気がついたが，スワイプだとcontrol(move)が使えないようだ．&lt;a href=&quot;..&#x2F;post&#x2F;t2-werve-gpujs&quot;&gt;GPU.jsで作った時&lt;&#x2F;a&gt;は使えているのだから，修正も可能であうと思う．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;canvas&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;ja&#x2F;docs&#x2F;Web&#x2F;HTML&#x2F;Element&#x2F;canvas&quot;&gt;Canvas&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;上述にある，表示に適すような配列を&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;ja&#x2F;docs&#x2F;Web&#x2F;JavaScript&quot;&gt;JavaScript&lt;&#x2F;a&gt;と&lt;a href=&quot;https:&#x2F;&#x2F;webassembly.org&quot;&gt;WebAssembly&lt;&#x2F;a&gt;の共有メモリーから表示している．
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;werve-gpujs&quot;&gt;GPU.js版&lt;&#x2F;a&gt;にあったベクトル表示ha未だに作っていないため,Canvasは1枚のみでの実装．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;css&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;ja&#x2F;docs&#x2F;Learn&#x2F;Getting_started_with_the_web&#x2F;CSS_basics&quot;&gt;CSS&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;poe.com&#x2F;s&#x2F;XGTlkiRiyR4deC8lfmIx&quot;&gt;ChatGPTに良い感じのものを作ってもらった．&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;depuroi&quot;&gt;デプロイ&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;webpack.js.org&#x2F;&quot;&gt;webpack&lt;&#x2F;a&gt;を用いてローカルで生成したものを&lt;a href=&quot;https:&#x2F;&#x2F;docs.github.com&#x2F;ja&#x2F;pages&#x2F;getting-started-with-github-pages&#x2F;about-github-pages&quot;&gt;GitHub Pages&lt;&#x2F;a&gt;で&#x2F;docs`内をデプロイしている．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;suo-gan&quot;&gt;所感&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;..&#x2F;post&#x2F;t2-werve-gpujs&quot;&gt;GPU.jsで作った時&lt;&#x2F;a&gt;に比べて情報が多くて楽だった．言語は違うとはいえ一度作った経験があるからというのも大きいだろうが．
+今後の目標としては&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;wgpu.rs&quot;&gt;wgpu&lt;&#x2F;a&gt;による性能向上&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;ja&#x2F;docs&#x2F;Web&#x2F;HTML&#x2F;Element&#x2F;canvas&quot;&gt;Canvas&lt;&#x2F;a&gt;を追加してベクトル表示&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;という具合だろうか．&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

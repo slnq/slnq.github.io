@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>夏果 - JS</title>
+    <link rel="self" type="application/atom+xml" href="https://slnq.github.io/tags/js/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://slnq.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-09-23T00:00:00+00:00</updated>
+    <id>https://slnq.github.io/tags/js/atom.xml</id>
+    <entry xml:lang="en">
+        <title>ガウシアンの偽物</title>
+        <published>2024-09-23T00:00:00+00:00</published>
+        <updated>2024-09-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://slnq.github.io/post/20240923/"/>
+        <id>https://slnq.github.io/post/20240923/</id>
+        
+        <content type="html" xml:base="https://slnq.github.io/post/20240923/">&lt;p&gt;ガウシアンに似ている関数を当てるクイズを作りました
+&lt;a href=&quot;https:&#x2F;&#x2F;gist-4d0c6.web.app&#x2F;fake_gaussian&#x2F;index.html&quot;&gt;https:&#x2F;&#x2F;gist-4d0c6.web.app&#x2F;fake_gaussian&#x2F;index.html&lt;&#x2F;a&gt;
+オモコロチャンネルの&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;playlist?list=PLb2_XmxSyzc9d96z7pRqojT7KdYpBh-3h&quot;&gt;なりすましクイズ&lt;&#x2F;a&gt;が好きなので似た形式で動画を撮ろうと思ったのですが一緒にクイズをしてくれる友人も自らの声が載った動画を編集する精神力もなかったのでポチポチと(プロンプトを入力し)クイズができるサイトを作り自らプレイして合成音声を用いつつ動画にしました
+&lt;a href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;n1QUgTBjjVs&quot;&gt;https:&#x2F;&#x2F;youtu.be&#x2F;n1QUgTBjjVs&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;声を作るには学習素材を誰かから買わないといけませんし時間とお金がかかってしまうので既存のものである&lt;a href=&quot;https:&#x2F;&#x2F;voicevox.hiroshiba.jp&#x2F;product&#x2F;chugoku_usagi&#x2F;&quot;&gt;中国うさぎ&lt;&#x2F;a&gt;を用いました
+身体は自分で作りましたがLive2Dに触れたのが初めてだったので本当に最低限の動きしかしてくれません
+無料期間があと40日ほどありますから身体のX軸とY軸くらいは作りたいところです&lt;&#x2F;p&gt;
+&lt;p&gt;そういえば昔AnimeEffectsというツールに触れたことを思い出しました
+&lt;a href=&quot;https:&#x2F;&#x2F;www.nicovideo.jp&#x2F;watch&#x2F;sm31007626&quot;&gt;サーバルちゃんが軽快に動く様&lt;&#x2F;a&gt;に憧れてDLし適当な萌イラストを動かしたりしてみていたのですがあまりにも破綻するのですぐに飽きてしまいました
+今回のLive2Dではなんだかんだ最低限の形にはなったと考えればこの7年の成長を感じ少しだけ嬉しかったりします
+私ではなくソフトウェアが成長しただけなのではなんて頭を過りましたがそんな事実は早々に忘失し都合よく生きていきましょう&lt;&#x2F;p&gt;
+&lt;p&gt;一応今回の動画で使ったgnuplotのコード(これまた生成AI製ですが)をまとめたものも添付しておきます
+&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;e4e7d55f03340630c08d08ed65e6cbf8&quot;&gt;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;e4e7d55f03340630c08d08ed65e6cbf8&lt;&#x2F;a&gt;
+(a&#x2F;1.1076)*(x&#x2F;c-b+1.2061)**(2-(x&#x2F;c-b+1.2061)**2)における&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.1076はe^(1&#x2F;2 e^(W(2 e) - 1) + W(2 e) - 2)&lt;&#x2F;li&gt;
+&lt;li&gt;1.2061はe^(W(2 e)&#x2F;2 - 1&#x2F;2)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;の近似値を表しているようです
+ちなみにWは&lt;a href=&quot;https:&#x2F;&#x2F;ja.wikipedia.org&#x2F;wiki&#x2F;%E3%83%A9%E3%83%B3%E3%83%99%E3%83%AB%E3%83%88%E3%81%AEW%E9%96%A2%E6%95%B0&quot;&gt;ランベルトのW関数&lt;&#x2F;a&gt;という関数らしくボース＝アインシュタイン凝縮などでも使われているようです
+浅学な私は初めて知りましたし未だによくわかっていませんがそんな状態でも使えるようにしてくれるWolframAlphaにはとにかく助けてもらっています&lt;&#x2F;p&gt;
+&lt;p&gt;しばしば馬鹿にされるgnuplotの配色ですが暫くこれを使い続けていたため最近では愛着が湧いています
+なにより「君もgnuplot使ってるんだね」と些細ながらコミュニケーションの契機としては十分な会話を与えてくれるプロットソフトなんてこの子だけでしょう
+さて色を変える面倒くささの言い訳も完了しましたから今日も気持ちよく眠れそうです&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>写真を並べる</title>
+        <published>2024-09-18T00:00:00+00:00</published>
+        <updated>2024-09-18T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://slnq.github.io/post/20240918/"/>
+        <id>https://slnq.github.io/post/20240918/</id>
+        
+        <content type="html" xml:base="https://slnq.github.io/post/20240918/">&lt;ul&gt;
+&lt;li&gt;画像を入力さえすればGitHub Actionでhtmlたちが作られてGitHub Pagesに出力される&lt;&#x2F;li&gt;
+&lt;li&gt;横方向のメイソンリーレイアウト&lt;&#x2F;li&gt;
+&lt;li&gt;メタデータにあるコメントを掬う&lt;&#x2F;li&gt;
+&lt;li&gt;OGPの設定&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;特徴としてはこのようなところだろうか
+写真においては概してひと言何かを言いたくなるわけだが整理整頓の苦手な私はテキストファイルと画像ファイルをセットで管理するなんて困難を伴うから画像ファイルより以上は触りたくなくて上のような像にした
+メタデータの取り出しに関してはjpegとwebpに対応させているが色々と試してみるとwebpのほうが容量が軽いのでそちらを使うようにしている
+本当はRustでビルドするタイミングで吸い出してhtmlファイルに書き込むほうが早いのだが直すほどでもないかとの所感がありまた今度に
+あとはsnsにおいて写真を貼るのではなくOGPで映す像がTwitpicやらを思い出しては懐かしくて今更そんなことをしても悪くないなと思う&lt;&#x2F;p&gt;
+&lt;p&gt;こういう簡単なサイトを作るうえで既存のSSGなどを使ってはドキュメントを読む時間ばかりがかかって疲れてしまうから最初から作っている
+今は生成AIのおかげで簡単に作られる
+おかけでコードはつぎはぎのフランケンシュタインの如き様相で薄目でエディターをみながら完成させるはめに&lt;&#x2F;p&gt;
+&lt;p&gt;さてそもそも何故サイトをつくることになったかといえばカメラを買ったからであるがこの経緯も残念なものでスマートフォンのカメラが壊れてしまい曇るから代替というわけだ
+とはいえ家には一応の一眼レフ: EOS Kiss Digital Nというかなり大衆的であるがよく映るものはあるがスマートフォンのカメラとして使うには嵩張るし重いから軽小なものをとNEX-C3と標準ズームレンズを世間的にはお手頃な価格で手に入れた
+私にとってはかなり高かったけれどスマートフォンを買い替えるとなると安くても倍はくだらないから仕方のない出費だったと自らに言い聞かせる
+その数日後に皮膚科に行ったところ施術前後の比較のためにとデジカメを取り出されてしまい私は勝手に「オールドレンズとやらを試したいからスマートフォンを言い訳にレンズ交換のできるカメラを買ったのではないのか」と痛いところをつかれたような気分だ
+ちなみにオールドレンズを買ってしまうと今月の生活に幕を引くことになるからまた数ヶ月後に買おうと色々なことを調べて楽しんでいる&lt;&#x2F;p&gt;
+&lt;p&gt;(これを制作の方に並べるのは本当にどうなのだろうかと思ったがリンクをもたせたいのでこちらに)&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>牛耕式を日本語に当てる</title>
+        <published>2024-02-05T00:00:00+00:00</published>
+        <updated>2024-02-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://slnq.github.io/post/20240205/"/>
+        <id>https://slnq.github.io/post/20240205/</id>
+        
+        <content type="html" xml:base="https://slnq.github.io/post/20240205/">&lt;h1 id=&quot;niu-geng-shi-toha&quot;&gt;牛耕式とは&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;あのイーハトーヴォの
+で夏、風たっおときす
+も底に冷たさをもつ青
+森いしくつう、らそい
+で飾られたモリーオ市
+かひらぎらぎの外郊、
+る草の波。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;のように奇数行は左から偶数行は右から書く方式で目の移動を最小にできる長所を持つ記法&lt;&#x2F;p&gt;
+&lt;p&gt;Dvorak配列と近い匂いを感じる
+そこでColemak配列に当たる代物を作ろうとの試み&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;ti-an-shou-fa-fou-ding-shu-ki&quot;&gt;提案手法 否定書き&lt;&#x2F;h1&gt;
+&lt;p&gt;まず日本語は珍しく縦書きも横書きも普及していてこれを利用しない手はない
+また右から左へ書いていく方式は馴染みがないからやめる
+つまり&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;左から右端&lt;&#x2F;li&gt;
+&lt;li&gt;そのまま下端へ&lt;&#x2F;li&gt;
+&lt;li&gt;左上に戻る&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;という否定記号¬のように読んでいく方式を提案する
+名前は否定書きとしておく&lt;&#x2F;p&gt;
+&lt;p&gt;先の例に当てると&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;あのイーハトーヴォの
+風、夏でも底に冷たす
+いそら、うつくしさき
+られたモリーオいをと
+外のぎらぎら市森もお
+る草の波。ひ、でつっ
+　　　　　か郊飾青た&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;慣れ親しんだ横書きと縦書きから成っていて読みやすい
+とまではいかなくとも牛耕式よりは幾分よいのではないだろうか
+目線の移動量については実感が湧かないだろうから目を移す文字数で計算してみる&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;shi-xian-yi-dong-wen-zi-shu-noji-suan&quot;&gt;視線移動文字数の計算&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;f3f7912c605ad565ff4492c588cd8e7d#file-hiteigaki-c&quot;&gt;このプログラム&lt;&#x2F;a&gt;を用いて計算とプロットを行った&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;1文字右へもしくは下へ目を移すと1増える&lt;&#x2F;li&gt;
+&lt;li&gt;斜めに移動する場合は縦と横の文字数の2乗和の平方根をとる&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;それらの総和を視線移動文字数とし比較をすると下の画像のようになる&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;slnq.github.io&#x2F;post&#x2F;20240205.svg&quot; alt=&quot;グラフ&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;今回は高度合成数から1260文字で固定して縦の文字数を横の文字数で割ったものを横軸にし視線移動文字数を縦軸に置いた
+縦の文字数が横の文字数より6.43倍までは否定書きの方が視線移動文字数が少ないわけだから有用な気もするがいかんせんこんな比率で書くことも無いのだろうし具体例でみたほうが実感が湧いて良いかもしれない&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;shi-yong-noshang-de&quot;&gt;実用の上で&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;xin-shu&quot;&gt;新書&lt;&#x2F;h2&gt;
+&lt;p&gt;手元の新書42行16列を利用すると横書き1246.365152縦書き1271.182900禁止書き1167.660476となり禁止書きが優勢&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;wen-ku&quot;&gt;文庫&lt;&#x2F;h2&gt;
+&lt;p&gt;これまた手元にあったものでは38行16列で横書き1126.231966縦書き1147.202666禁止書き1045.636821で相変わらず&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;heng-shu-kinodan-xing-ben&quot;&gt;横書きの単行本&lt;&#x2F;h2&gt;
+&lt;p&gt;35行36列で横書き2415.485615縦書き2414.514595禁止書き2069.214987となり同様&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;note&quot;&gt;note&lt;&#x2F;h2&gt;
+&lt;p&gt;16:9FHDのディスプレイで初期状態のChromeを用いたところ28行34列となり横書き1815.408997縦書き1809.610902禁止書き1572.829309でWEBでも通用するよう&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;twitter&quot;&gt;Twitter&lt;&#x2F;h2&gt;
+&lt;p&gt;同じ環境でTwitterをみると5行33列で横書き263.939380縦書き288.062485禁止書き278.493361となり普通の横書きの方が良い感じ
+またiPhone11のアプリ6行26列も横書き275.099960縦書き257.475488禁止書き65.614259で縦書きが良いなんて結果に&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;shi-erunoka&quot;&gt;使えるのか&lt;&#x2F;h1&gt;
+&lt;p&gt;慣れることで横書きや縦書きと遜色なく読めるのであれば視線移動文字数が減っている以上は効率的と言えるかもしれない
+ただ私は医学に明るくないので視線の移動がどのように起こっているかも知らず正しい計算かは確かでない
+またインターネットが今ほど普及していない2007年の調査&lt;a href=&quot;https:&#x2F;&#x2F;research.nttcoms.com&#x2F;database&#x2F;data&#x2F;000596&#x2F;&quot;&gt;日本人の読書離れは進んでいるのか&lt;&#x2F;a&gt;においても読書よりインターネットに時間が割かれており現代ではこの傾向が顕著になっていると考えられWEBへの対応がより肝要と考える
+頁による隔たりのないため単純に文字数から縦横比を選ぶのではなく画面に表示される文字数に応じてレンダリングしていく必要がある
+これに違和感なくスクロールを落とし込むと手法が思いつかないがスクロールしたら書いてある文の全てを更新するくらいだろうか
+本に関しても縦書きが混じるため数式や英語を使えないといった問題も生じる
+また文章が避けるような画像の配置をすることにも困難が伴うだろう&lt;&#x2F;p&gt;
+&lt;p&gt;WEBなら簡単に作れるので取り敢えず試すのが肝要に思える&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;shi-su&quot;&gt;試す&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist-4d0c6.web.app&#x2F;hiteigaki.html&quot;&gt;簡単に作ったもの&lt;&#x2F;a&gt;と&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;f3f7912c605ad565ff4492c588cd8e7d#file-hiteigaki-html&quot;&gt;そのコード&lt;&#x2F;a&gt;
+面倒なのでスマートフォンには対応しておらずマウスのスクロールによって次が読める
+次を読もうと右下から左上に視線をやるとどこまで読んでいたかがわからなくなり全く読みにくい
+試してみないとわからなかったので作った甲斐があった&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zong-zite&quot;&gt;総じて&lt;&#x2F;h1&gt;
+&lt;p&gt;視線移動文字数からは楽に読めるであろうと考えられた禁止書きだが実際に試すと読みにくく良い書き方とは言えないだろう&lt;&#x2F;p&gt;
+&lt;p&gt;この結論に落とし込むと文章は書けるのにやたら無知な読書感想文賞レース常連小学生かストーリーの為に頓痴気な予想をたてる卒研生のようで嫌だ&lt;&#x2F;p&gt;
+&lt;p&gt;そもそも牛耕式のメリットは視線の移動量よりも文章に関係ない部分のために目線を動かす必要がない点にあるなんてわかりきっていたことなのだから&lt;&#x2F;p&gt;
+&lt;p&gt;無為&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>手描きイージングと丸ドット画像</title>
+        <published>2023-10-31T00:00:00+00:00</published>
+        <updated>2023-10-31T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://slnq.github.io/post/20231031/"/>
+        <id>https://slnq.github.io/post/20231031/</id>
+        
+        <content type="html" xml:base="https://slnq.github.io/post/20231031/">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;chat.openai.com&quot;&gt;chatGPT&lt;&#x2F;a&gt;と戯れることを主目的に以下の静的サイト(とは名ばかりの生html)を作成した．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;shou-miao-kiizingu&quot;&gt;手描きイージング&lt;&#x2F;h1&gt;
+&lt;p&gt;動画編集が行き詰まるとイージングを弄って一日が終わる．
+そんな中で気づいたのだが，イージングは大抵のソフトでベジェ曲線により制御されていて，手描きなんて中々みない．
+便利になるとも思えないが物は試しで手描きのイージングを試す．&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist-4d0c6.web.app&#x2F;draw.html&quot;&gt;https:&#x2F;&#x2F;gist-4d0c6.web.app&#x2F;draw.html&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;これくらいの実装なら適当に頼めば書いてくれるだろうと思ったが，細かく手順を書かないと思ったようなコードをくれなかった．
+結局&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;canvasに線を引けるプログラム&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;ja&#x2F;docs&#x2F;Web&#x2F;CSS&#x2F;easing-function&quot;&gt;easing-function&lt;&#x2F;a&gt;によって四角形を動かすプログラム&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;を書いてもらい，jsで取得したマウスの軌道をcssの&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;ja&#x2F;docs&#x2F;Web&#x2F;CSS&#x2F;easing-function&quot;&gt;easing-function&lt;&#x2F;a&gt;に当てる肝の部分は自分で書いた．&lt;&#x2F;p&gt;
+&lt;p&gt;コード: &lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5cf7fc14dc1c7d2fb10b7f8f0516977d&quot;&gt;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5cf7fc14dc1c7d2fb10b7f8f0516977d&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;cssの&lt;a href=&quot;https:&#x2F;&#x2F;cubic-bezier.com&#x2F;#.17,.67,.83,.67&quot;&gt;cubic-bezier&lt;&#x2F;a&gt;は3次に限定されているようなので，4次以上のベジェ曲線に対応するイージングも作ってみたい気持ちはある．
+B-スプライン曲線にも興味はあるが肝要となるn次におけるn+1点での制御では始点と終点を固定することが出来ず面倒事が多そうだなという思いが強くある．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;hua-xiang-wowan-idotutodebiao-xian-suru&quot;&gt;画像を丸いドットで表現する&lt;&#x2F;h1&gt;
+&lt;p&gt;随分前に作ったので動機などは覚えていないが，VTuberの3Dライブで3D空間に置かれたモニターを敢えて荒いドットで現実のライブ然と実装していることが気に入って作ったような気がする．&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist-4d0c6.web.app&#x2F;circle_dot.html&quot;&gt;https:&#x2F;&#x2F;gist-4d0c6.web.app&#x2F;circle_dot.html&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;これは結構ChatGPTが書いてくれたんじゃないかな．自分で書いたら入力した画像の解像度に応じた円の大きさと量を設定する気がするため．
+いまから加筆修正してもいいのだが形になってはいるのでまぁいいかな．&lt;&#x2F;p&gt;
+&lt;p&gt;コード: &lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;925eda31999a88c527170377a1d6478b&quot;&gt;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;925eda31999a88c527170377a1d6478b&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;円を小さくし数を増やすとモアレのようなものが見えて面白い．
+面白いが携帯では重くなってしまうのが問題．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zolanokoto&quot;&gt;Zolaのこと&lt;&#x2F;h1&gt;
+&lt;p&gt;それぞれの記事を書くほどの内容でも無いのでまとめてしまったが，このサイトでは複数のURLを⧉から飛べるように設定していないので改変の必要が出てきてしまった．また近いうちに．&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>合成に使う材料の重さを計算する</title>
+        <published>2023-07-09T00:00:00+00:00</published>
+        <updated>2023-07-09T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://slnq.github.io/post/20230709/"/>
+        <id>https://slnq.github.io/post/20230709/</id>
+        
+        <content type="html" xml:base="https://slnq.github.io/post/20230709/">&lt;h1 id=&quot;motibesiyon&quot;&gt;モチベーション&lt;&#x2F;h1&gt;
+&lt;p&gt;合成の為に秤量をするのだが，その計算を行うソフトウェアがWindowsにしか対応しておらず不便でならない．
+WEBで実装することでOSに依らず使えるようにしようという算段だ．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zhi-zuo-wu&quot;&gt;制作物&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist-4d0c6.web.app&#x2F;hyoryo.html&quot;&gt;https:&#x2F;&#x2F;gist-4d0c6.web.app&#x2F;hyoryo.html&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;sosukodo&quot;&gt;ソースコード&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;65ec66de4d338ec9e1ae35a1fbd7d314&quot;&gt;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;65ec66de4d338ec9e1ae35a1fbd7d314&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;ほとんどを&lt;a href=&quot;https:&#x2F;&#x2F;chat.openai.com&quot;&gt;ChatGPT&lt;&#x2F;a&gt;に書いてもらった．
+とはいえ関数ごとに書いてもらったので，同じ処理を別の関数に分けている部分などは設計も碌にせずに書き始めた私のせいだ．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;ji-neng&quot;&gt;機能&lt;&#x2F;h1&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;target&lt;&#x2F;th&gt;&lt;th&gt;:&lt;&#x2F;th&gt;&lt;th&gt;合成したい試料の化学式&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;reagents&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;合成に用いる試薬の化学式&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;targets mass&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;合成したい試料の重さ [g]&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;x&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;xを定義する&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;y&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;yを定義する&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;decimals&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;表示する小数点以下の桁数&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;target&quot;&gt;target&lt;&#x2F;h2&gt;
+&lt;p&gt;合成したい試料の化学式を書く．
+複数の化学式を書きたい場合は&lt;code&gt;LaOBiSSe, LaOBiS1.4Se0.6&lt;&#x2F;code&gt;のように，カンマ区切りで書く．
+置換したい要素が1つある場合は&lt;code&gt;LaOBiS2-xSex&lt;&#x2F;code&gt;のように，変数xを用いて書く．
+置換したい要素が2つある場合は&lt;code&gt;LaO1-xFxBiS2-ySey&lt;&#x2F;code&gt;のように，変数x, yを用いて書く．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;reagents&quot;&gt;reagents&lt;&#x2F;h2&gt;
+&lt;p&gt;合成に使いたい試薬の化学式を書く．
+まず2つ以上になるだろうから&lt;code&gt;Bi. S, La2S3, La2O3, LaF3, Bi2Se3 &lt;&#x2F;code&gt;のようにカンマ区切りで書く．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;x&quot;&gt;x&lt;&#x2F;h2&gt;
+&lt;p&gt;targetで変数xを使う場合のxの定義を書く．&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;x_min, x_max, x_step&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;x1, x2, x3, ...&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;1つ目のようにfor文のような書き方と2つ目のように列記する書き方のどちらも出来る．
+例として0から1まで0.2ずつ変化させたい場合は&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;0, 1, 0.2&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;0, 0.2, 0.4, 0.6, 0.8, 1.0&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;と書く．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;y&quot;&gt;y&lt;&#x2F;h2&gt;
+&lt;p&gt;targetで変数を2つ使う場合は，yの定義をxのときと同様に書く．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;decimals&quot;&gt;decimals&lt;&#x2F;h2&gt;
+&lt;p&gt;小数点以下を何桁表示するか選べる．
+空白だったり0を入力した場合はJavaScriptのnumber型の仕様で17桁が表示され邪魔になるだろうから，使う秤に合わせた数値を入力するといい．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;urlparameta&quot;&gt;URLパラメーター&lt;&#x2F;h2&gt;
+&lt;p&gt;以上のフォームの入力によってURLを動的に変更し，そのURLでフォームに自動入力できるようにした．
+また，URLを開いた時に自動的にフォームを送信し，結果を表示できるようにした．
+すべてをChatGPTが書いてくれた．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;biao-shi&quot;&gt;表示&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;bian-shu-nasinochang-he&quot;&gt;変数なしの場合&lt;&#x2F;h2&gt;
+&lt;p&gt;行ヘッダーにtargetが，列ヘッダーにregentsが表示され，表の中が計算した重さになる.
+&lt;a href=&quot;https:&#x2F;&#x2F;gist-4d0c6.web.app&#x2F;hyoryo.html?input_targets=LaOBiS2%2C+LaOBiS1.8Se0.2&amp;amp;input_reagents=La2O3%2C+La2S3%2C+LaF3%2C+Bi%2C+S%2C+Bi2Se3&amp;amp;input_mass=1&quot;&gt;変数なしの表を表示する例&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;1bian-shu-xnominoshi-yong-nochang-he&quot;&gt;1変数xのみの使用の場合&lt;&#x2F;h2&gt;
+&lt;p&gt;行ヘッダーにxを代入したtargetが，列ヘッダーにregentsが表示され，表の中が計算した重さになる.
+&lt;a href=&quot;https:&#x2F;&#x2F;gist-4d0c6.web.app&#x2F;hyoryo.html?input_targets=LaO1-xFxBiS2&amp;amp;input_reagents=La2O3%2C+La2S3%2C+LaF3%2C+Bi%2C+S%2C+Bi2Se3&amp;amp;input_mass=1&amp;amp;input_x=0.2%2C+0.5%2C+0.9&amp;amp;input_decimals=4&quot;&gt;1変数の表を表示する例&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;2bian-shu-x-ynoshi-yong-nochang-he&quot;&gt;2変数x, yの使用の場合&lt;&#x2F;h2&gt;
+&lt;p&gt;行ヘッダーにxが,列ヘッダーにyが表示される．その表の中にx, yを代入したtargetをヘッダーにもち，regentsを列ヘッダーにもつ表が表示される.
+&lt;a href=&quot;https:&#x2F;&#x2F;gist-4d0c6.web.app&#x2F;hyoryo.html?input_targets=LaO1-xFxBiS2&amp;amp;input_reagents=La2O3%2C+La2S3%2C+LaF3%2C+Bi%2C+S%2C+Bi2Se3&amp;amp;input_x=0.2%2C+0.3%2C+0.35%2C+0.5&amp;amp;input_y=0%2C+1.2%2C+0.2&amp;amp;input_decimals=7&amp;amp;input_mass=2&quot;&gt;2変数の表を表示する例&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;suo-gan&quot;&gt;所感&lt;&#x2F;h1&gt;
+&lt;p&gt;だいたいをChatGPTに書いてもらったので達成感などは無い．
+それが故に値があっているのか心配で，元からあるソフトの結果と見比べながら使っている．
+AIは出力を保証してくれない．&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>GitHubのContributionを模倣</title>
+        <published>2023-07-02T00:00:00+00:00</published>
+        <updated>2023-07-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://slnq.github.io/post/20230702/"/>
+        <id>https://slnq.github.io/post/20230702/</id>
+        
+        <content type="html" xml:base="https://slnq.github.io/post/20230702/">&lt;h1 id=&quot;motibesiyon&quot;&gt;モチベーション&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;&quot;&gt;GitHub&lt;&#x2F;a&gt;のContributionが埋まっている人はかっこいいが，コンスタントにプログラムを書くわけでも無いので真似もできない．代わりにツイートで実装すれば良いのではと思い作り始めた．
+&lt;a href=&quot;https:&#x2F;&#x2F;adrianroselli.com&#x2F;2018&#x2F;02&#x2F;github-contributions-chart.html&quot;&gt;GitHub Contributions Chart&lt;&#x2F;a&gt;を参考にJavaScriptで実装し，あとはTwitterからツイートを取得するのみに迫った頃，Twitter APIの実質的な終了が言い渡され全てが泡沫の如く消えた．
+読書記録などにしようか，いや普通の読書記録アプリさえも続かないのに，などと2ヶ月程度考えた末に&lt;a href=&quot;https:&#x2F;&#x2F;slnq.github.io&quot;&gt;当ブログ&lt;&#x2F;a&gt;の更新記録にしてみるかと考え，&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&quot;&gt;Zola&lt;&#x2F;a&gt;での実装を始めた．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zhi-zuo-wu&quot;&gt;制作物&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist-4d0c6.web.app&#x2F;like_contribution.html&quot;&gt;JavaScriptでの実装&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;..&#x2F;..&#x2F;about&#x2F;#log&quot;&gt;Zolaでの実装&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;sosukodo&quot;&gt;ソースコード&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5c6407c9173c67b2222fa837cd9ce735&quot;&gt;JavaScriptでのコード&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;blob&#x2F;main&#x2F;templates&#x2F;macros.html&quot;&gt;Zolaでのコード&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;JavaScriptの方についてはDOM操作に慣れている人は&lt;a href=&quot;https:&#x2F;&#x2F;adrianroselli.com&#x2F;2018&#x2F;02&#x2F;github-contributions-chart.html&quot;&gt;GitHub Contributions Chart&lt;&#x2F;a&gt;をそのまま置き換えただけだとわかると思う．更新した瞬間にDOM操作が行われるため画面が乱れるという欠点がある．
+&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&quot;&gt;Zola&lt;&#x2F;a&gt;の方については関数として&lt;a href=&quot;https:&#x2F;&#x2F;tera.netlify.app&#x2F;docs&#x2F;#macros&quot;&gt;macro&lt;&#x2F;a&gt;を使っているが，配列を出力出来ないため，カンマ区切りの文字列を介して返している．また，条件文に括弧を使えないため他の言語なら1つのif文で書けるものも&lt;a href=&quot;https:&#x2F;&#x2F;tera.netlify.app&#x2F;docs&quot;&gt;Tera&lt;&#x2F;a&gt;では2重で書くしかない．以上を抑えておけば&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;blob&#x2F;main&#x2F;templates&#x2F;macros.html&quot;&gt;macros.html&lt;&#x2F;a&gt;を読んで理解できると思う．
+デザインについてはJavaScriptの方は&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;&quot;&gt;GitHub&lt;&#x2F;a&gt;のものをそのまま，&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&quot;&gt;Zola&lt;&#x2F;a&gt;の方は&lt;a href=&quot;https:&#x2F;&#x2F;slnq.github.io&quot;&gt;当ブログ&lt;&#x2F;a&gt;に合う感じにした．色の濃度が無いのは1日に1記事より多く更新するとは思えないため．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;chu-li&quot;&gt;処理&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;xing-hetuda&quot;&gt;行ヘッダー&lt;&#x2F;h2&gt;
+&lt;p&gt;getWeek()で月が何週間あるかを計算しcolspanで間隔を空ける．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;xing&quot;&gt;行&lt;&#x2F;h2&gt;
+&lt;p&gt;get_date_on_weekday()で1年間の全てのn曜日を取得している．
+HTMLのtableが列で構成できたらもっと楽だったはずなのですが．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;run-nian-pan-ding&quot;&gt;閏年判定&lt;&#x2F;h2&gt;
+&lt;p&gt;JavaScriptではDate()が便利で必要が無いが，&lt;a href=&quot;https:&#x2F;&#x2F;tera.netlify.app&#x2F;docs&quot;&gt;Tera&lt;&#x2F;a&gt;には無いので，last_day()で計算している．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;suo-gan&quot;&gt;所感&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tera.netlify.app&#x2F;docs&quot;&gt;Tera&lt;&#x2F;a&gt;を書くのが大変だった．とはいえ言語の目的に適していないことを行っているのだから当然ではある．
+せっかくブログ更新のContributionを作ったのだから定期的に記事を更新していきたいが，継続的な行動が苦手なので厳しいのではないかなと思っている．&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Wasmで電場シミュレータを作る</title>
+        <published>2023-06-29T00:00:00+00:00</published>
+        <updated>2023-06-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://slnq.github.io/post/20230629/"/>
+        <id>https://slnq.github.io/post/20230629/</id>
+        
+        <content type="html" xml:base="https://slnq.github.io/post/20230629/">&lt;h1 id=&quot;motibesiyon&quot;&gt;モチベーション&lt;&#x2F;h1&gt;
+&lt;p&gt;卒業研究として&lt;a href=&quot;..&#x2F;post&#x2F;t2-werve-gpujs&quot;&gt;GPU.jsで電場シミュレータ&lt;&#x2F;a&gt;を作っている間に&lt;a href=&quot;https:&#x2F;&#x2F;webassembly.org&quot;&gt;WebAssembly&lt;&#x2F;a&gt;というものを知ってしまい，それ以降はやる気が低下したりしていた．卒研が終わり暇も出来たので，電場シミュレータを&lt;a href=&quot;https:&#x2F;&#x2F;webassembly.org&quot;&gt;WebAssembly&lt;&#x2F;a&gt;で作り直した．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zhi-zuo-wu&quot;&gt;制作物&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;slnq.github.io&#x2F;werve-wasm&#x2F;&quot;&gt;https:&#x2F;&#x2F;slnq.github.io&#x2F;werve-wasm&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ji-neng&quot;&gt;機能&lt;&#x2F;h2&gt;
+&lt;p&gt;黒い範囲をクリックすると白いぼやけた円が表示される．これはスライダーによって変化するcharge valueの値に対応した電荷による電場である．このようにして電場を表示するのが主な機能．&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;install&lt;&#x2F;th&gt;&lt;th&gt;:&lt;&#x2F;th&gt;&lt;th&gt;クリックするとchargeに合う値の電荷を置く&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;remove&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電荷をクリックすると消すことができる&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;control&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電荷をドラッグ・アンド・ドロップで移動させられる&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;fix&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電荷をクリックすると固定できる&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;sosukodo&quot;&gt;ソースコード&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;werve-wasm&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;werve-wasm&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;基本的に&lt;code&gt;src&lt;&#x2F;code&gt;内の&lt;code&gt;.js&lt;&#x2F;code&gt;ファイルを読めばシミュレーションについてはわかると思う．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;chu-li&quot;&gt;処理&lt;&#x2F;h1&gt;
+&lt;ol&gt;
+&lt;li&gt;1つの電荷に対する電界の値を1539×1539で計算しテンプレートに格納する．&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の位置を元に電界のテンプレートを動かし配列769×769に格納する．&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の数だけ総和して配列769×769に格納していく．&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の座標に対応する電界配列の要素を電荷値と乗算してクーロン力を計算する．&lt;&#x2F;li&gt;
+&lt;li&gt;クーロン力を元に位置と速度と加速度を計算する．&lt;&#x2F;li&gt;
+&lt;li&gt;表示する．&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;これの2.から6.を繰り返している．配列の大きさの選択理由については記憶が無いが奇数の方が都合が良かったはず．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;webassembly&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;webassembly.org&quot;&gt;WebAssembly&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;入力と表示以外の全てを&lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;ja&quot;&gt;Rust&lt;&#x2F;a&gt;から変換した&lt;a href=&quot;https:&#x2F;&#x2F;webassembly.org&quot;&gt;WebAssembly&lt;&#x2F;a&gt;で実行している．これを作った時点では&lt;a href=&quot;https:&#x2F;&#x2F;wgpu.rs&quot;&gt;wgpu&lt;&#x2F;a&gt;というか&lt;a href=&quot;https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webgpu&#x2F;&quot;&gt;WebGPU&lt;&#x2F;a&gt;の仕様が変わり続けていたため使っていない．
+また，表示に適すような配列への変換もこっちで行っている．&lt;&#x2F;p&gt;
+&lt;p&gt;スマホで触ってみて気がついたが，スワイプだとcontrol(move)が使えないようだ．&lt;a href=&quot;..&#x2F;post&#x2F;t2-werve-gpujs&quot;&gt;GPU.jsで作った時&lt;&#x2F;a&gt;は使えているのだから，修正も可能であうと思う．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;canvas&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;ja&#x2F;docs&#x2F;Web&#x2F;HTML&#x2F;Element&#x2F;canvas&quot;&gt;Canvas&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;上述にある，表示に適すような配列を&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;ja&#x2F;docs&#x2F;Web&#x2F;JavaScript&quot;&gt;JavaScript&lt;&#x2F;a&gt;と&lt;a href=&quot;https:&#x2F;&#x2F;webassembly.org&quot;&gt;WebAssembly&lt;&#x2F;a&gt;の共有メモリーから表示している．
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;werve-gpujs&quot;&gt;GPU.js版&lt;&#x2F;a&gt;にあったベクトル表示ha未だに作っていないため,Canvasは1枚のみでの実装．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;css&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;ja&#x2F;docs&#x2F;Learn&#x2F;Getting_started_with_the_web&#x2F;CSS_basics&quot;&gt;CSS&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;poe.com&#x2F;s&#x2F;XGTlkiRiyR4deC8lfmIx&quot;&gt;ChatGPTに良い感じのものを作ってもらった．&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;depuroi&quot;&gt;デプロイ&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;webpack.js.org&#x2F;&quot;&gt;webpack&lt;&#x2F;a&gt;を用いてローカルで生成したものを&lt;a href=&quot;https:&#x2F;&#x2F;docs.github.com&#x2F;ja&#x2F;pages&#x2F;getting-started-with-github-pages&#x2F;about-github-pages&quot;&gt;GitHub Pages&lt;&#x2F;a&gt;で&#x2F;docs`内をデプロイしている．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;suo-gan&quot;&gt;所感&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;..&#x2F;post&#x2F;t2-werve-gpujs&quot;&gt;GPU.jsで作った時&lt;&#x2F;a&gt;に比べて情報が多くて楽だった．言語は違うとはいえ一度作った経験があるからというのも大きいだろうが．
+今後の目標としては&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;wgpu.rs&quot;&gt;wgpu&lt;&#x2F;a&gt;による性能向上&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;ja&#x2F;docs&#x2F;Web&#x2F;HTML&#x2F;Element&#x2F;canvas&quot;&gt;Canvas&lt;&#x2F;a&gt;を追加してベクトル表示&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;という具合だろうか．&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>GPU.jsで電場シミュレータを作る</title>
+        <published>2023-06-27T00:00:00+00:00</published>
+        <updated>2023-06-27T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://slnq.github.io/post/20230627/"/>
+        <id>https://slnq.github.io/post/20230627/</id>
+        
+        <content type="html" xml:base="https://slnq.github.io/post/20230627/">&lt;h1 id=&quot;motibesiyon&quot;&gt;モチベーション&lt;&#x2F;h1&gt;
+&lt;p&gt;研究室で以前つくられた電場シミュレータをWeb上で実装し，それを以て卒業研究にしようというモチベーションで作られた．
+作っているうちに知ったが他の年度にも色々と試されていたようで陳腐な卒研となった．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zhi-zuo-wu&quot;&gt;制作物&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;slnq.github.io&#x2F;werve-gpujs&#x2F;&quot;&gt;https:&#x2F;&#x2F;slnq.github.io&#x2F;werve-gpujs&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ji-neng&quot;&gt;機能&lt;&#x2F;h2&gt;
+&lt;p&gt;白い範囲をクリックすると赤い円と無数の矢印が見える．赤は正を円は電荷を示し赤い円は正電荷で矢印は電場を表現している．
+右下にchargeとあるスライダーを左に動かし，白い範囲をクリックすると円の大きさが違う青い円が現れ動き出す．青は負で大きさは電荷の大きさを示しており，青い円は負電荷となっている．
+精密なシミュレータではないが，電荷や電場の動きは習ったそれと変わらないのではないだろうか．これが基本で，その他に8つあるスイッチは細かい設定の為にあり，下で説明する．&lt;&#x2F;p&gt;
+&lt;p&gt;| time | : | 時間を再生&#x2F;停止する |
+| -: | | |
+| norm | : | 電場の大きさを輝度で表す |
+| vector | : | 電場のベクトルを矢印で表す |
+| install | : | クリックするとchargeに合う値の電荷を置く |
+| delete | : | 電荷をクリックすると消すことができる |
+| fix | : | 電荷をクリックすると固定できる |
+| move | : | 電荷をドラッグ・アンド・ドロップで移動させられる |&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;sosukodo&quot;&gt;ソースコード&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;werve-gpujs&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;werve-gpujs&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;基本的に&lt;code&gt;src&lt;&#x2F;code&gt;内の&lt;code&gt;.js&lt;&#x2F;code&gt;ファイルを読めばシミュレーションについてはわかると思う．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;chu-li&quot;&gt;処理&lt;&#x2F;h1&gt;
+&lt;ol&gt;
+&lt;li&gt;1つの電荷に対する電場の値を599×599で計算しテンプレートに格納する．&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の位置を元に電場のテンプレートを動かし配列300×300に格納する．&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の数だけ電場を総和して配列300×300に格納していく．&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の座標に対応する電場配列の要素を電荷値と乗算してクーロン力を計算する．&lt;&#x2F;li&gt;
+&lt;li&gt;クーロン力を元に位置と速度と加速度を計算する．&lt;&#x2F;li&gt;
+&lt;li&gt;表示する．&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;これの2.から6.を繰り返している．配列の大きさ(すなわちシミュレートの解像度)である300×300は色々と試した結果であり，最適な解像度とかでは無い．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;gpu-js&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;GPU.js&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;GPU.js&lt;&#x2F;a&gt;は1.から3.及び6.で使っている．&lt;code&gt;new GPU({ mode: &#x27;cpu&#x27; });&lt;&#x2F;code&gt;でGPUを使わない手法も取れると&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gpujs&#x2F;gpu.js&quot;&gt;ドキュメント&lt;&#x2F;a&gt;には書いてあるが機能せず，CPUとの比較が出来ていないのだから，GPUのありがたみも未知数となる．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;canvas&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;ja&#x2F;docs&#x2F;Web&#x2F;HTML&#x2F;Element&#x2F;canvas&quot;&gt;Canvas&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;GPU.js&lt;&#x2F;a&gt;を6.で使っているのも事実だが，使われた割合としてはせいぜい半分くらい．normでの電場の輝度表示は&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;GPU.js&lt;&#x2F;a&gt;を用いているが，vectorで使える電場のベクトル表示や電荷の円は&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;ja&#x2F;docs&#x2F;Web&#x2F;JavaScript&quot;&gt;JavaScript&lt;&#x2F;a&gt;で描いている．300×300でいくつも矢印を描くと画質的に見てられないので，300×300で出た輝度表示は600×600に補間せず拡大しベクトル表示の方は600×600で出している．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;dakumodo&quot;&gt;ダークモード&lt;&#x2F;h2&gt;
+&lt;p&gt;ちょうど流行りだったので作った．&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;ja&#x2F;docs&#x2F;Web&#x2F;JavaScript&quot;&gt;JavaScript&lt;&#x2F;a&gt;で輝度表示の色を反転させると計算量を食うかなと思い，&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;GPU.js&lt;&#x2F;a&gt;の表示用配列の時点で反転させている．他のところで最適化に程遠いのだから，こんなの無意味だろと言われれば，それはそのとおり．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;depuroi&quot;&gt;デプロイ&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;webpack.js.org&#x2F;&quot;&gt;webpack&lt;&#x2F;a&gt;を用いてローカルで生成したものを&lt;a href=&quot;https:&#x2F;&#x2F;docs.github.com&#x2F;ja&#x2F;pages&#x2F;getting-started-with-github-pages&#x2F;about-github-pages&quot;&gt;GitHub Pages&lt;&#x2F;a&gt;で&lt;code&gt;&#x2F;docs&lt;&#x2F;code&gt;内をデプロイしている．当初は&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;&quot;&gt;Bitbucket&lt;&#x2F;a&gt;を使っていたので，&lt;a href=&quot;https:&#x2F;&#x2F;jp.heroku.com&#x2F;&quot;&gt;Heroku&lt;&#x2F;a&gt;を使おうとしていたが，うまくいかなかった．最近の&lt;a href=&quot;https:&#x2F;&#x2F;jp.heroku.com&#x2F;&quot;&gt;Heroku&lt;&#x2F;a&gt;を見ている感じ災い転じて福となすなんて思うわけだが．(結局&lt;a href=&quot;https:&#x2F;&#x2F;jp.heroku.com&#x2F;&quot;&gt;Heroku&lt;&#x2F;a&gt;の使い方はわからないまま，使う機会がなくなったね．)&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;suo-gan&quot;&gt;所感&lt;&#x2F;h1&gt;
+&lt;p&gt;卒業研究として作ったのは確かだが，研究といえる代物ではない．
+とはいえ一応こうして形になったのは嬉しかったな．&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
