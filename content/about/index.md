@@ -25,17 +25,6 @@ links = []
 中途半端なものを人に見られるのが嫌というわけでは無いのだが変な完璧主義のきらいがあるようで，最初から書き直すことで何かが変わることを期待している節がある．
 
 # link
-- [search](https://slnq.github.io/search)
-- [RSS](https://slnq.github.io/atom.xml)
-- [Photos](https://slnq.github.io/photos/)
-- [Animation](https://slnq.github.io/animation/)
-- [Twitter](https://twitter.com/slnql)
-- [Bluesky](https://bsky.app/profile/nsl.bsky.social)
-- [Misskey](https://misskey.io/@sq)
-- [mixi2](https://mixi.social/@sili)
-- [Instagram](https://www.instagram.com/ntkzu/)
-- [YouTube](https://www.youtube.com/@slnq)
-- [GitHub](https://github.com/slnq)
-- [Gist](https://gist.github.com/slnq)
-- [Zenn](https://zenn.dev/natsuka_sili)
-- [note](https://note.com/ntq)
+基本的には[リンクツリー](https://slnq.github.io/links/)にまとめてあります
+- [当ブログの全文検索](https://slnq.github.io/search)
+- [当ブログのRSS](https://slnq.github.io/atom.xml)
