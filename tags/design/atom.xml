@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>夏果 - design</title>
+    <link rel="self" type="application/atom+xml" href="https://slnq.github.io/tags/design/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://slnq.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-12-21T00:00:00+00:00</updated>
+    <id>https://slnq.github.io/tags/design/atom.xml</id>
+    <entry xml:lang="en">
+        <title>text figuresな10 segment表示</title>
+        <published>2024-12-21T00:00:00+00:00</published>
+        <updated>2024-12-21T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://slnq.github.io/post/20241221/"/>
+        <id>https://slnq.github.io/post/20241221/</id>
+        
+        <content type="html" xml:base="https://slnq.github.io/post/20241221/">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Text_figures&quot;&gt;text figures&lt;&#x2F;a&gt;またの名をnon-liningとかold styleとかよばれる数字の書体&lt;&#x2F;p&gt;
+&lt;p&gt;3, 4, 5, 7, 9が下に出ていて6, 8は上に飛び出ている&lt;&#x2F;p&gt;
+&lt;p&gt;他の英字とかにも溶け込んで統一感がうまれる形式だけれど読みやすさは最近のlining数字に劣っているからかweb上で目にすることは多くない 特に日本語だとね&lt;&#x2F;p&gt;
+&lt;p&gt;連続した英文のなかにあるからこそメリットがでてくる書体ではあるけれど敢えてディジタル数字に取り入れてみたい&lt;&#x2F;p&gt;
+&lt;p&gt;10 segmentなら多分aからfも表示できるんじゃないかな&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;slnq.github.io&#x2F;post&#x2F;20241221.svg&quot; alt=&quot;グラフ&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;うん悪くない&lt;&#x2F;p&gt;
+&lt;p&gt;2がzみたいなのは少し気になるけれど4とかdとか良い感じじゃない？&lt;&#x2F;p&gt;
+&lt;p&gt;でもtext figuresのメリットって小文字のなかに混ざるからこそだろうからもう少し本数を増やして全部のアルファベットに対応させたいな&lt;&#x2F;p&gt;
+&lt;p&gt;実際にledを買ってきて作ろうかと思ったけれどフォントとかに使ったほうが馴染む気がする&lt;&#x2F;p&gt;
+&lt;p&gt;4入力でデジタル回路を設計しようとカルノー図をちまちま書いていたけれど思ったより素子が必要そうで少し面倒になってきたのもある&lt;&#x2F;p&gt;
+&lt;p&gt;ledを組む方に焦点をあてるのならArduinoで操作してもいいのかな&lt;&#x2F;p&gt;
+&lt;p&gt;アルファベット全体の作成もしくは16進数のled実装が出来たらまた追記しようかな&lt;&#x2F;p&gt;
+&lt;p&gt;最後に7セグ関連のおすすめの動画を載せておくね: &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=RTB5XhjbgZA&amp;amp;t=18s&quot;&gt;Segmented Displays -Posy&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>写真を並べる</title>
+        <published>2024-09-18T00:00:00+00:00</published>
+        <updated>2024-09-18T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://slnq.github.io/post/20240918/"/>
+        <id>https://slnq.github.io/post/20240918/</id>
+        
+        <content type="html" xml:base="https://slnq.github.io/post/20240918/">&lt;ul&gt;
+&lt;li&gt;画像を入力さえすればGitHub Actionでhtmlたちが作られてGitHub Pagesに出力される&lt;&#x2F;li&gt;
+&lt;li&gt;横方向のメイソンリーレイアウト&lt;&#x2F;li&gt;
+&lt;li&gt;メタデータにあるコメントを掬う&lt;&#x2F;li&gt;
+&lt;li&gt;OGPの設定&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;特徴としてはこのようなところだろうか
+写真においては概してひと言何かを言いたくなるわけだが整理整頓の苦手な私はテキストファイルと画像ファイルをセットで管理するなんて困難を伴うから画像ファイルより以上は触りたくなくて上のような像にした
+メタデータの取り出しに関してはjpegとwebpに対応させているが色々と試してみるとwebpのほうが容量が軽いのでそちらを使うようにしている
+本当はRustでビルドするタイミングで吸い出してhtmlファイルに書き込むほうが早いのだが直すほどでもないかとの所感がありまた今度に
+あとはsnsにおいて写真を貼るのではなくOGPで映す像がTwitpicやらを思い出しては懐かしくて今更そんなことをしても悪くないなと思う&lt;&#x2F;p&gt;
+&lt;p&gt;こういう簡単なサイトを作るうえで既存のSSGなどを使ってはドキュメントを読む時間ばかりがかかって疲れてしまうから最初から作っている
+今は生成AIのおかげで簡単に作られる
+おかけでコードはつぎはぎのフランケンシュタインの如き様相で薄目でエディターをみながら完成させるはめに&lt;&#x2F;p&gt;
+&lt;p&gt;さてそもそも何故サイトをつくることになったかといえばカメラを買ったからであるがこの経緯も残念なものでスマートフォンのカメラが壊れてしまい曇るから代替というわけだ
+とはいえ家には一応の一眼レフ: EOS Kiss Digital Nというかなり大衆的であるがよく映るものはあるがスマートフォンのカメラとして使うには嵩張るし重いから軽小なものをとNEX-C3と標準ズームレンズを世間的にはお手頃な価格で手に入れた
+私にとってはかなり高かったけれどスマートフォンを買い替えるとなると安くても倍はくだらないから仕方のない出費だったと自らに言い聞かせる
+その数日後に皮膚科に行ったところ施術前後の比較のためにとデジカメを取り出されてしまい私は勝手に「オールドレンズとやらを試したいからスマートフォンを言い訳にレンズ交換のできるカメラを買ったのではないのか」と痛いところをつかれたような気分だ
+ちなみにオールドレンズを買ってしまうと今月の生活に幕を引くことになるからまた数ヶ月後に買おうと色々なことを調べて楽しんでいる&lt;&#x2F;p&gt;
+&lt;p&gt;(これを制作の方に並べるのは本当にどうなのだろうかと思ったがリンクをもたせたいのでこちらに)&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Vivaldiでアドレスの横にブクマ</title>
+        <published>2023-08-12T00:00:00+00:00</published>
+        <updated>2023-08-12T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://slnq.github.io/post/20230812/"/>
+        <id>https://slnq.github.io/post/20230812/</id>
+        
+        <content type="html" xml:base="https://slnq.github.io/post/20230812/">&lt;h1 id=&quot;motibesiyon&quot;&gt;モチベーション&lt;&#x2F;h1&gt;
+&lt;p&gt;Firefoxに慣れてしまってはアドレスバーの横にブックマークを並べられないブラウザを使うことができなくなってしまう．タブバーとツールバーで結構な高さを取るのにブックマークバーを表示しては目障りで仕方がない．
+しかし&lt;a href=&quot;https:&#x2F;&#x2F;forest.watch.impress.co.jp&#x2F;docs&#x2F;news&#x2F;1408055.html&quot;&gt;「NHKプラス」が「Firefox」のサポートを“完全”終了へ ～ 5月23日より視聴不可能に&lt;&#x2F;a&gt;からもわかるように最近はFirefoxのサポートを終えているサイトも少なくない．私にとっての問題は&lt;a href=&quot;https:&#x2F;&#x2F;note.com&#x2F;&quot;&gt;note&lt;&#x2F;a&gt;の記事作成画面においてmarkdown形式でペーストしてもFirefoxではnote形式に展開されないというものだった．
+FirefoxからChromiumブラウザへの乗り換えで散見されたVivaldiを選んでみたが，標準のカスタマイズ機能ではツールバーにブックマークを置けないようなのでカスタムcssファイルを作成した．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zhi-zuo-wu&quot;&gt;制作物&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5b77b333d26a07409104694c2b22fef7&quot;&gt;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5b77b333d26a07409104694c2b22fef7&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5b77b333d26a07409104694c2b22fef7#file-vivaldi-css&quot;&gt;vivaldi.css&lt;&#x2F;a&gt;がVivaldiで使っているUI用のCSS&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5b77b333d26a07409104694c2b22fef7#file-userchrome-css&quot;&gt;userChrome.css&lt;&#x2F;a&gt;はFirefoxで使っているUI用のCSS&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5b77b333d26a07409104694c2b22fef7#file-usercontent-css&quot;&gt;userContent.css&lt;&#x2F;a&gt;はFirefoxで使っている任意のサイト用のCSS&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;vivaldi-css&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5b77b333d26a07409104694c2b22fef7#file-vivaldi-css&quot;&gt;vivaldi.css&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Vivaldiではアドレスバーなどが含まれるmainbar，bookmark-bar，サイトを表示するinnerがmainというflexコンテナに入っている．この辺のことは&lt;a href=&quot;https:&#x2F;&#x2F;gabevilela.vivaldi.net&#x2F;2020&#x2F;12&#x2F;26&#x2F;guide-customizing-vivaldis-ui-with-css-mods&#x2F;&quot;&gt;Guide: Customizing Vivaldi’s UI with CSS mods&lt;&#x2F;a&gt;を参考にするとわかりよい．
+当初はmainbarとbookmark-barを2重のflexコンテナに入れることを考えたが，カスタムjsファイルを読み込む為のbrowser.htmlがアップデートの度に初期化されるらしくcssのみでの実装を考えた．結果としては以下のようになった(全文は&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5b77b333d26a07409104694c2b22fef7#file-vivaldi-css&quot;&gt;vivaldi.css&lt;&#x2F;a&gt;に書いておく)．&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;#main {
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+.inner {
+  flex-basis: 100% !important;
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;このコードの中でもflex-directionやwrapはすぐに思いつくのだが，それだけではうまくいかず色々と試した末に&lt;code&gt;flex-basis: 100% !important;&lt;&#x2F;code&gt;が肝要であるとわかった．
+一応これでブックマークバーとツールバーを並べることには成功したが，Firefoxではツールバーにブックマークを展開していたわけで，見た目は一緒だが構造は違うよなと少しもどかしい．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;firefox&quot;&gt;Firefox&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5b77b333d26a07409104694c2b22fef7#file-userchrome-css&quot;&gt;userChrome.css&lt;&#x2F;a&gt;では右クリックしたときのメニューの要素を大量に隠しているのでわかりにくくなっているが，基本的にはタブバーを低くしたり，ページ内検索を上に移し背景を設定している．
+&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5b77b333d26a07409104694c2b22fef7#file-usercontent-css&quot;&gt;userContent.css&lt;&#x2F;a&gt;では新規タブの背景画像を設定したり，&lt;a href=&quot;https:&#x2F;&#x2F;tweetdeck.twitter.com&#x2F;&quot;&gt;TweetDeck&lt;&#x2F;a&gt;の新しいバージョンへの以降を促すリンクを消したり，&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;&quot;&gt;YouTube&lt;&#x2F;a&gt;のヘッダーを透過させたりしている．これもVivaldiで使いたいのだが拡張機能を使わないといけないようで二の足を踏んでいる．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;suo-gan&quot;&gt;所感&lt;&#x2F;h1&gt;
+&lt;p&gt;取り敢えずブラウザへ求める要素のうち最も大事なブックマークをアドレスバーの横への配置をChromiumベースのブラウザで実装できてよかった．&lt;a href=&quot;https:&#x2F;&#x2F;www.appbank.net&#x2F;2022&#x2F;12&#x2F;18&#x2F;technology&#x2F;2348747.php?page=3&quot;&gt;610億円を払って「Firefox」を延命するGoogleのズル賢さ&lt;&#x2F;a&gt;からもわかるようにFirefoxが無くなることはないだろうが，今後も肩身は狭いだろう．Vivaldi以外の候補としてはSleipnirとFloorpがあったが日本発のものは情報が少ないことが往々にしてあるため避けがちである．
+取り敢えずPCのブラウザ環境には満足したので後はAppleによる携帯端末のWebKit強制の終了を待つのみ．&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>GitHubのContributionを模倣</title>
+        <published>2023-07-02T00:00:00+00:00</published>
+        <updated>2023-07-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://slnq.github.io/post/20230702/"/>
+        <id>https://slnq.github.io/post/20230702/</id>
+        
+        <content type="html" xml:base="https://slnq.github.io/post/20230702/">&lt;h1 id=&quot;motibesiyon&quot;&gt;モチベーション&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;&quot;&gt;GitHub&lt;&#x2F;a&gt;のContributionが埋まっている人はかっこいいが，コンスタントにプログラムを書くわけでも無いので真似もできない．代わりにツイートで実装すれば良いのではと思い作り始めた．
+&lt;a href=&quot;https:&#x2F;&#x2F;adrianroselli.com&#x2F;2018&#x2F;02&#x2F;github-contributions-chart.html&quot;&gt;GitHub Contributions Chart&lt;&#x2F;a&gt;を参考にJavaScriptで実装し，あとはTwitterからツイートを取得するのみに迫った頃，Twitter APIの実質的な終了が言い渡され全てが泡沫の如く消えた．
+読書記録などにしようか，いや普通の読書記録アプリさえも続かないのに，などと2ヶ月程度考えた末に&lt;a href=&quot;https:&#x2F;&#x2F;slnq.github.io&quot;&gt;当ブログ&lt;&#x2F;a&gt;の更新記録にしてみるかと考え，&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&quot;&gt;Zola&lt;&#x2F;a&gt;での実装を始めた．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zhi-zuo-wu&quot;&gt;制作物&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist-4d0c6.web.app&#x2F;like_contribution.html&quot;&gt;JavaScriptでの実装&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;..&#x2F;..&#x2F;about&#x2F;#log&quot;&gt;Zolaでの実装&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;sosukodo&quot;&gt;ソースコード&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5c6407c9173c67b2222fa837cd9ce735&quot;&gt;JavaScriptでのコード&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;blob&#x2F;main&#x2F;templates&#x2F;macros.html&quot;&gt;Zolaでのコード&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;JavaScriptの方についてはDOM操作に慣れている人は&lt;a href=&quot;https:&#x2F;&#x2F;adrianroselli.com&#x2F;2018&#x2F;02&#x2F;github-contributions-chart.html&quot;&gt;GitHub Contributions Chart&lt;&#x2F;a&gt;をそのまま置き換えただけだとわかると思う．更新した瞬間にDOM操作が行われるため画面が乱れるという欠点がある．
+&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&quot;&gt;Zola&lt;&#x2F;a&gt;の方については関数として&lt;a href=&quot;https:&#x2F;&#x2F;tera.netlify.app&#x2F;docs&#x2F;#macros&quot;&gt;macro&lt;&#x2F;a&gt;を使っているが，配列を出力出来ないため，カンマ区切りの文字列を介して返している．また，条件文に括弧を使えないため他の言語なら1つのif文で書けるものも&lt;a href=&quot;https:&#x2F;&#x2F;tera.netlify.app&#x2F;docs&quot;&gt;Tera&lt;&#x2F;a&gt;では2重で書くしかない．以上を抑えておけば&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;blob&#x2F;main&#x2F;templates&#x2F;macros.html&quot;&gt;macros.html&lt;&#x2F;a&gt;を読んで理解できると思う．
+デザインについてはJavaScriptの方は&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;&quot;&gt;GitHub&lt;&#x2F;a&gt;のものをそのまま，&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&quot;&gt;Zola&lt;&#x2F;a&gt;の方は&lt;a href=&quot;https:&#x2F;&#x2F;slnq.github.io&quot;&gt;当ブログ&lt;&#x2F;a&gt;に合う感じにした．色の濃度が無いのは1日に1記事より多く更新するとは思えないため．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;chu-li&quot;&gt;処理&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;xing-hetuda&quot;&gt;行ヘッダー&lt;&#x2F;h2&gt;
+&lt;p&gt;getWeek()で月が何週間あるかを計算しcolspanで間隔を空ける．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;xing&quot;&gt;行&lt;&#x2F;h2&gt;
+&lt;p&gt;get_date_on_weekday()で1年間の全てのn曜日を取得している．
+HTMLのtableが列で構成できたらもっと楽だったはずなのですが．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;run-nian-pan-ding&quot;&gt;閏年判定&lt;&#x2F;h2&gt;
+&lt;p&gt;JavaScriptではDate()が便利で必要が無いが，&lt;a href=&quot;https:&#x2F;&#x2F;tera.netlify.app&#x2F;docs&quot;&gt;Tera&lt;&#x2F;a&gt;には無いので，last_day()で計算している．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;suo-gan&quot;&gt;所感&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tera.netlify.app&#x2F;docs&quot;&gt;Tera&lt;&#x2F;a&gt;を書くのが大変だった．とはいえ言語の目的に適していないことを行っているのだから当然ではある．
+せっかくブログ更新のContributionを作ったのだから定期的に記事を更新していきたいが，継続的な行動が苦手なので厳しいのではないかなと思っている．&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Zolaでブログを作る</title>
+        <published>2023-06-26T00:00:00+00:00</published>
+        <updated>2023-06-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://slnq.github.io/post/20230626/"/>
+        <id>https://slnq.github.io/post/20230626/</id>
+        
+        <content type="html" xml:base="https://slnq.github.io/post/20230626/">&lt;h1 id=&quot;zola&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&quot;&gt;Zola&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gohugo.io&#x2F;&quot;&gt;Hugo&lt;&#x2F;a&gt;や&lt;a href=&quot;https:&#x2F;&#x2F;www.gatsbyjs.com&#x2F;&quot;&gt;Gatsby&lt;&#x2F;a&gt;と同じく&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Static_site_generator&quot;&gt;静的サイトジェネレーター(SSG)&lt;&#x2F;a&gt;の一種．
+言語は&lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;ja&quot;&gt;Rust&lt;&#x2F;a&gt;で書かれているため，buildが早いという特徴がある．
+とはいえ&lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;ja&quot;&gt;Rust&lt;&#x2F;a&gt;の知識は必要なく&lt;a href=&quot;https:&#x2F;&#x2F;tera.netlify.app&quot;&gt;Tera&lt;&#x2F;a&gt;について知っていると少し書きやすい程度でブログを作る程度なら簡単に扱える．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zhi-zuo-wu&quot;&gt;制作物&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;slnq.github.io&quot;&gt;https:&#x2F;&#x2F;slnq.github.io&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;sosukodo&quot;&gt;ソースコード&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;overview&#x2F;&quot;&gt;ドキュメント&lt;&#x2F;a&gt;に仕様などが詳しく書かれているため，これを見ていけば最低限のブログは作れる．
+それでもわからない点は有志が作った&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;themes&#x2F;&quot;&gt;テーマ&lt;&#x2F;a&gt;のコードを見ることで大抵は解決する．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;dezain&quot;&gt;デザイン&lt;&#x2F;h2&gt;
+&lt;p&gt;軽量かつシンプルでありトップページから全てのページにアクセスできるように作った．
+特にページの要素を示すタグの一覧を見るために別のページにアクセスする労力を嫌い，タグの一覧をトップページに載せる仕様は絶対だった．
+また，技術的な内容と日記などの文章を主体とする記事の両方を書きたかったので2つのカテゴリに分けられるようにした．
+レイアウトについては&lt;a href=&quot;http:&#x2F;&#x2F;saqum.com&#x2F;index.html&quot;&gt;日光室&lt;&#x2F;a&gt;を参考にしている．
+タグに用いている記号については&lt;a href=&quot;https:&#x2F;&#x2F;qiita.com&#x2F;yuneco&#x2F;items&#x2F;444abd3f40d53ce7d078&quot;&gt;4KBのJavaScriptだけで動く可愛いアクションゲームを作ったのでソースと解説&lt;&#x2F;a&gt;にて紹介されている手法を用いた．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;deirekutorigou-cheng&quot;&gt;ディレクトリ構成&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;tree&#x2F;main&#x2F;templates&quot;&gt;templates&lt;&#x2F;a&gt;ディレクトリにMarkdownからレンダリングされる元となるHTMLが配置されている．
+全てのページで使われているヘッダー部分は&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;blob&#x2F;main&#x2F;templates&#x2F;base.html&quot;&gt;base.html&lt;&#x2F;a&gt;，トップページは&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;blob&#x2F;main&#x2F;templates&#x2F;index.html&quot;&gt;index.html&lt;&#x2F;a&gt;，記事は&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;blob&#x2F;main&#x2F;templates&#x2F;blog-page.html&quot;&gt;blog-pages.html&lt;&#x2F;a&gt;を使っている．
+また，&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;tree&#x2F;main&#x2F;sass&quot;&gt;sass&lt;&#x2F;a&gt;にはスタイルシートが，&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;tree&#x2F;main&#x2F;content&quot;&gt;content&lt;&#x2F;a&gt;には書いたMarkdownが配置されている．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;taxonomies&quot;&gt;Taxonomies&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;taxonomies&#x2F;&quot;&gt;Taxonomies&lt;&#x2F;a&gt;の実装に躓いたのでメモを残す．
+特に既存の&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;themes&#x2F;&quot;&gt;テーマ&lt;&#x2F;a&gt;ではタグやカテゴリの一覧を単独のページにしており，私の希望であった&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;タグの一覧をトップページに載せる&lt;&#x2F;li&gt;
+&lt;li&gt;トップページで投稿を2つのカテゴリに分ける&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;という仕様はコピー・アンド・ペーストでは実装できなかった．&lt;&#x2F;p&gt;
+&lt;p&gt;1つ目については&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;tree&#x2F;main&#x2F;templates&quot;&gt;templates&lt;&#x2F;a&gt;ディレクトリ内に&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;tree&#x2F;main&#x2F;templates&#x2F;tags&quot;&gt;tags&lt;&#x2F;a&gt;を作成し&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;taxonomies&#x2F;&quot;&gt;Taxonomies&lt;&#x2F;a&gt;を実装し&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;blob&#x2F;main&#x2F;templates&#x2F;base.html&quot;&gt;base.html&lt;&#x2F;a&gt;に&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;{% set tags = get_taxonomy(kind=&amp;quot;tags&amp;quot;, lang=lang) %}
+{% for term in tags.items %}
+  {{ term.name }}
+{% endfor %}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;と記述することで実現できた．コードは簡単のため&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;tree&#x2F;main&#x2F;templates&#x2F;tags&quot;&gt;tags&lt;&#x2F;a&gt;に関係ない部分は省略している．
+&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;overview&#x2F;#get-taxonomy&quot;&gt;&lt;code&gt;get_taxonomy&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;で&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;tree&#x2F;main&#x2F;templates&#x2F;tags&quot;&gt;tags&lt;&#x2F;a&gt;を取得し&lt;code&gt;tags.items&lt;&#x2F;code&gt;の全てを表示している．&lt;&#x2F;p&gt;
+&lt;p&gt;2つ目については1つ目と同様に&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;tree&#x2F;main&#x2F;templates&#x2F;categories&quot;&gt;categories&lt;&#x2F;a&gt;を作成し&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;blob&#x2F;main&#x2F;templates&#x2F;index.html&quot;&gt;index.html&lt;&#x2F;a&gt;に&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;{% set section = get_section(path=&amp;quot;post&amp;#x2F;_index.md&amp;quot;) %}
+{% if paginator %} {% set pages = paginator.pages %} {% else %} {% set pages = section.pages %} {% endif %}
+{% for page in pages %} {% if page.taxonomies.categories %} {% if &amp;quot;tech&amp;quot; in page.taxonomies.categories %}
+      {{ page.title }}
+{% endif %}{% endif %} {% endfor %}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;と記述することで実現できた．コードは簡単のため&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;tree&#x2F;main&#x2F;templates&#x2F;categories&quot;&gt;categories&lt;&#x2F;a&gt;に関係ない部分は省略している．
+&lt;code&gt;paginator.pages&lt;&#x2F;code&gt;や&lt;code&gt;section.pages&lt;&#x2F;code&gt;で&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;slnq.github.io&#x2F;tree&#x2F;main&#x2F;templates&#x2F;categories&quot;&gt;categories&lt;&#x2F;a&gt;を取得し&lt;code&gt;page.taxonomies.categories&lt;&#x2F;code&gt;が存在しており&lt;code&gt;&quot;tech&quot;&lt;&#x2F;code&gt;が含まれている場合に&lt;code&gt;page.title&lt;&#x2F;code&gt;を表示することで2つのカテゴリに分けられている．&lt;a href=&quot;https:&#x2F;&#x2F;tera.netlify.app&quot;&gt;Tera&lt;&#x2F;a&gt;の仕様で&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;{% if page.taxonomies.categories == &amp;quot;tech&amp;quot; %}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;とは書けない．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;zennhenozhuan-zai&quot;&gt;Zennへの転載&lt;&#x2F;h2&gt;
+&lt;p&gt;この記事もだが技術系のものについてはZennにも投稿したいと考え，Markdownのレンダリングを整えるために&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;{{ page.content |
+   linebreaksbr |
+   replace(from=&amp;quot;&amp;lt;&amp;#x2F;p&amp;gt;&amp;lt;br&amp;gt;&amp;lt;p&amp;gt;&amp;quot;, to=&amp;quot;&amp;lt;&amp;#x2F;p&amp;gt;&amp;lt;p class=&amp;#x27;br&amp;#x27;&amp;gt;&amp;lt;&amp;#x2F;p&amp;gt;&amp;lt;p&amp;gt;&amp;quot;) |
+   replace(from=&amp;quot;&amp;lt;br&amp;gt;&amp;lt;a&amp;quot;, to=&amp;quot;&amp;lt;br \&amp;gt;&amp;lt;a&amp;quot;) |
+   replace(from=&amp;quot;&amp;lt;br&amp;gt;&amp;lt;c&amp;quot;, to=&amp;quot;&amp;lt;br \&amp;gt;&amp;lt;c&amp;quot;) |
+   replace(from=&amp;quot;&amp;lt;br&amp;gt;&amp;lt;&amp;quot;, to=&amp;quot;&amp;lt;&amp;quot;) |
+   safe}}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;と書いている．
+&lt;code&gt;linebreaksbr&lt;&#x2F;code&gt;でMarkdownの改行を&lt;code&gt;&amp;lt;br&amp;gt;&lt;&#x2F;code&gt;にし，&lt;code&gt;replace(from=&quot;&amp;lt;&#x2F;p&amp;gt;&amp;lt;br&amp;gt;&amp;lt;p&amp;gt;&quot;, to=&quot;&amp;lt;&#x2F;p&amp;gt;&amp;lt;p class=&#x27;br&#x27;&amp;gt;&amp;lt;&#x2F;p&amp;gt;&amp;lt;p&amp;gt;&quot;)&lt;&#x2F;code&gt;
+で二連続の改行を使えるようにし，&lt;code&gt;replace(from=&quot;&amp;lt;br&amp;gt;&amp;lt;a&quot;, to=&quot;&amp;lt;br \&amp;gt;&amp;lt;a&quot;)&lt;&#x2F;code&gt;などでaタグやcodeタグの改行を消さないようにした後で&lt;code&gt;replace(from=&quot;&amp;lt;br&amp;gt;&amp;lt;&quot;, to=&quot;&amp;lt;&quot;)&lt;&#x2F;code&gt;で改行しすぎる事を防いでいる．もっと賢いやり方はあるのだろうが頭が悪いので力技を使っている．
+これで&lt;a href=&quot;https:&#x2F;&#x2F;zenn.dev&quot;&gt;Zenn&lt;&#x2F;a&gt;とだいたい同じ感じでMarkdownを良い具合にHTMLに変換できていると思う．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;depuroi&quot;&gt;デプロイ&lt;&#x2F;h1&gt;
+&lt;p&gt;今回は&lt;a href=&quot;https:&#x2F;&#x2F;docs.github.com&#x2F;ja&#x2F;pages&#x2F;getting-started-with-github-pages&#x2F;about-github-pages&quot;&gt;GitHub Pages&lt;&#x2F;a&gt;を使った｡
+&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;&quot;&gt;公式ドキュメント&lt;&#x2F;a&gt;に沿えば良いのが,知識不足と英語の苦手が故にまごついた部分があったので以下に手順を示す．&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;user icon&amp;gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;settings&#x2F;profile&quot;&gt;Settings&lt;&#x2F;a&gt;&amp;gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;settings&#x2F;apps&quot;&gt;Developer setting&lt;&#x2F;a&gt;&amp;gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;settings&#x2F;tokens&quot;&gt;Personal access tokens (classic)&lt;&#x2F;a&gt;にて Generate new token(classic) を行い public_repo のみに印を付け発行されたtokenをコピーする．&lt;&#x2F;li&gt;
+&lt;li&gt;repositry&amp;gt;Settings&amp;gt;Secrets&amp;gt;ActionsにてNameにTOKENと書きSecretには先程コピーしたtokenをペーストする．&lt;&#x2F;li&gt;
+&lt;li&gt;&#x2F;config.tomlをbase_url=&quot;https:&#x2F;&#x2F;&#x27;user_name&#x27;.github.io&#x2F;&#x27;repository_name&#x27;&quot;と書き換える．&lt;&#x2F;li&gt;
+&lt;li&gt;git pushした後でrepositry&amp;gt;Settings&amp;gt;Pages&amp;gt;SourceがDeploy from a branchでありrepositry&amp;gt;Settings&amp;gt;Pages&amp;gt;Branchがgh-pages &#x2F;(root)になっている事を確認する．&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h1 id=&quot;suo-gan&quot;&gt;所感&lt;&#x2F;h1&gt;
+&lt;p&gt;かなり良いブログができたなと思っている．
+特に色彩とレイアウトはかなり気に入っているが，まだ改善の余地はあると感じている．
+最も改善するべき点はコードブロックなのだろうが，具体的な仕様が思いついていない．&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

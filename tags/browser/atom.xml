@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>夏果 - browser</title>
+    <link rel="self" type="application/atom+xml" href="https://slnq.github.io/tags/browser/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://slnq.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-08-12T00:00:00+00:00</updated>
+    <id>https://slnq.github.io/tags/browser/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Vivaldiでアドレスの横にブクマ</title>
+        <published>2023-08-12T00:00:00+00:00</published>
+        <updated>2023-08-12T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://slnq.github.io/post/20230812/"/>
+        <id>https://slnq.github.io/post/20230812/</id>
+        
+        <content type="html" xml:base="https://slnq.github.io/post/20230812/">&lt;h1 id=&quot;motibesiyon&quot;&gt;モチベーション&lt;&#x2F;h1&gt;
+&lt;p&gt;Firefoxに慣れてしまってはアドレスバーの横にブックマークを並べられないブラウザを使うことができなくなってしまう．タブバーとツールバーで結構な高さを取るのにブックマークバーを表示しては目障りで仕方がない．
+しかし&lt;a href=&quot;https:&#x2F;&#x2F;forest.watch.impress.co.jp&#x2F;docs&#x2F;news&#x2F;1408055.html&quot;&gt;「NHKプラス」が「Firefox」のサポートを“完全”終了へ ～ 5月23日より視聴不可能に&lt;&#x2F;a&gt;からもわかるように最近はFirefoxのサポートを終えているサイトも少なくない．私にとっての問題は&lt;a href=&quot;https:&#x2F;&#x2F;note.com&#x2F;&quot;&gt;note&lt;&#x2F;a&gt;の記事作成画面においてmarkdown形式でペーストしてもFirefoxではnote形式に展開されないというものだった．
+FirefoxからChromiumブラウザへの乗り換えで散見されたVivaldiを選んでみたが，標準のカスタマイズ機能ではツールバーにブックマークを置けないようなのでカスタムcssファイルを作成した．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zhi-zuo-wu&quot;&gt;制作物&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5b77b333d26a07409104694c2b22fef7&quot;&gt;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5b77b333d26a07409104694c2b22fef7&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5b77b333d26a07409104694c2b22fef7#file-vivaldi-css&quot;&gt;vivaldi.css&lt;&#x2F;a&gt;がVivaldiで使っているUI用のCSS&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5b77b333d26a07409104694c2b22fef7#file-userchrome-css&quot;&gt;userChrome.css&lt;&#x2F;a&gt;はFirefoxで使っているUI用のCSS&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5b77b333d26a07409104694c2b22fef7#file-usercontent-css&quot;&gt;userContent.css&lt;&#x2F;a&gt;はFirefoxで使っている任意のサイト用のCSS&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;vivaldi-css&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5b77b333d26a07409104694c2b22fef7#file-vivaldi-css&quot;&gt;vivaldi.css&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Vivaldiではアドレスバーなどが含まれるmainbar，bookmark-bar，サイトを表示するinnerがmainというflexコンテナに入っている．この辺のことは&lt;a href=&quot;https:&#x2F;&#x2F;gabevilela.vivaldi.net&#x2F;2020&#x2F;12&#x2F;26&#x2F;guide-customizing-vivaldis-ui-with-css-mods&#x2F;&quot;&gt;Guide: Customizing Vivaldi’s UI with CSS mods&lt;&#x2F;a&gt;を参考にするとわかりよい．
+当初はmainbarとbookmark-barを2重のflexコンテナに入れることを考えたが，カスタムjsファイルを読み込む為のbrowser.htmlがアップデートの度に初期化されるらしくcssのみでの実装を考えた．結果としては以下のようになった(全文は&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5b77b333d26a07409104694c2b22fef7#file-vivaldi-css&quot;&gt;vivaldi.css&lt;&#x2F;a&gt;に書いておく)．&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;#main {
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+.inner {
+  flex-basis: 100% !important;
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;このコードの中でもflex-directionやwrapはすぐに思いつくのだが，それだけではうまくいかず色々と試した末に&lt;code&gt;flex-basis: 100% !important;&lt;&#x2F;code&gt;が肝要であるとわかった．
+一応これでブックマークバーとツールバーを並べることには成功したが，Firefoxではツールバーにブックマークを展開していたわけで，見た目は一緒だが構造は違うよなと少しもどかしい．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;firefox&quot;&gt;Firefox&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5b77b333d26a07409104694c2b22fef7#file-userchrome-css&quot;&gt;userChrome.css&lt;&#x2F;a&gt;では右クリックしたときのメニューの要素を大量に隠しているのでわかりにくくなっているが，基本的にはタブバーを低くしたり，ページ内検索を上に移し背景を設定している．
+&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;slnq&#x2F;5b77b333d26a07409104694c2b22fef7#file-usercontent-css&quot;&gt;userContent.css&lt;&#x2F;a&gt;では新規タブの背景画像を設定したり，&lt;a href=&quot;https:&#x2F;&#x2F;tweetdeck.twitter.com&#x2F;&quot;&gt;TweetDeck&lt;&#x2F;a&gt;の新しいバージョンへの以降を促すリンクを消したり，&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;&quot;&gt;YouTube&lt;&#x2F;a&gt;のヘッダーを透過させたりしている．これもVivaldiで使いたいのだが拡張機能を使わないといけないようで二の足を踏んでいる．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;suo-gan&quot;&gt;所感&lt;&#x2F;h1&gt;
+&lt;p&gt;取り敢えずブラウザへ求める要素のうち最も大事なブックマークをアドレスバーの横への配置をChromiumベースのブラウザで実装できてよかった．&lt;a href=&quot;https:&#x2F;&#x2F;www.appbank.net&#x2F;2022&#x2F;12&#x2F;18&#x2F;technology&#x2F;2348747.php?page=3&quot;&gt;610億円を払って「Firefox」を延命するGoogleのズル賢さ&lt;&#x2F;a&gt;からもわかるようにFirefoxが無くなることはないだろうが，今後も肩身は狭いだろう．Vivaldi以外の候補としてはSleipnirとFloorpがあったが日本発のものは情報が少ないことが往々にしてあるため避けがちである．
+取り敢えずPCのブラウザ環境には満足したので後はAppleによる携帯端末のWebKit強制の終了を待つのみ．&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

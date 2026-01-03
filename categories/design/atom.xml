@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>夏果 - design</title>
+    <link rel="self" type="application/atom+xml" href="https://slnq.github.io/categories/design/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://slnq.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-06-27T00:00:00+00:00</updated>
+    <id>https://slnq.github.io/categories/design/atom.xml</id>
+    <entry xml:lang="en">
+        <title>GPU.jsで電場シミュレータを作る</title>
+        <published>2023-06-27T00:00:00+00:00</published>
+        <updated>2023-06-27T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://slnq.github.io/post/20230627/"/>
+        <id>https://slnq.github.io/post/20230627/</id>
+        
+        <content type="html" xml:base="https://slnq.github.io/post/20230627/">&lt;h1 id=&quot;motibesiyon&quot;&gt;モチベーション&lt;&#x2F;h1&gt;
+&lt;p&gt;研究室で以前つくられた電場シミュレータをWeb上で実装し，それを以て卒業研究にしようというモチベーションで作られた．
+作っているうちに知ったが他の年度にも色々と試されていたようで陳腐な卒研となった．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zhi-zuo-wu&quot;&gt;制作物&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;slnq.github.io&#x2F;werve-gpujs&#x2F;&quot;&gt;https:&#x2F;&#x2F;slnq.github.io&#x2F;werve-gpujs&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ji-neng&quot;&gt;機能&lt;&#x2F;h2&gt;
+&lt;p&gt;白い範囲をクリックすると赤い円と無数の矢印が見える．赤は正を円は電荷を示し赤い円は正電荷で矢印は電場を表現している．
+右下にchargeとあるスライダーを左に動かし，白い範囲をクリックすると円の大きさが違う青い円が現れ動き出す．青は負で大きさは電荷の大きさを示しており，青い円は負電荷となっている．
+精密なシミュレータではないが，電荷や電場の動きは習ったそれと変わらないのではないだろうか．これが基本で，その他に8つあるスイッチは細かい設定の為にあり，下で説明する．&lt;&#x2F;p&gt;
+&lt;p&gt;| time | : | 時間を再生&#x2F;停止する |
+| -: | | |
+| norm | : | 電場の大きさを輝度で表す |
+| vector | : | 電場のベクトルを矢印で表す |
+| install | : | クリックするとchargeに合う値の電荷を置く |
+| delete | : | 電荷をクリックすると消すことができる |
+| fix | : | 電荷をクリックすると固定できる |
+| move | : | 電荷をドラッグ・アンド・ドロップで移動させられる |&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;sosukodo&quot;&gt;ソースコード&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;werve-gpujs&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;slnq&#x2F;werve-gpujs&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;基本的に&lt;code&gt;src&lt;&#x2F;code&gt;内の&lt;code&gt;.js&lt;&#x2F;code&gt;ファイルを読めばシミュレーションについてはわかると思う．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;chu-li&quot;&gt;処理&lt;&#x2F;h1&gt;
+&lt;ol&gt;
+&lt;li&gt;1つの電荷に対する電場の値を599×599で計算しテンプレートに格納する．&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の位置を元に電場のテンプレートを動かし配列300×300に格納する．&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の数だけ電場を総和して配列300×300に格納していく．&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の座標に対応する電場配列の要素を電荷値と乗算してクーロン力を計算する．&lt;&#x2F;li&gt;
+&lt;li&gt;クーロン力を元に位置と速度と加速度を計算する．&lt;&#x2F;li&gt;
+&lt;li&gt;表示する．&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;これの2.から6.を繰り返している．配列の大きさ(すなわちシミュレートの解像度)である300×300は色々と試した結果であり，最適な解像度とかでは無い．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;gpu-js&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;GPU.js&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;GPU.js&lt;&#x2F;a&gt;は1.から3.及び6.で使っている．&lt;code&gt;new GPU({ mode: &#x27;cpu&#x27; });&lt;&#x2F;code&gt;でGPUを使わない手法も取れると&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gpujs&#x2F;gpu.js&quot;&gt;ドキュメント&lt;&#x2F;a&gt;には書いてあるが機能せず，CPUとの比較が出来ていないのだから，GPUのありがたみも未知数となる．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;canvas&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;ja&#x2F;docs&#x2F;Web&#x2F;HTML&#x2F;Element&#x2F;canvas&quot;&gt;Canvas&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;GPU.js&lt;&#x2F;a&gt;を6.で使っているのも事実だが，使われた割合としてはせいぜい半分くらい．normでの電場の輝度表示は&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;GPU.js&lt;&#x2F;a&gt;を用いているが，vectorで使える電場のベクトル表示や電荷の円は&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;ja&#x2F;docs&#x2F;Web&#x2F;JavaScript&quot;&gt;JavaScript&lt;&#x2F;a&gt;で描いている．300×300でいくつも矢印を描くと画質的に見てられないので，300×300で出た輝度表示は600×600に補間せず拡大しベクトル表示の方は600×600で出している．&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;dakumodo&quot;&gt;ダークモード&lt;&#x2F;h2&gt;
+&lt;p&gt;ちょうど流行りだったので作った．&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;ja&#x2F;docs&#x2F;Web&#x2F;JavaScript&quot;&gt;JavaScript&lt;&#x2F;a&gt;で輝度表示の色を反転させると計算量を食うかなと思い，&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;GPU.js&lt;&#x2F;a&gt;の表示用配列の時点で反転させている．他のところで最適化に程遠いのだから，こんなの無意味だろと言われれば，それはそのとおり．&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;depuroi&quot;&gt;デプロイ&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;webpack.js.org&#x2F;&quot;&gt;webpack&lt;&#x2F;a&gt;を用いてローカルで生成したものを&lt;a href=&quot;https:&#x2F;&#x2F;docs.github.com&#x2F;ja&#x2F;pages&#x2F;getting-started-with-github-pages&#x2F;about-github-pages&quot;&gt;GitHub Pages&lt;&#x2F;a&gt;で&lt;code&gt;&#x2F;docs&lt;&#x2F;code&gt;内をデプロイしている．当初は&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;&quot;&gt;Bitbucket&lt;&#x2F;a&gt;を使っていたので，&lt;a href=&quot;https:&#x2F;&#x2F;jp.heroku.com&#x2F;&quot;&gt;Heroku&lt;&#x2F;a&gt;を使おうとしていたが，うまくいかなかった．最近の&lt;a href=&quot;https:&#x2F;&#x2F;jp.heroku.com&#x2F;&quot;&gt;Heroku&lt;&#x2F;a&gt;を見ている感じ災い転じて福となすなんて思うわけだが．(結局&lt;a href=&quot;https:&#x2F;&#x2F;jp.heroku.com&#x2F;&quot;&gt;Heroku&lt;&#x2F;a&gt;の使い方はわからないまま，使う機会がなくなったね．)&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;suo-gan&quot;&gt;所感&lt;&#x2F;h1&gt;
+&lt;p&gt;卒業研究として作ったのは確かだが，研究といえる代物ではない．
+とはいえ一応こうして形になったのは嬉しかったな．&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
